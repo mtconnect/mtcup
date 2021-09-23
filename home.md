@@ -2,11 +2,12 @@
 title: Home
 description: 
 published: true
-date: 2021-09-23T23:30:00.181Z
+date: 2021-09-23T23:30:37.522Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-22T02:21:15.482Z
 ---
+
 
 [305x96px|center|link=<http://www.mtconnect.org>](/File:MTConnect_MBDG_R.jpg "wikilink")
 
