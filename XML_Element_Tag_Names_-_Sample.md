@@ -1,6 +1,11 @@
 ---
 title: XML Element Tag Names - Sample
-permalink: /XML_Element_Tag_Names_-_Sample/
+description: 
+published: true
+date: 2021-09-24T00:33:05.624Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:33:03.034Z
 ---
 
 [XML](/Terminology "wikilink") elements that can be placed in the

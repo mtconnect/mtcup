@@ -1,6 +1,11 @@
 ---
 title: Component Types and Subcomponents
-permalink: /Component_Types_and_Subcomponents/
+description: 
+published: true
+date: 2021-09-25T01:52:22.512Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:30:46.596Z
 ---
 
 *[Component](/Terminology "wikilink")* is an abstract type that allows
@@ -50,8 +55,7 @@ C2, C3, C4, …). This is in compliance with the ISO-841-2001.
 Figure one below shows an axes example with three linear axes and one
 rotary axis.
 
-[none|500px|thumb|Figure 1: Axes
-Example](/File:AxesExample.PNG "wikilink")
+![AxesExample.PNG](/images/AxesExample.PNG)
 
 **LINEAR**
 
@@ -180,8 +184,7 @@ A sensor may measure values associated with any
 *[Device](/Terminology "wikilink")*. Some examples of how sensor data
 may be modeled are represented in Figure 2 below:
 
-[none|500px|thumb|Figure 2: Sensor Data
-Associations](/File:SensorDataAssociations.PNG "wikilink")
+![SensorDataAssociations.PNG](/images/SensorDataAssociations.PNG)
 
 ### Sensor Interface
 
@@ -197,18 +200,12 @@ Typical functions of the *sensor interface* include:
     a scaled temperature value that can be transmitted to another
     [device](/Terminology "wikilink").)
 
-<!-- end list -->
-
   - process *sensing element* data into calculated values. (Example:
     temperature sensor data is converted into calculated values of
     average temperature, maximum temperature, minimum temperature, etc.)
 
-<!-- end list -->
-
   - provide calibration and configuration information associated with
     each *sensing element*.
-
-<!-- end list -->
 
   - monitor the health and integrity of the *sensing elements* and the
     *sensor interface*. (Example: The *sensor interface* may provide
@@ -228,8 +225,7 @@ which it is most closely associated.
 *[Device](/Terminology "wikilink")*. Some examples of where a sensor may
 be modeled are represented in Figure 3 below:
 
-[none|500px|thumb|Figure 3: Sensor
-Associations](/File:SensorAssociations.PNG "wikilink")
+![SensorDataAssociations.PNG](/images/SensorDataAssociations.PNG)
 
 When a *Sensor* is modeled as a *[Component](/Terminology "wikilink")*,
 it MAY have its own [uuid](/Terminology "wikilink") so it can be tracked

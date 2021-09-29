@@ -1,6 +1,11 @@
 ---
 title: HTTP Error
-permalink: /HTTP_Error/
+description: 
+published: true
+date: 2021-09-24T00:31:36.768Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:31:34.779Z
 ---
 
 Here is an example of an HTTP error:

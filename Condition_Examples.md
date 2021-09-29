@@ -1,6 +1,11 @@
 ---
 title: Condition Examples
-permalink: /Condition_Examples/
+description: 
+published: true
+date: 2021-09-24T00:30:52.141Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:30:49.990Z
 ---
 
 The condition has additional restrictions which are different from the

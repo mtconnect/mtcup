@@ -1,6 +1,11 @@
 ---
 title: C++ Agent
-permalink: /C++_Agent/
+description: 
+published: true
+date: 2021-09-24T00:32:15.027Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:30:40.556Z
 ---
 
 ## Reference MTConnect Agent

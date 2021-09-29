@@ -1,6 +1,11 @@
 ---
 title: Fault Tolerance
-permalink: /Fault_Tolerance/
+description: 
+published: true
+date: 2021-09-25T02:04:07.545Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:31:19.595Z
 ---
 
 ## Fault Tolerance and Recovery
@@ -28,8 +33,7 @@ If this cannot be done, the current state of the
 [application](/Terminology "wikilink") can continue from that point
 onward. See Figure 1.
 
-[400px|none|thumb|Figure 1: Application Failure and
-Recovery](/File:Figure1.PNG "wikilink")
+![Figure1.PNG](/images/Figure1.PNG)
 
 ### Agent Failure
 
@@ -55,8 +59,7 @@ sequence number 1. The next request will retrieve all data starting from
 the first available [event](/Terminology "wikilink") or
 [sample](/Terminology "wikilink").
 
-[400px|none|thumb|Figure 2: Agent Failure and
-Recovery](/File:Figure2.PNG "wikilink")
+![Figure2.PNG](/images/Figure2.PNG)
 
 ### Data Persistence and Recovery
 
@@ -116,8 +119,7 @@ until it becomes disconnected and then in the future it reconnects and
 the temperature is 30. Between these two points assumptions SHOULD NOT
 be made as to the temperature since no information was available.
 
-[none|500px|thumb|Figure 3: Unavailable
-Data](/File:UnavailableData.PNG "wikilink")
+![UnavailableData.PNG](/images/UnavailableData.PNG)
 
 If data for multiple [data items](/Terminology "wikilink") are delivered
 from one source and that source becomes unavailable, all [data

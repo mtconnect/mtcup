@@ -1,11 +1,16 @@
 ---
 title: Getting Started with MTConnect – Writing Client Applications
-permalink: /Getting_Started_with_MTConnect_–_Writing_Client_Applications/
+description: 
+published: true
+date: 2021-09-25T01:34:51.427Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:31:31.485Z
 ---
 
 ## Getting Started with MTConnect - Writing Client Applications
 
-[Media:GettingStartedWithMTConnectWritingClientsRevisionJuly2013.pdf](/Media:GettingStartedWithMTConnectWritingClientsRevisionJuly2013.pdf "wikilink")
+[GettingStartedWithMTConnectWritingClientsRevisionJuly2013.pdf](/pdfs/GettingStartedWithMTConnectWritingClientsRevisionJuly2013.pdf)
 
 July, 2013
 

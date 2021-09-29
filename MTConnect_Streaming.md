@@ -1,6 +1,11 @@
 ---
 title: MTConnect Streaming
-permalink: /MTConnect_Streaming/
+description: 
+published: true
+date: 2021-09-24T00:31:57.501Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:31:55.546Z
 ---
 
 MTConnect supports streaming data using MIME content. This is referred

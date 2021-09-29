@@ -1,6 +1,11 @@
 ---
 title: Sensors
-permalink: /Sensors/
+description: 
+published: true
+date: 2021-09-25T01:49:24.086Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:32:37.593Z
 ---
 
 Sensors are modeled with the *[DataItem](/Terminology "wikilink")* types
@@ -11,8 +16,7 @@ the sensor unit may have its own diagnostic measurements – in this case,
 a temperature measurement (thermistor) to measure the health of the
 sensor unit.
 
-[center|500px|thumb|Spindle Sensing
-System](/File:SpindleSensingSystem.PNG "wikilink")
+![SpindleSensingSystem.PNG](/images/SpindleSensingSystem.PNG)
 
 The basic machine is modeled below – 3 linear axes and a spindle. The
 spindle has two additional *[DataItems](/Terminology "wikilink")*

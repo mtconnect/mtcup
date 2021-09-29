@@ -1,6 +1,11 @@
 ---
 title: MTConnect XML Overview
-permalink: /MTConnect_XML_Overview/
+description: 
+published: true
+date: 2021-09-25T02:17:15.868Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:31:58.323Z
 ---
 
 ## Reply XML Document Structure
@@ -41,8 +46,7 @@ MTConnectDevices [XML](/Terminology "wikilink") Document, there MUST be
 a Header and it MUST be followed by [Devices](/Terminology "wikilink")
 section.
 
-[none|500px|thumb|Figure 1: MTConnect Devices
-Structure](/File:DevicesStructure.PNG "wikilink")
+![DevicesStructure.PNG](/images/DevicesStructure.PNG)
 
 MTConnectDevices XML Document MUST have the following structure:
 
@@ -60,8 +64,7 @@ MTConnectDevices XML Document MUST have the following structure:
 An MTConnectDevices element MUST include the Header for all documents
 and the [Devices](/Terminology "wikilink") element.
 
-[none|500px|thumb|Figure 2: MTConnectDevices
-Elements](/File:DevicesElements.PNG "wikilink")
+![DevicesElements.PNG](/images/DevicesElements.PNG)
 
 ### MTConnectStreams
 
@@ -72,8 +75,7 @@ and Condition from [devices](/Terminology "wikilink") and their
 [XML](/Terminology "wikilink") Document, there MUST be a Header and it
 MUST be followed by a [Streams](/Terminology "wikilink") section.
 
-[none|500px|thumb|Figure 3: MTConnectStreams
-Structure](/File:StreamsStructure.PNG "wikilink")
+![StreamsStructure.PNG](/images/StreamsStructure.PNG)
 
 An MTConnectStreams [XML](/Terminology "wikilink") Document will have
 the following structure:
@@ -91,8 +93,7 @@ the following structure:
 An MTConnectStreams document MUST include a Header and a
 [Streams](/Terminology "wikilink") element.
 
-[none|500px|thumb|Figure 4: MTConnectStreams
-Elements](/File:StreamsElements.PNG "wikilink")
+![StreamsElements.PNG](/images/StreamsElements.PNG)
 
 ### MTConnectAssets
 
@@ -105,8 +106,7 @@ meaning that at any point in time the latest version of the complete
 state for this asset will be given by this
 [device](/Terminology "wikilink").
 
-[none|500px|thumb|Figure 5: MTConnectAssets
-Structure](/File:AssetsStructure.PNG "wikilink")
+![AssetsStructure.PNG](/images/AssetsStructure.PNG)
 
 Each [device](/Terminology "wikilink") may have a different set of
 information about this asset and it is the responsibility of the
@@ -147,8 +147,7 @@ The document is broken down into two sections, the tool definition (line
 
 ### MTConnectError
 
-[none|500px|thumb|Figure 6: MTConnectError
-Structure](/File:ErrorStructure.PNG "wikilink")
+![ErrorStructure.PNG](/images/ErrorStructure.PNG)
 
 An *MTConnectError* document contains information about an *error* that
 occurred in processing the request. In an *MTConnectError*
@@ -181,13 +180,11 @@ single Error element.
 An MTConnect® document MUST include the Header for all documents and one
 *Error* element.
 
-[none|500px|thumb|Figure 7: MTConnectError
-Elements](/File:ErrorElements.PNG "wikilink")
+![ErrorElements.PNG](/images/ErrorElements.PNG)
 
 ## Header Attributes
 
-[right|500px|Figure 7: Header
-Attributes](/File:HeaderAttributes.PNG "wikilink")
+![HeaderAttributes.PNG](/images/HeaderAttributes.PNG)
 
 The *nextSequence*, *firstSequence*, and *lastSequence* number MUST be
 included in [sample](/Terminology "wikilink") and

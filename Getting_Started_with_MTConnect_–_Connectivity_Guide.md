@@ -1,11 +1,16 @@
 ---
 title: Getting Started with MTConnect – Connectivity Guide
-permalink: /Getting_Started_with_MTConnect_–_Connectivity_Guide/
+description: 
+published: true
+date: 2021-09-25T01:28:13.150Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:31:25.646Z
 ---
 
 ## Getting Started with MTConnect - Connectivity Guide
 
-[Media:Getting-Started-with-MTConnect-Connectivity-Guide.pdf](/Media:Getting-Started-with-MTConnect-Connectivity-Guide.pdf "wikilink")
+[Getting-Started-with-MTConnect-Connectivity-Guide.pdf](/pdfs/Getting-Started-with-MTConnect-Connectivity-Guide.pdf)
 
 October, 2011
 

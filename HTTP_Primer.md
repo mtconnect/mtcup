@@ -1,6 +1,11 @@
 ---
 title: HTTP Primer
-permalink: /HTTP_Primer/
+description: 
+published: true
+date: 2021-09-25T02:14:11.305Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:31:37.640Z
 ---
 
 ## Architectural Overview
@@ -96,8 +101,7 @@ authenticates itself with the Name Server (if used). In the second part
 of the example, it shows how the entities interrelate in an
 architecture.
 
-[none|500px|thumb|Figure 1: Agent
-Initialization](/File:AgentInitialization.PNG "wikilink")
+![AgentInitialization.PNG](/images/AgentInitialization.PNG)
 
 Figure 1 above illustrates the initialization of the
 [Agent](/Terminology "wikilink") and communication with the
@@ -123,8 +127,7 @@ polls the [device](/Terminology "wikilink") for data.
 
 ### Application Communication
 
-[none|500px|thumb|Figure 2: Application
-Communication](/File:ApplicationCommunication.PNG "wikilink")
+![ApplicationCommunication.PNG](/images/ApplicationCommunication.PNG)
 
 Figure 2 above shows how all major [components](/Terminology "wikilink")
 of an MTConnect® architecture inter-relate and how the four basic
@@ -198,8 +201,7 @@ capacity, or *bufferSize*, of the MTConnect
 data is inserted into the tube it is assigned a sequentially increasing
 number.
 
-[none|500px|thumb|Figure 3: Data
-Storage](/File:DataStorage.PNG "wikilink")
+![DataStorage.PNG](/images/DataStorage.PNG)
 
 As a client requests data from the MTConnect
 [Agent](/Terminology "wikilink") it can specify the sequence number from
@@ -243,8 +245,7 @@ recommended way to construct a unique *assetId*, for example, a Cutting
 Tool SHOULD be identified by the tool ID and serial number as a composed
 synthetic identifier.
 
-[right|500px|thumb|Figure 4: Asset
-Storage](/File:AssetStorage.PNG "wikilink")
+![AssetStorage.PNG](/images/AssetStorage.PNG)
 
 As in this Figure 4, each of the assets is referred to by their key. The
 key is independent of the order in the storage buffer.
@@ -253,50 +254,23 @@ Asset protocol:
 
   - Request an asset by ID:
 
-<!-- end list -->
-
-  -
-    \- url: http://example.com/asset/hh1
-    \- Returns the *MTConnectAssets* document for asset hh1
-
-<!-- end list -->
+    - url: http://example.com/asset/hh1
+     Returns the *MTConnectAssets* document for asset hh1
 
   - Request multiple assets by ID:
 
-<!-- end list -->
+    - url: http://example.com/asset/hh1;cc;123;g5
+    Returns the *MTConnectAssets* document for asset hh1, cc, 123, and g5.
 
-  -
-    \- url: http://example.com/asset/hh1;cc;123;g5
-    \- Returns the *MTConnectAssets* document for asset hh1, cc, 123,
-    and g5.
+  - Request for all the assets in the *[Agent](/Terminology  "wikilink")*:
 
-<!-- end list -->
+    - url: http://example.com/assets  
+    Returns all available MTConnect assets in the [Agent](/Terminology "wikilink"). MTConnect MAY return a limited set if there are too many asset records. The assets MUST be added to the beginning with the most recently modified assets.
 
-  - Request for all the assets in the
-    *[Agent](/Terminology "wikilink")*:
+  - Request for all assets of a given type in the *[Agent](/Terminology "wikilink")*:
 
-<!-- end list -->
-
-  -
-    \- url: http://example.com/assets
-    \- Returns all available MTConnect assets in the
-    [Agent](/Terminology "wikilink"). MTConnect MAY return a limited set
-    if there are too many asset records. The assets MUST be added to the
-    beginning with the most recently modified assets.
-
-<!-- end list -->
-
-  - Request for all assets of a given type in the
-    *[Agent](/Terminology "wikilink")*:
-
-<!-- end list -->
-
-  -
-    \- url: http://example.com/assets?type=”CuttingTool”
-    \- Returns all available *CuttingTool* assets from the MTConnect
-    *[Agent](/Terminology "wikilink")*. MTConnect MAY return a limited
-    set if there are too many asset records. The assets MUST be added to
-    the beginning with the most recently modified assets.
+    - url: http://example.com/assets?type=”CuttingTool”  
+    Returns all available *CuttingTool* assets from the MTConnect *[Agent](/Terminology "wikilink")*. MTConnect MAY return a limited set if there are too many asset records. The assets MUST be added to the beginning with the most recently modified assets.
 
 When an asset is added or modified, an *AssetChanged*
 [event](/Terminology "wikilink") will be sent to inform us that new

@@ -1,6 +1,11 @@
 ---
 title: Installing C++ Agent on Raspberry Pi
-permalink: /Installing_C++_Agent_on_Raspberry_Pi/
+description: 
+published: true
+date: 2021-09-24T00:31:50.267Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:31:44.133Z
 ---
 
 ## Dockerfile

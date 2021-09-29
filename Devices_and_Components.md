@@ -1,6 +1,11 @@
 ---
 title: Devices and Components
-permalink: /Devices_and_Components/
+description: 
+published: true
+date: 2021-09-25T02:02:51.558Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:31:13.006Z
 ---
 
 MTConnect organizes information and data from a data source (typically a
@@ -18,8 +23,7 @@ building blocks used to organize information about a piece of equipment.
 They also define how the various parts of a piece of equipment relate to
 each other.
 
-[none|500px|thumb|Example Container
-Structure](/File:ContainerStructure.PNG "wikilink")
+![ContainerStructure.PNG](/images/ContainerStructure.PNG)
 
 The first, or highest, level container in the MTConnect data structure
 is the *[Devices](/Terminology "wikilink")* container. The
@@ -81,8 +85,7 @@ define the difference between a logical collection of
 *[Component](/Terminology "wikilink")* that forms the structure within a
 *[Device](/Terminology "wikilink")*.
 
-[none|500px|thumb|Device Schema
-Diagram](/File:DeviceSchema.PNG "wikilink")
+![DeviceSchema.PNG](/images/DeviceSchema.PNG)
 
 Note: Some *[components](/Terminology "wikilink")* may not be integral
 to a parent *[device](/Terminology "wikilink")* or another
@@ -170,8 +173,7 @@ the structure and configuration of a
 characteristics and capabilities of the parent
 *[component](/Terminology "wikilink")*.
 
-[none|500px|thumb|Component/Sub-component
-Diagram](/File:ComponentDiagram.PNG "wikilink")
+![ComponentDiagram.PNG](/images/ComponentDiagram.PNG)
 
 While these sub-elements are by definition
 *[Components](/Terminology "wikilink")*, they SHALL be called
@@ -197,8 +199,7 @@ represented in the [XML](/Terminology "wikilink") schema as follows:
                                <Etc.  >
 ```
 
-[none|500px|thumb|Component
-Schema](/File:ComponentSchema.PNG "wikilink")
+![ComponentSchema.PNG](/images/ComponentSchema.PNG)
 
 Every component has the following composition:
 

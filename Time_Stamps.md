@@ -1,6 +1,11 @@
 ---
 title: Time Stamps
-permalink: /Time_Stamps/
+description: 
+published: true
+date: 2021-09-24T00:32:45.681Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:32:43.749Z
 ---
 
 Time stamps in MTConnect are based on Universal Time Coordinated (UTC).

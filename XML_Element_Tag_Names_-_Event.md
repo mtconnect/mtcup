@@ -1,6 +1,11 @@
 ---
 title: XML Element Tag Names - Event
-permalink: /XML_Element_Tag_Names_-_Event/
+description: 
+published: true
+date: 2021-09-25T02:30:16.802Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:32:59.694Z
 ---
 
 The following is a list of all the [event](/Terminology "wikilink")
@@ -15,19 +20,19 @@ Path is controlling all the axes.
 **ActuatorState** An actuator state represents a device for moving or
 controlling a mechanism or system. The CDATA MUST be as follows:
 
-[none|400px](/File:ActuatorStateTags.PNG "wikilink")
+![ActuatorStateTags.PNG](/images/ActuatorStateTags.PNG)
 
 **Availabilty** Represents the component’s ability to communicate its
 availability. This MUST be provided for the device and MAY be provided
 for all other components.
 
-[none|400px](/File:AvailabilityTags.PNG "wikilink")
+![AvailabilityTags.PNG](/images/AvailabilityTags.PNG)
 
 **AxisCoupling** Describes the way the axes will be associated to each
 other. This is used in conjunction with *COUPLED_AXES* to indicate the
 way they are interacting.
 
-[none|400px](/File:AxisCouplingTags.PNG "wikilink")
+![AxisCouplingTags.PNG](/images/AxisCouplingTags.PNG)
 
 **Block** A block of code is a command being executed by the Controller.
 The *Block* MUST include the entire command with all the parameters.
@@ -35,7 +40,7 @@ The *Block* MUST include the entire command with all the parameters.
 **ControllerMode** The *Mode* of the Controller. The CDATA MUST be one
 of the following:
 
-[none|400px](/File:ControllerModeTags.PNG "wikilink")
+![ControllerModeTags.PNG](/images/ControllerModeTags.PNG)
 
 **CoupledAxes** As a *Linear* or *Rotary* axis data item, refers to the
 set of associated axes to be used in conjunction with *AxisCoupling*.
@@ -45,22 +50,22 @@ The value will be a space delimited set of axes names. For example:
 **Direction** A Direction indicates the direction of rotation. The CDATA
 MUST be as follows:
 
-[none|400px](/File:DirectionTags.PNG "wikilink")
+![DirectionTags.PNG](/images/DirectionTags.PNG)
 
 **DoorState** A *DoorState* represents an opening that can be opened or
 closed. The CDATA MUST be as follows:
 
-[none|400px](/File:DoorStateTags.PNG "wikilink")
+![DoorStateTags.PNG](/images/DoorStateTags.PNG)
 
 **Execution** The *Execution* state of the Controller. The CDATA MUST be
 one of the following:
 
-[none|400px](/File:ExecutionTags.PNG "wikilink")
+![ExecutionTags.PNG](/images/ExecutionTags.PNG)
 
 **EmergencyStop** The emergency stop state of the machine, device, or
 controller path. The CDATA MUST be one of the following:
 
-[none|400px](/File:EmergencyStopTags.PNG "wikilink")
+![EmergencyStopTags.PNG](/images/EmergencyStopTags.PNG)
 
 **Line** This [event](/Terminology "wikilink") refers to the optional
 program line number. For example in RS274/NGC, the line number begins
@@ -86,12 +91,12 @@ discretion of the implementation.
 multiple motion paths and their associated axes. When *PathMode* is not
 provided, it MUST be assumed to be *INDEPENDENT*.
 
-[none|400px](/File:PathModeTags.PNG "wikilink")
+![PathModeTags.PNG](/images/PathModeTags.PNG)
 
 **PowerState** Power state of a device or component. DEPRECATION
 WARNING: MAY be deprecated in the future.
 
-[none|400px](/File:PowerStateTags.PNG "wikilink")
+![PowerStateTags.PNG](/images/PowerStateTags.PNG)
 
 **Program** The name of the program executing in the controller. This is
 usually the name of the file containing the program instructions.
@@ -99,7 +104,7 @@ usually the name of the file containing the program instructions.
 **RotaryMode** The mode in which the rotary axis is currently operating.
 The CDATA MUST be one of the following:
 
-[none|400px](/File:RotaryModeTags.PNG "wikilink")
+![RotaryModeTags.PNG](/images/RotaryModeTags.PNG)
 
 **ToolAssetId** This is a reference to an identifier for the current
 tool in use by the *Path*.

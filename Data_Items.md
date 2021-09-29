@@ -1,6 +1,11 @@
 ---
 title: Data Items
-permalink: /Data_Items/
+description: 
+published: true
+date: 2021-09-24T00:31:09.202Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:31:07.077Z
 ---
 
 The semantics and types of an MTConnect DataItem can be found under

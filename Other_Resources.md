@@ -1,6 +1,11 @@
 ---
 title: Other Resources
-permalink: /Other_Resources/
+description: 
+published: true
+date: 2021-09-24T00:32:14.102Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:32:11.808Z
 ---
 
 ## Other Resources

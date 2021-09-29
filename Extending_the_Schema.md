@@ -1,6 +1,11 @@
 ---
 title: Extending the Schema
-permalink: /Extending_the_Schema/
+description: 
+published: true
+date: 2021-09-24T00:31:18.673Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:31:16.354Z
 ---
 
 MTConnect was designed with various extension points that are created as

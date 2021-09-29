@@ -1,6 +1,11 @@
 ---
 title: Device Functionality Groups
-permalink: /Device_Functionality_Groups/
+description: 
+published: true
+date: 2021-09-25T01:13:16.924Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:31:10.150Z
 ---
 
 ## Device Functionality Groups
@@ -12,46 +17,34 @@ be extended to cover additional data items.
 
 #### DMG Mori
 
-[Media:DMG Mori-MAPPS_MTConnect
-Functionality.pdf](/Media:DMG_Mori-MAPPS_MTConnect_Functionality.pdf "wikilink")
+[DMG_Mori-MAPPS_MTConnect_Functionality.pdf](/pdfs/DMG_Mori-MAPPS_MTConnect_Functionality.pdf)
 
 #### Doosan
 
-[Media:Doosan_MTConnect
-Functionality.pdf](/Media:Doosan_MTConnect_Functionality.pdf "wikilink")
+[Doosan_MTConnect_Functionality.pdf](/pdfs/Doosan_MTConnect_Functionality.pdf)
 
 #### Mazak
 
-[Media:Mazak_Integrex_eseries_Matrix_MTConnect
-Functionality.pdf](/Media:Mazak_Integrex_eseries_Matrix_MTConnect_Functionality.pdf "wikilink")
+[Mazak_Integrex_eseries_Matrix_MTConnect_Functionality.pdf](/pdfs/Mazak_Integrex_eseries_Matrix_MTConnect_Functionality.pdf)
 
-[Media:Mazak_Integrex_eseries_Matrix2_MTConnect
-Functionality.pdf](/Media:Mazak_Integrex_eseries_Matrix2_MTConnect_Functionality.pdf "wikilink")
+[Mazak_Integrex_eseries_Matrix2_MTConnect_Functionality.pdf](/pdfs/Mazak_Integrex_eseries_Matrix2_MTConnect_Functionality.pdf)
 
-[Media:Mazak_QTN_Matrix_MTConnect
-Functionality.pdf](/Media:Mazak_QTN_Matrix_MTConnect_Functionality.pdf "wikilink")
+[Mazak_QTN_Matrix_MTConnect_Functionality.pdf](/pdfs/Mazak_QTN_Matrix_MTConnect_Functionality.pdf)
 
-[Media:Mazak_QTN_Matrix2_MTConnect
-Functionality.pdf](/Media:Mazak_QTN_Matrix2_MTConnect_Functionality.pdf "wikilink")
+[Mazak_QTN_Matrix2_MTConnect_Functionality.pdf](/pdfs/Mazak_QTN_Matrix2_MTConnect_Functionality.pdf)
 
-[Media:Mazak_Smooth_CNC_MTConnect
-Functionality.PDF](/Media:Mazak_Smooth_CNC_MTConnect_Functionality.PDF "wikilink")
+[Mazak_Smooth_CNC_MTConnect_Functionality.PDF](/pdfs/Mazak_Smooth_CNC_MTConnect_Functionality.PDF)
 
-[Media:Mazak_VCN_Matrix_MTConnect
-Functionality.pdf](/Media:Mazak_VCN_Matrix_MTConnect_Functionality.pdf "wikilink")
+[Mazak_VCN_Matrix_MTConnect_Functionality.pdf](/pdfs/Mazak_VCN_Matrix_MTConnect_Functionality.pdf)
 
-[Media:Mazak_VCN_Matrix2_MTConnect
-Functionality.pdf](/Media:Mazak_VCN_Matrix2_MTConnect_Functionality.pdf "wikilink")
+[Mazak_VCN_Matrix2_MTConnect_Functionality.pdf](/pdfs/Mazak_VCN_Matrix2_MTConnect_Functionality.pdf)
 
 #### NUM
 
-[Media:NUM_MTConnect
-Functionality.pdf](/Media:NUM_MTConnect_Functionality.pdf "wikilink")
+[NUM_MTConnect_Functionality.pdf](/pdfs/NUM_MTConnect_Functionality.pdf)
 
 #### Okuma
 
-[Media:OKUMA-Lathe_MTConnect
-Functionality.pdf](/Media:OKUMA-Lathe_MTConnect_Functionality.pdf "wikilink")
+[OKUMA-Lathe_MTConnect_Functionality.pdf](/pdfs/OKUMA-Lathe_MTConnect_Functionality.pdf)
 
-[Media:OKUMA-MachiningCenter_MTConnect
-Functionality.pdf](/Media:OKUMA-MachiningCenter_MTConnect_Functionality.pdf "wikilink")
+[OKUMA-MachiningCenter_MTConnect_Functionality.pdf](/pdfs/OKUMA-MachiningCenter_MTConnect_Functionality.pdf)

@@ -1,6 +1,11 @@
 ---
 title: Samples, Events, and Condition
-permalink: /Samples,_Events,_and_Condition/
+description: 
+published: true
+date: 2021-09-24T00:32:33.545Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:32:31.410Z
 ---
 
 Samples, Events and Conditions are observations that provide information

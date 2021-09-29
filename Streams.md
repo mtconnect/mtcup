@@ -1,6 +1,11 @@
 ---
 title: Streams
-permalink: /Streams/
+description: 
+published: true
+date: 2021-09-25T02:21:12.596Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:32:40.511Z
 ---
 
 The MTConnect *[Agent](/Terminology "wikilink")* collects data from
@@ -18,8 +23,7 @@ Every MTConnect® response MUST contain a header as the first
 MTConnect® [XML](/Terminology "wikilink") Document sent back to an
 [application](/Terminology "wikilink").
 
-[none|500px|thumb|Header Schema Diagram for
-*MTConnectStreams*](/File:StreamsHeaderSchema.PNG "wikilink")
+![StreamsHeaderSchema.PNG](/images/StreamsHeaderSchema.PNG)
 
 ## Streams Structure
 
@@ -31,8 +35,7 @@ Its function is to contain *DeviceStream* sub-elements. There MUST be no
 [XML](/Terminology "wikilink") elements within the
 *[Streams](/Terminology "wikilink")* element.
 
-[none|500px|thumb|Streams Schema
-Diagram](/File:StreamsSchemaDiagram.PNG "wikilink")
+![StreamsSchemaDiagram.PNG](/images/StreamsSchemaDiagram.PNG)
 
 | Elements     | Description                                                   | Occurrence |
 | ------------ | ------------------------------------------------------------- | ---------- |
@@ -52,8 +55,7 @@ The following diagram illustrates the structure of the
 *[Events](/Terminology "wikilink")*, and *Condition* at the lowest
 level:
 
-[none|500px|thumb|Streams Example
-Structure](/File:StreamsExampleStructure.PNG "wikilink")
+![StreamsExampleStructure.PNG](/images/StreamsExampleStructure.PNG)
 
 Below is an example [XML](/Terminology "wikilink") Document response for
 an *[Agent](/Terminology "wikilink")* with two
@@ -114,8 +116,7 @@ that match the criteria, an empty *DeviceStream* element MUST be created
 to indicate that the [device](/Terminology "wikilink") exists, but there
 was no data available.
 
-[none|500px|thumb|*DeviceStream*
-Schema](/File:DeviceStreamSchema.PNG "wikilink")
+![DeviceStreamSchema.PNG](/images/DeviceStreamSchema.PNG)
 
 ***DeviceStream* Attributes:**
 
@@ -132,8 +133,7 @@ Schema](/File:DeviceStreamSchema.PNG "wikilink")
 
 ## ComponentStream
 
-[none|500px|thumb|*ComponentStream*
-Schema](/File:ComponentStreamSchema.PNG "wikilink")
+![ComponentStreamSchema.PNG](/images/ComponentStreamSchema.PNG)
 
 A *ComponentStream* is similar to the *DeviceStream*. It contains the
 information specific to the [component](/Terminology "wikilink") within

@@ -1,11 +1,16 @@
 ---
 title: Getting Started with MTConnect – Architecture
-permalink: /Getting_Started_with_MTConnect_–_Architecture/
+description: 
+published: true
+date: 2021-09-25T01:27:25.002Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:31:22.847Z
 ---
 
 ## Getting Started with MTConnect - Architecture
 
-[Media:MTConnectArchitecture_2012-10-26.pdf](/Media:MTConnectArchitecture_2012-10-26.pdf "wikilink")
+[MTConnectArchitecture_2012-10-26.pdf](/pdfs/MTConnectArchitecture_2012-10-26.pdf)
 
 September, 2012
 

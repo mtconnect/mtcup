@@ -1,6 +1,11 @@
 ---
 title: MTC FAQ
-permalink: /MTC_FAQ/
+description: 
+published: true
+date: 2021-09-25T01:22:13.332Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:31:50.282Z
 ---
 
 ## Frequently Asked Questions (FAQs)
@@ -16,6 +21,7 @@ To implement a DataItem observer in software you need to derive a class
 from the ChangeObserver class and override the virtual method, signal(),
 for example:
 
+```
     class BusyObserver : public ChangeObserver
     {
     public:
@@ -28,6 +34,7 @@ for example:
         tstring _id;
         DataItem * _item;
     };
+```
 
 You can write one superclass to derive from ChangeObserver or have per
 data item class definitions to handle data changes. Once you have the
@@ -35,14 +42,12 @@ class you need to register it with the actual DataItem so that it can
 notify an instance of the observer class that a change of state has
 occurred.
 
-</pre>
-
-`   Device *dev = config.getAgent()->getDeviceByName(devicename);`
-`   DataItem *di = dev->getDeviceDataItem("Xabs");`
-`       BusyObserver * observer =   new  BusyObserver("Xabs", di)`
-`   di->addObserver(observer);`
-
-</pre>
+```
+   Device *dev = config.getAgent()->getDeviceByName(devicename);
+   DataItem *di = dev->getDeviceDataItem("Xabs");
+       BusyObserver * observer =   new  BusyObserver("Xabs", di)
+   di->addObserver(observer);
+```
 
 To attach an observer, you will need to access the agent, which contains
 a list of devices, and inside each device is a list of data items, from
@@ -91,6 +96,7 @@ Answer: You can use VBScript to update data. Below is a VB Script test
 to write writing Xabs and Yabs values of the Mazak1 device to the
 MTConnect Agent.
 
+```
     Function HTTPPost(sUrl, sRequest)
       set oHTTP = CreateObject("Microsoft.XMLHTTP")
       oHTTP.open "POST", sUrl,false
@@ -105,6 +111,7 @@ MTConnect Agent.
     End Function
 
     HTTPPost "http://129.6.72.44/Mazak1/sample?Xabs=10.0&Yabs=20.0", ""
+```
 
 Posted: John Michaloski Tue 07/26/11 10:02:07 AM
 
@@ -113,6 +120,7 @@ Posted: John Michaloski Tue 07/26/11 10:02:07 AM
 Answer: Below is a VB Script test to write qmrcylinderplan.xml file to
 the MTConnect Agent.
 
+```
     Function HTTPPost(sUrl, sRequest)
       set oHTTP = CreateObject("Microsoft.XMLHTTP")
       oHTTP.open "POST", sUrl,false
@@ -146,6 +154,7 @@ the MTConnect Agent.
     Wscript.echo "Status: " & xmlhttp.statusText
     Wscript.echo "Response: " & xmlhttp.responseText
     set xmlhttp=Nothing
+```
 
 Posted: John Michaloski Tue 07/26/11 03:01:07 PM
 
@@ -229,9 +238,11 @@ in the DataItems list. This is done by creating a new Xml node ( ) and
 then associating the attributes we want with the node for the equivalent
 to:
 
+```
     <DataItem category="EVENT" id="id10223" name="probe_toolchange" type="OTHER" />
+```
 
-`This insures that an http agent/current query will return our new data item.`
+This insures that an http agent/current query will return our new data item.
 
 ```
     xmlNodeSetPtr nodeset = controllerdataitems->nodesetval;
@@ -323,6 +334,7 @@ show how this is done.
 1\. First, you create an XML file like the partial one based on the QMR
 schema (qifspecs.org):
 
+```
     <Part timestamp="2011-07-25T13:55:22" assetId="BORE_1232">
       <Inspection> <!-- this is the start of the QMR specification -->
         <MeasurementResults>
@@ -330,6 +342,7 @@ schema (qifspecs.org):
         </MeasurementResults>
       </Inspection>
     </Part>
+```
 
 The Part is an extension to MTConnect and should be in its own
 namespace. We could also call it WorkPiece or something else, but we'll
@@ -338,13 +351,14 @@ use Part for this example.
 1.  Next you'll need to get a version of the MTConnect Agent (1.2
     branch).
 
-<!-- end list -->
+
 
 1.  You will also need to configure the agent. It needs to have this
     line in the cfg file: AllowPut = true
 
 Here's an example:
 
+```
     Devices = VMC-3Axis.xml
     AllowPut = true
 
@@ -360,6 +374,7 @@ Here's an example:
         logging_level = debug
         output = cout
     }
+```
 
 Next you will need to post data to the agent. See FAQ: “Is there a
 simple way to upload an “asset” XML file to the HTTP C++ Agent?” for one
@@ -367,6 +382,7 @@ example on how to upload an XML file. Below, the type=Part bit is
 because we can store many different asset types and we need to track
 assets by type.
 
+```
     http://localhost:5000/asset/BORE_1232?type=Part
     PUT asset/BORE_1232?type=Part HTTP/1.1
     Host: localhost:5000
@@ -374,6 +390,7 @@ assets by type.
     Content-Length: <length of file>
 
     [bore.xml Data]
+```
 
 The asset id (BORE_1232) at the end MUST match the asset Id in the
 document. That's it for the changes to MTConnect. The new Assets
@@ -386,6 +403,7 @@ You will also receive an asset changed event telling you a part has been
 added/changed within the /current MTConnect query (highlighted in bold
 below):
 
+```
     <?xml version="1.0" encoding="UTF-8"?>
     <MTConnectStreams xmlns:m="urn:mtconnect.org:MTConnectStreams:1.2" ns="urn:mtconnect.org:MTConnectStreams:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:mtconnect.org:MTConnectStreams:1.2 http://www.mtconnect.org/schemas/MTConnectStreams_1.2.xsd">
       <Header creationTime="2011-07-25T19:44:18Z" sender="flori-2.local" instanceId="1311622912" version="1.2" bufferSize="131072" nextSequence="47" firstSequence="1" lastSequence="46"/>
@@ -400,6 +418,7 @@ below):
         </DeviceStream>
       </Streams>
     </MTConnectStreams>
+```
 
 The application monitors the assetchanged events and then grabs the
 data. This is the same process as with cutting tools. There's more docs
@@ -426,17 +445,20 @@ SHDR which allows you to transmit multiple lines at a time. Below is and
 EBNF representation of the SHDR with the new multiline asset
 implementation:
 
+```
     <SHDR> ::= <Date> "|" <StatementList>
     <StatementList> ::= <Statement> | <Statement> EOL <StatementList>
     <Statement> ::= <SimpleStatement>  | < MultilineStatement >
     <SimpleStatement> ::= <Tag> "|" <Value> { "|" <Value>}*
     <MultilineStatement> ::= "@" <Tag> "@" "|" ID  "|"  --multiline—{A-Z}+  .*  --multiline—{A-Z}+
+```
 
 where beginning and ending multiline statement “--multiline—{A-Z}” must
 match.
 
 Here is an example implementing the Asset SHDR:
 
+```
     2011-07-25T13:55:22|@ASSET@|BORE_1232|Part|--multiline--AAAA
     <Part timestamp="2011-07-25T13:55:22" assetId="BORE_1232">
       <Inspection>
@@ -445,6 +467,7 @@ Here is an example implementing the Asset SHDR:
       </Inspection>
     </Part>
     --multiline--AAAA
+```
 
 The multiline will scan until it sees a matching --multiline-XXXX token
 at the beginning of the line. The contents will act similar to the post.
@@ -460,7 +483,7 @@ logger_config block.
 logger_config configuration itemslogger_config The logging
 configuration section.logging_level The logging level: trace, debug,
 info, warn, error, or fatal. Default:infooutput The output file or
-stream. If a file is specified specify as: “file <filename>”. cout and
+stream. If a file is specified specify as: “file filename”. cout and
 cerr can be used to specify the standard output and standard error
 streams. Defaults to the same directory as the executable. Default: file
 adapter.log
@@ -520,8 +543,10 @@ Posted: John Michaloski Wed 08/17/11 09:48:07 AM
 
 Answer: The agent Xmlprinter.cpp has the code:
 
+```
     THROW_IF_XML2_ERROR(xmlTextWriterWriteAttribute(writer, BAD_CAST "creationTime", BAD_CAST getCurrentTime(GMT).c_str()));
-
+```
+  
 Posted Mon 08/29/11 10:58:58 AM
 
 ## Question: How can I incorporate windows features into the Cpp Agent?
@@ -553,6 +578,7 @@ Posted: John Michaloski Mon 08/29/11 10:58:58 AM
 Answer: First, add the windows subsystem described earlier and then add
 the COM functionality you require, as illustrated below:
 
+```
     int APIENTRY WinMain(HINSTANCE hInstance,
                          HINSTANCE hPrevInstance,
                          LPTSTR    lpCmdLine,
@@ -571,7 +597,8 @@ the COM functionality you require, as illustrated below:
             NULL //Reserved for future use
             );
     . . .
-
+```
+  
 Posted: John Michaloski Mon 08/29/11 10:58:58 AM
 
 ## Question: How can I incorporate another adapter with its own thread into the Cpp Agent?
@@ -618,6 +645,7 @@ model using a modern C++ approach. There is a boost and non-boost
 implementation. Below shows a SendHttp function to send any szrequest to
 an http server.
 
+```
     #include "boost/asio.hpp"
     using namespace std;
     Bool SendHttp(string szrequest, string domainname="127.0.0.1", string port="80")
@@ -638,13 +666,16 @@ an http server.
         }
         return true;
     }
+```
 
 Here is an example of using SendHttp to write Xabs and Yabs values to
 the Mazak1 device.
 
+```
     http://129.6.72.44/Mazak1/sample?Xabs=10.0&Yabs=20.0
 
     SendHttp("http://129.6.72.44/Mazak1/sample?Xabs=10.0&Yabs=20.0", "129.6.72.44");
+```
 
 Posted: John Michaloski Fri 09/23/11 11:47:41 AM
 
@@ -662,8 +693,9 @@ or the CLSID. Below shows how to do it with the program id.
 Then, the COM component has to be implemented as an automation IDispatch
 interface so that you can do method and property name lookup via the
 Dispatch interface. It’s easiest if you use ATL GetPropertyByName method
-and the default implementation of CComPtr<IDispatch>.
+and the default implementation of `CComPtr<IDispatch>`.
 
+```
     template<typename VariantType>
     _variant_t GetTypedProperty(CComPtr<IDispatch> pDispatch, _bstr_t propname, VariantType defaultval)
     {
@@ -688,6 +720,7 @@ and the default implementation of CComPtr<IDispatch>.
         CComPtr<IDispatch>  _progdispatch = (IDispatch *) pProg;
 
         speed=GetTypedProperty<LONG>(_progdispatch, L"Speed", 0);
+```
 
 Don’t forget to call ::CoInitialize(NULL) or everything will fail.
 
@@ -698,7 +731,9 @@ Posted: John Michaloski Tue 10/11/11 01:16:28 PM
 Answer: All the source code for dlib is included complete source code in
 the globals.cpp file.
 
+```
     ... mtconnect-cppagent\agent\globals.cpp(36):#include "../lib/dlib/all/source.cpp"
 
     /* Dlib library */
     #include "../lib/dlib/all/source.cpp"
+```

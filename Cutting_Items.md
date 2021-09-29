@@ -1,10 +1,14 @@
 ---
 title: Cutting Items
-permalink: /Cutting_Items/
+description: 
+published: true
+date: 2021-09-25T01:55:07.020Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:30:56.213Z
 ---
 
-[center|500px|thumb|Figure 1: Cutting
-Items](/File:CuttingItems.PNG "wikilink")
+![CuttingItems.PNG](/images/CuttingItems.PNG)
 
 An optional collection of cutting items that SHOULD be provided for each
 independent edge or insert. If the CuttingItems are not present; it
@@ -33,8 +37,7 @@ Item MUST NOT exist in MTConnect unless it is attached to a cutting
 tool. Some of the measurements, such as *FunctionalLength*, MUST be made
 with reference to the entire cutting tool to be meaningful.
 
-[center|500px|thumb|Figure 2: Cutting
-Item](/File:CuttingItem.PNG "wikilink")
+![CuttingItem.PNG](/images/CuttingItem.PNG)
 
 ### CuttingItem attributes
 
@@ -104,8 +107,6 @@ rules:
     (\#1) and work it’s way back to the cutting item closest to the
     gauge line.
 
-<!-- end list -->
-
   -
     2\. Flutes SHOULD be identified as such using the word `FLUTE`:. For
     example:
@@ -119,7 +120,7 @@ furthest insert from the end of the tool on that flute.
 
 ## ItemLife
 
-[center|500px|thumb|Figure 3: Item Life](/File:ItemLife.PNG "wikilink")
+![ItemLife.PNG](/images/ItemLife.PNG)
 
 The value is the current value for the tool life. The value MUST be a
 number. Tool life is an option element which can have three types,
@@ -171,21 +172,13 @@ The Code in the following table will refer to the acronym in the
 diagram. We will be referring to many diagrams to disambiguate all
 measurements of the cutting tools and items.
 
-[left|500px|thumb|Figure 4: Cutting
-Tool](/File:CuttingTool.PNG "wikilink") [center|500px|thumb|Figure 5:
-Cutting Item](/File:CuttingItem2.PNG "wikilink")
-[left|500px|thumb|Figure 6: Cutting Item Measurement
-Diagram](/File:CuttingItemMeasurementDiagram.PNG "wikilink")
-[center|500px|thumb|Figure 7: Cutting Item Drive
-Angle](/File:CuttingItemDriveAngle.PNG "wikilink")
+![CuttingTool.PNG](/images/CuttingTool.PNG)
 
+![CuttingItem2.PNG](/images/CuttingItem2.PNG)
 
+![CuttingToolMeasurements.PNG](/images/CuttingToolMeasurements.PNG)
 
-
-
-
-
-
+![CuttingItemDriveAngle.PNG](/images/CuttingItemDriveAngle.PNG)
 
 The following *CuttingItemMeasurements* will refer to the diagrams
 above:

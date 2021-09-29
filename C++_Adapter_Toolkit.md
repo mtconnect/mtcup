@@ -1,6 +1,11 @@
 ---
 title: C++ Adapter Toolkit
-permalink: /C++_Adapter_Toolkit/
+description: 
+published: true
+date: 2021-09-24T00:30:39.656Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:30:37.477Z
 ---
 
 The C++ Adapter toolkit is the most widely used framework currently in

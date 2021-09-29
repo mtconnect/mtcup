@@ -1,6 +1,11 @@
 ---
 title: Data Item Units
-permalink: /Data_Item_Units/
+description: 
+published: true
+date: 2021-09-24T00:31:06.147Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:31:03.650Z
 ---
 
 Here is a list of [DataItem](/Terminology "wikilink") Units:

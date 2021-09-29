@@ -1,6 +1,11 @@
 ---
 title: CSharp Adapter Toolkit
-permalink: /CSharp_Adapter_Toolkit/
+description: 
+published: true
+date: 2021-09-24T00:30:45.762Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:30:43.793Z
 ---
 
 The C\# Adapter Toolkit is a development toolkit coded in C\#. It was

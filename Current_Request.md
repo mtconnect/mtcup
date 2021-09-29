@@ -1,6 +1,11 @@
 ---
 title: Current Request
-permalink: /Current_Request/
+description: 
+published: true
+date: 2021-09-24T00:30:55.184Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:30:53.017Z
 ---
 
 Here is an example of the current request using the *at* parameter with

@@ -1,6 +1,11 @@
 ---
 title: Vertical Three Axis Mill
-permalink: /Vertical_Three_Axis_Mill/
+description: 
+published: true
+date: 2021-09-25T01:45:52.456Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:32:56.834Z
 ---
 
 This is a simple machine tool with a vertical spindle and a table that
@@ -9,7 +14,7 @@ Z axis that is aligned with the primary spindle. The X axis is defined
 as the longest axis perpendicular to the Z axis. The spindle is now
 defined as a *Rotary* C axis that rotates around the Z axis.
 
-[center|500px|thumb|Three Axis Mill](/File:ThreeAxisMill.PNG "wikilink")
+![ThreeAxisMill.PNG](/images/ThreeAxisMill.PNG)
 
 The [right hand rule](/Machine_Tool_Modeling "wikilink") applies when
 naming the axes and defining positive motion and rotation. In this case

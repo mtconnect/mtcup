@@ -1,10 +1,14 @@
 ---
 title: HyperQuadrex
-permalink: /HyperQuadrex/
+description: 
+published: true
+date: 2021-09-25T01:48:37.443Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:31:41.061Z
 ---
 
-[center|600px|thumb|HyperQuadrex
-Lathe](/File:Hyperquadrex.PNG "wikilink")
+![Hyperquadrex.PNG](/images/Hyperquadrex.PNG)
 
 ``` xml numberLines
 

@@ -1,6 +1,11 @@
 ---
 title: Using XML With MTConnect
-permalink: /Using_XML_With_MTConnect/
+description: 
+published: true
+date: 2021-09-25T02:27:08.727Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:32:49.589Z
 ---
 
 ## This document provides a guideline and definitions for using XML in conjunction with the MTConnect Standard.
@@ -69,8 +74,6 @@ A sample of XML Elements could include:
     defined portion of an XML Element. Sub-Elements are grouped into the
     parent element which in turn functions as a Container.
 
-<!-- end list -->
-
   - XML Tree: A graphical representation of an XML Document. This
     graphical representation defines the XML Elements and the
     relationship between the elements based on the XML Schema.
@@ -80,8 +83,9 @@ generate the tree.
 
 Samples of XML Trees:
 
-[<File:xmlspy_pict1.png>](/File:xmlspy_pict1.png "wikilink")
-[<File:device_hierarchy.png>](/File:device_hierarchy.png "wikilink")
+![Xmlspy_pict1.png](/images/Xmlspy_pict1.png)
+
+![Device_hierarchy.png](/images/Device_hierarchy.png)
 
   - Container: An XML Element that groups related or homogeneous XML
     Elements. A Container typically contains Child Elements or
@@ -102,15 +106,11 @@ the following formats:
     using the element type name without an “s” (singular). Example:
     `Device`, `Controller`, `Asset`, etc.
 
-<!-- end list -->
-
   - Abstract Element: An XML element that can be substituted for another
     element that is a sub-type of that element. An abstract element
     cannot appear in the document itself. For example, you cannot have a
     `Component` element in the `MTConnectDevices`, you can only have a a
     sub-type of `Component` like `Controller` or `Axes`.
-
-<!-- end list -->
 
   - Container of Abstract Elements: XML provides a mechanism to force
     the substitution for a particular element or type of element. When
@@ -163,7 +163,7 @@ that you can list all of the teams. It would look something like:
 <a class="sourceLine" id="cb1-10" title="10">     <span class="er">&lt;/Teams&gt;</span></a>
 <a class="sourceLine" id="cb1-11" title="11">   <span class="er">&lt;/State&gt;</span></a>
 <a class="sourceLine" id="cb1-12" title="12"><span class="er">&lt;/Country&gt;</span></a></code></pre></div></td>
-<td><p><a href="/File:team_roster_hier1.png" title="wikilink">thumbnail|right</a></p></td>
+<td><p><img src="/images/Team_roster_hier1.png"/></p></td>
 </tr>
 </tbody>
 </table>
@@ -189,7 +189,7 @@ does not appear in the XML Document. It would look something like:
 <a class="sourceLine" id="cb1-10" title="10">     <span class="er">&lt;/Teams&gt;</span></a>
 <a class="sourceLine" id="cb1-11" title="11">   <span class="er">&lt;/State&gt;</span></a>
 <a class="sourceLine" id="cb1-12" title="12"><span class="er">&lt;/Country&gt;</span></a></code></pre></div></td>
-<td><p><a href="/File:team_roster_hier2.png" title="wikilink">thumbnail|right</a></p></td>
+<td><p><img src="/images/Team_roster_hier2.png"/></p></td>
 </tr>
 </tbody>
 </table>
@@ -217,8 +217,6 @@ markup.
     used to reference an instance of an XML element. Tags come in three
     flavors:
 
-<!-- end list -->
-
   - *start-tags*; for example: <code>
     <section>
     </code>
@@ -226,8 +224,6 @@ markup.
     </section>
     </code>
   - *empty-element tags*; for example: <line-break />
-
-<!-- end list -->
 
   - Attributes: Information about an XML Element that provides
     additional descriptive details to further define the element.
@@ -258,20 +254,14 @@ etc.
   - Devices: An XML Container that represents a logical grouping of one
     or more Device XML Elements.
 
-<!-- end list -->
-
   - Device: An XML Element defined in the MTConnect Standard to
     represent a piece of equipment capable of performing an operation. A
     Device may be composed of a set of components that provide data to a
     software application. The Device is a separate entity with at least
     one component or data item providing information about the device.
 
-<!-- end list -->
-
   - MTConnectAssets: An XML Container that represents a logical grouping
     of one or more Asset XML Elements.
-
-<!-- end list -->
 
   - Asset: An XML Element defined in the MTConnect Standard to represent
     something that is associated with the manufacturing process that is
@@ -289,8 +279,6 @@ MTConnect Standard.
 
   - Components: An XML Container the represents all of the logical
     and/or physical portions of a device (piece of equipment).
-
-<!-- end list -->
 
   - Component: A logical or physical portion of a device (piece of
     equipment) that can be described independently and has data and/or
@@ -327,8 +315,6 @@ Sub-Components.
     associated with a XML Element. In MTConnect, DataItems can be
     associated with Device, Components, any Component Type, or a
     Sub-Component type, or Asset.
-
-<!-- end list -->
 
   - DataItem: An XML Element that provides the descriptive information
     associated with a XML Element - Device, Components, any Component

@@ -1,6 +1,11 @@
 ---
 title: B2MML
-permalink: /B2MML/
+description: 
+published: true
+date: 2021-09-24T00:30:36.590Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:30:32.989Z
 ---
 
 ## Overview of B2MML Relationship with MTConnect

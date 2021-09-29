@@ -1,6 +1,11 @@
 ---
 title: Near Real Time
-permalink: /Near_Real_Time/
+description: 
+published: true
+date: 2021-09-24T00:32:10.860Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:32:08.410Z
 ---
 
 MTConnect supports the ability to receive changes in near real time. The

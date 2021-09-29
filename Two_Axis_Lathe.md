@@ -1,13 +1,18 @@
 ---
 title: Two Axis Lathe
-permalink: /Two_Axis_Lathe/
+description: 
+published: true
+date: 2021-09-25T01:48:01.653Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:32:46.529Z
 ---
 
 This machine is a simple two axis horizontal lathe with a Z and an X
 axis where the Linear Z axis is aligned with the primary spindle Rotary
 C. The material is now held in the C axis and the tool is fixed.
 
-[center|500px|thumb|Two Axis Lathe](/File:TwoAxisLathe.PNG "wikilink")
+![TwoAxisLathe.PNG](/images/TwoAxisLathe.PNG)
 
 ``` xml
 

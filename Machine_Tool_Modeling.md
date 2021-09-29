@@ -1,6 +1,11 @@
 ---
 title: Machine Tool Modeling
-permalink: /Machine_Tool_Modeling/
+description: 
+published: true
+date: 2021-09-25T01:47:04.223Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:32:01.604Z
 ---
 
 MTConnect utilizes the right hand rule for all coordinate systems
@@ -11,8 +16,7 @@ The fingers will point in the positive direction. All linear axes
 represent a space within a machine that is defined by coordinates
 according to the right hand rule.
 
-[center|500px|thumb|Right Hand Rule Coordinate
-Planes](/File:RHRCoordinate.PNG "wikilink")
+![RHRCoordinate.PNG](/images/RHRCoordinate.PNG)
 
 For Rotary axes, the right hand rule defines the direction of rotary
 movement by wrapping one's right-hand fingers around the axis of
@@ -22,5 +26,4 @@ the positive direction of the vector or axis the hand encircles. All
 rotational angles and movements are given according to the right hand
 rule for Rotary axes.
 
-[center|500px|thumb|Rotational Right Hand
-Rule](/File:RRHR.PNG "wikilink")
+![RRHR.PNG](/images/RRHR.PNG)

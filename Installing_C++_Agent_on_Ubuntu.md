@@ -1,6 +1,11 @@
 ---
 title: Installing C++ Agent on Ubuntu
-permalink: /Installing_C++_Agent_on_Ubuntu/
+description: 
+published: true
+date: 2021-09-25T01:41:14.544Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:31:47.231Z
 ---
 
 ## Overview
@@ -15,30 +20,37 @@ The C++ agent depends on libxml2 and for testing libcppunit. The rest
 are the standard packages for building software. We also use cmake to
 generate the make files.
 
-` sudo apt-get update`
-` sudo apt-get install libxml2 libxml2-dev cmake git libcppunit-dev build-essential screen ruby curl`
+```
+sudo apt-get update
+sudo apt-get install libxml2 libxml2-dev cmake git libcppunit-dev build-essential screen ruby curl
+```
 
 ## Download and build the agent
 
 Make a directory for the agent work and our build directory
 
-` mkdir -p ~/agent/build`
-` cd ~/agent`
-` `
+```
+mkdir -p ~/agent/build
+cd ~/agent
+```
 
 Use git to clone the agent from the repo, init and update the submodules
 and create the makefiles. We're going to be building the Release
 version; a debug version can also be built, refer to the cmake docs for
 more info.
 
-` git clone `<https://github.com/mtconnect/cppagent.git>
-` cd build`
-` cmake -D CMAKE_BUILD_TYPE=Release ../cppagent/`
+```
+git clone <https://github.com/mtconnect/cppagent.git>
+cd build
+cmake -D CMAKE_BUILD_TYPE=Release ../cppagent/
+```
 
 Now build the app and install it in /usr/local/bin
 
-` make`
-` sudo cp agent/agent /usr/local/bin`
+```
+make
+sudo cp agent/agent /usr/local/bin
+```
 
 There may be a few build warnings, these can be ignored.
 
@@ -46,13 +58,17 @@ There may be a few build warnings, these can be ignored.
 
 Setup the agent
 
-` sudo mkdir -p /etc/mtconnect/agent /etc/mtconnect/adapter`
-` cd ~/agent/cppagent`
-` sudo cp -r styles schemas simulator/VMC-3Axis.xml /etc/mtconnect/agent`
+```
+sudo mkdir -p /etc/mtconnect/agent /etc/mtconnect/adapter
+cd ~/agent/cppagent
+sudo cp -r styles schemas simulator/VMC-3Axis.xml /etc/mtconnect/agent
+```
 
 Setup the simulator
 
-` sudo cp simulator/VMC-3Axis-Log.txt simulator/run_scenario.rb /etc/mtconnect/adapter`
+```
+sudo cp simulator/VMC-3Axis-Log.txt simulator/run_scenario.rb /etc/mtconnect/adapter
+```
 
 ## Configure the Agent
 
@@ -62,7 +78,7 @@ added from the copy and paste process, get rid of them as they are not
 part of the actual code. Copy and paste the edited text into the
 Terminal and press enter.
 
-``` bash numberLines
+``` 
 sudo sh -c 'cat <<EOT > /etc/mtconnect/agent/agent.cfg
 Devices = /etc/mtconnect/agent/VMC-3Axis.xml
 AllowPut = true
@@ -134,7 +150,7 @@ Just like configuring the agent above, install the following text files.
 
 The systemd script to start the agent:
 
-``` numberLines
+```
 sudo sh -c 'cat <<EOT > /etc/systemd/system/mtc_agent.service
 [Unit]
 Description=MTConnect Agent
@@ -151,7 +167,7 @@ EOT'
 
 The systemd script for the adapter:
 
-``` numberLines
+```
 sudo sh -c 'cat <<EOT > /etc/systemd/system/mtc_adapter.service
 [Unit]
 Description=MTConnect Adapter

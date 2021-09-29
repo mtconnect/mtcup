@@ -1,6 +1,11 @@
 ---
 title: XML Primer
-permalink: /XML_Primer/
+description: 
+published: true
+date: 2021-09-24T00:33:09.126Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:33:06.670Z
 ---
 
 ## XML

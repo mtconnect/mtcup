@@ -1,6 +1,11 @@
 ---
 title: ROS - MTConnect
-permalink: /ROS_-_MTConnect/
+description: 
+published: true
+date: 2021-09-24T00:32:30.503Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:32:28.428Z
 ---
 
   -

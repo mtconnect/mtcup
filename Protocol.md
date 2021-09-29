@@ -1,6 +1,11 @@
 ---
 title: Protocol
-permalink: /Protocol/
+description: 
+published: true
+date: 2021-09-24T00:32:23.930Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:32:21.529Z
 ---
 
 MTConnect includes a protocol based on HTTP that is outlined in Part 1:

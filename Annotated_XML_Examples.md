@@ -1,6 +1,11 @@
 ---
 title: Annotated XML Examples
-permalink: /Annotated_XML_Examples/
+description: 
+published: true
+date: 2021-09-24T00:30:31.920Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:30:28.692Z
 ---
 
 ## Simplest Device

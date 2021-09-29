@@ -1,6 +1,11 @@
 ---
 title: Sensor Types
-permalink: /Sensor_Types/
+description: 
+published: true
+date: 2021-09-24T00:32:36.679Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:32:34.516Z
 ---
 
 Types of measurements provided by *Sensor* include:

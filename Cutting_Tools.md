@@ -1,6 +1,11 @@
 ---
 title: Cutting Tools
-permalink: /Cutting_Tools/
+description: 
+published: true
+date: 2021-09-25T02:00:40.793Z
+tags: 
+editor: markdown
+dateCreated: 2021-09-24T00:30:59.701Z
 ---
 
 An Asset is something that is associated with the manufacturing process
@@ -11,8 +16,7 @@ associated with other [devices](/Terminology "wikilink") during their
 lifecycle. An asset does not have computational capabilities, but may
 carry information in some media physically attached to the asset.
 
-[center|500px|thumb|Figure 1: Assets
-Schema](/File:AssetsSchema.PNG "wikilink")
+![AssetsSchema.PNG](/images/AssetsSchema.PNG)
 
 Concrete examples of Assets are things like Cutting Tools, Workholding
 Systems, and Fixtures. This page will go over the modeling of Cutting
@@ -36,10 +40,10 @@ Assembly Item will be covered in the *CuttingToolDefinition* section of
 this page since this section contains the full ISO 13399 information
 about a Cutting Tool.
 
-[left|500px|thumb|Figure 2: Cutting Tool
-Parts](/File:CuttingToolParts.PNG "wikilink") [center|500px|thumb|Figure
-3: Cutting Tool
-Composition](/File:CuttingToolComposition.PNG "wikilink")
+![CuttingToolParts.PNG](/images/CuttingToolParts.PNG)
+
+![CuttingToolComposition.PNG](/images/CuttingToolComposition.PNG)
+
 Figure 2 illustrates the parts of a cutting tool. The cutting tool is
 the aggregate of all the components and the cutting item is the part of
 the tool that removes the material from the workpiece. These are the
@@ -52,9 +56,10 @@ cutting tool we are referring to the entirety of the assembly and when
 we provide data regarding the cutting item we are referencing each
 individual item as illustrated on the left of the previous diagram.
 
-[left|500px|thumb|Figure 4: Cutting Tool, Tool Item, and Cutting
-Item](/File:CTTICI.PNG "wikilink") [center|500px|thumb|Figure 5: Cutting
-Tool, Tool Item, and Cutting Item](/File:CTTICI2.PNG "wikilink")
+![CTTICI.PNG](/images/CTTICI.PNG)
+
+![CTTICI2.PNG](/images/CTTICI2.PNG)
+
 Figures 4 and 5 further illustrate the components of the cutting tool.
 As we compose the Tool Item, Cutting Item, Adaptive Item, we get a
 Cutting Tool. The Tool Item, Adaptive Item, and Assembly Item will only
@@ -67,8 +72,7 @@ illustrated below. The measurements will have a maximum, minimum, and
 nominal value representing the tolerance of allowable values for this
 dimension.
 
-[center|500px|thumb|Figure 6: Cutting Tool
-Measurements](/File:CuttingToolMeasurements.PNG "wikilink")
+![CuttingToolMeasurements.PNG](/images/CuttingToolMeasurements.PNG)
 
 The MTConnect standard will not define the entire geometry of the
 cutting tool, but will provide the information necessary to use the tool
@@ -80,10 +84,10 @@ will be defined in the measurement tables. The codes are consistent with
 the codes used in ISO 13399 and have been standardized. MTConnect will
 use the full text name for clarity in the XML document.
 
-[left|500px|thumb|Figure 7: Cutting Tool Asset
-Structure](/File:CuttingToolAssetStructure.PNG "wikilink")
-[center|500px|thumb|Figure 8: Cutting Tool
-Schema](/File:CuttingToolSchema.PNG "wikilink")
+![CuttingToolAssetStructure.PNG](/images/CuttingToolAssetStructure.PNG)
+
+![CuttingToolSchema.PNG](/images/CuttingToolSchema.PNG)
+
 **Cutting Tool Attributes:**
 
 | Attribute     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                     | Occurrence |
@@ -120,8 +124,7 @@ Currently the description contains no additional
 
 ### CuttingToolDefinition
 
-[center|500px|thumb|Figure 9: Cutting Tool
-Definition](/File:CuttingToolDefinition.PNG "wikilink")
+![CuttingToolDefinition.PNG](/images/CuttingToolDefinition.PNG)
 
 The *CuttingToolDefinition* contains the detailed structure of the
 cutting tool. The information contained in this element will be static
@@ -170,8 +173,7 @@ representation.
 
 ### CuttingToolLifeCycle
 
-[right|500px|thumb|Figure 10: Cutting Tool Life
-Cycle](/File:CuttingToolLifeCycle.PNG "wikilink")
+![CuttingToolLifeCycle.PNG](/images/CuttingToolLifeCycle.PNG)
 
 The life cycle refers to the data pertaining the the
 [application](/Terminology "wikilink") or the use of the tool. This data
@@ -219,8 +221,7 @@ combined, but only certain combinations make sense. A cutting tool
 SHOULD not be both `NEW` and `USED` at the same time. There are no rules
 in the schema to enforce this, but this is left to the implementer.
 
-[center|500px|thumb|Figure 11:
-*CutterStatus*](/File:CutterStatus.PNG "wikilink")
+![CutterStatus.PNG](/images/CutterStatus.PNG)
 
 The following combinations MUST NOT occur:
 
@@ -257,7 +258,7 @@ These are the values for the status of the cutting tool:
 
 ## Location
 
-[center|500px|thumb|Figure 12: Location](/File:Location.PNG "wikilink")
+![Location.PNG](/images/Location.PNG)
 
 This is the optional device specific pocket id providing the current
 pocket number this tool resides in. This can be any series of numbers
@@ -318,8 +319,7 @@ MUST be an integer.
 
 ### ReconditionCount
 
-[center|500px|thumb|Figure 13: Cutting Tool Life
-Cycle](/File:ReconditionCount.PNG "wikilink")
+![ReconditionCount.PNG](/images/ReconditionCount.PNG)
 
 This element MUST contain an integer value as the
 [CDATA](/Terminology "wikilink") that represents the number of times the
@@ -333,7 +333,7 @@ cutter has been reconditioned.
 
 ### Tool Life
 
-[center|500px|thumb|Figure 14: Tool Life](/File:ToolLife.PNG "wikilink")
+![ToolLife.PNG](/images/ToolLife.PNG)
 
 The value is the current value for the tool life. The value MUST be a
 number. Tool life is an option element which can have three types,
@@ -373,8 +373,7 @@ The value of *type* must be one of the following:
 
 ### ProcessSpindleSpeed
 
-[center|500px|thumb|Figure 15: Process Spindle
-Speed](/File:ProcessSpindleSpeed.PNG "wikilink")
+![ProcessSpindleSpeed.PNG](/images/ProcessSpindleSpeed.PNG)
 
 The Process Spindle Speed MUST be specified in revolutions/minute (RPM).
 The [CDATA](/Terminology "wikilink") MAY contain the process target
@@ -391,8 +390,7 @@ provided as attributes. At least one value MUST be provided.
 
 ### ProcessFeedRate
 
-[center|500px|thumb|Figure 16: Process Feed
-Rate](/File:ProcessFeedRate.PNG "wikilink")
+![ProcessFeedRate.PNG](/images/ProcessFeedRate.PNG)
 
 The Process Feed Rate MUST be specified in millimeters/second (mm/s).
 The [CDATA](/Terminology "wikilink") MAY contain the process target feed
@@ -431,8 +429,7 @@ different depending on the particular implementation and will be assumed
 to be consistent within the shop. MTConnect does not standardize the
 manufacturing process or the definition of the zero point.
 
-[center|500px|thumb|Figure 17:
-Measurement](/File:Measurement.PNG "wikilink")
+![Measurement.PNG](/images/Measurement.PNG)
 
 A measurement MUST be a scalar floating point value that MAY be
 constrained to a maximum and minimum value. Since the
@@ -489,10 +486,9 @@ The Code in the following table will refer to the acronyms in the
 diagrams. We will be referring to many diagrams to disambiguate all
 measurements of the *CuttingTool* and *CuttingItem*.
 
-[left|500px|thumb|Figure 18: Cutting Tool Measurement Diagram
-1](/File:CTMeasurementDiagram.PNG "wikilink") [center|500px|thumb|Figure
-19: Cutting Tool Measurement Diagram
-2](/File:CTMeasurementDiagram2.PNG "wikilink")
+![CTMeasurementDiagram.PNG](/images/CTMeasurementDiagram.PNG)
+
+![CTMeasurementDiagram2.PNG](/images/CTMeasurementDiagram2.PNG)
 
 | Measurement        | Code   | Description                                                                                                                                                                                                                                                                                                                                                                                                   | Units |
 | ------------------ | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- |
