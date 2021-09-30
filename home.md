@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2021-09-25T01:34:17.944Z
+date: 2021-09-30T00:25:47.615Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-22T02:21:15.482Z
@@ -66,3 +66,5 @@ See [www.MTConnect.org/r-d](http://www.MTConnect.org/r-d)
   - [HyperQuadrex](/HyperQuadrex "wikilink")
   - [Sensors](/Sensors "wikilink")
   - [Condition Examples](/Condition_Examples "wikilink")
+  
+:heart: MTConnect :heart:
