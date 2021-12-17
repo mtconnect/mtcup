@@ -2,13 +2,12 @@
 title: World of Printers
 description: 
 published: true
-date: 2021-12-17T06:21:27.929Z
+date: 2021-12-17T06:21:55.795Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-17T03:33:18.310Z
 ---
 
-# World of Printers
 
 > Have you ever wanted a single pane of glass to oversee all of your industrial printers? Yeah, me too.  
 
