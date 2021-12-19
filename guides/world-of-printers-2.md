@@ -2,7 +2,7 @@
 title: World of Printers - Part 2
 description: 
 published: true
-date: 2021-12-19T05:19:15.103Z
+date: 2021-12-19T05:19:23.665Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-19T04:44:17.165Z
@@ -50,7 +50,7 @@ Adapter Implementation
 An adapter is a software application concerened with:
 
 1. Communicating with the data source using its native protocol.
-2. Transforming source data
+2. Transforming source data blahahhhaa
 3. Communicating with the Agent using the SHDR protocol, a simple pipe delimited string transmission.
 
 
