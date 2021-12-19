@@ -2,7 +2,7 @@
 title: World of Printers - Part 1
 description: 
 published: true
-date: 2021-12-18T19:09:40.736Z
+date: 2021-12-19T03:58:57.306Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-17T03:33:18.310Z
@@ -36,7 +36,7 @@ PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8v
 
 ---
 
-Every manufacturer has some sort of networked interface to fulfill its duty as a printer and provide data points about its operating status and parameters.
+Every printer make has some sort of networked interface to fulfill its duty as a printer and provide data points about its operating status and parameters.
 
 |   |   |
 |---|---|
