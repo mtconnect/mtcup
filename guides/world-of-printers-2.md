@@ -2,7 +2,7 @@
 title: World of Printers - Part 2
 description: 
 published: true
-date: 2022-01-03T03:59:26.797Z
+date: 2022-01-03T13:47:58.482Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-19T04:44:17.165Z
@@ -143,9 +143,11 @@ The process of configuring and running the Agent is described in depth [here](ht
 
 3. Sample Endpoint - Set of timestamped observations.
 	`HTTP GET /sample`
-  `HTTP Server Push /sample using multipart/x-mixed-replace`
+  `HTTP Server Push /sample` via `multipart/x-mixed-replace`
 
 ### Application
+
+
 
 
 
