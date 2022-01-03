@@ -2,7 +2,7 @@
 title: World of Printers - Part 2
 description: 
 published: true
-date: 2022-01-03T15:33:11.442Z
+date: 2022-01-03T15:49:48.066Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-19T04:44:17.165Z
@@ -158,6 +158,8 @@ The process of configuring and running the Agent is described in depth [here](ht
 
 
 ### Application
+
+An application in the context of MTConnect can be simply characterized as a manufacturing support system having the ability to consume MTConnect vocabulary.  Let's illustrate a traditional, non-MTConnect deployment to understand the value.
 
 
 
