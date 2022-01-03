@@ -2,7 +2,7 @@
 title: World of Printers - Part 2
 description: 
 published: true
-date: 2022-01-03T15:21:07.453Z
+date: 2022-01-03T15:33:11.442Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-19T04:44:17.165Z
@@ -143,7 +143,7 @@ PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8v
 
 
 
-The process of configuring and running the Agent is described in depth [here](https://github.com/mtconnect/cppagent#usage). There are several ways to access the information from the reference Agent:
+The process of configuring and running the Agent is described in depth [here](https://github.com/mtconnect/cppagent#usage). The current representation is XML and JSON served over HTTP. There are several ways to access the information from the reference Agent:
 
 1. Probe Endpoint - The information model itself.
 	`HTTP GET /probe`
@@ -154,6 +154,8 @@ The process of configuring and running the Agent is described in depth [here](ht
 3. Sample Endpoint - Set of timestamped observations.
 	`HTTP GET /sample`
   `HTTP Server Push /sample` via `multipart/x-mixed-replace`
+  
+
 
 ### Application
 
