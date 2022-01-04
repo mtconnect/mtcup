@@ -2,7 +2,7 @@
 title: World of Printers - Part 1
 description: 
 published: true
-date: 2021-12-19T04:41:33.107Z
+date: 2022-01-04T18:19:56.016Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-17T03:33:18.310Z
@@ -158,6 +158,7 @@ PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8v
 
 Let me repeat that once more.  You build one dashboard, over a single information model, modeled over four different manufacturers of hardware. A dashboard is just one of many consumers of this information. This will become clearer as we try to address previously stated business concerns.
 
+[Part 2](/guides/world-of-printers-2) describes the components of MTConnect: Adapter, Agent, Application.
 
 
 
