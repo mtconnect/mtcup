@@ -2,7 +2,7 @@
 title: Modeling Technique - Strut Assembly Station
 description: 
 published: true
-date: 2022-01-17T00:13:41.985Z
+date: 2022-01-17T03:29:06.204Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-16T23:54:35.386Z
@@ -269,7 +269,9 @@ Using the [XState](https://xstate.js.org/) library we created the controller sta
 
 Controller and MTConnect output simulated using NodeRed.
 
-[Flow](http://143.198.106.54:1880/)
-[User Interface](http://143.198.106.54:1880/ui)
+[Live Flow](http://143.198.106.54:1880/)  
+[Live User Interface](http://143.198.106.54:1880/ui)  
+[Download Flows](/strut-assy/flows-strut-assy.json)
+
 
 ![strut-assy-1.gif](/strut-assy/strut-assy-1.gif)
