@@ -2,7 +2,7 @@
 title: Modeling Technique - Strut Assembly Station
 description: 
 published: true
-date: 2022-01-17T00:13:09.443Z
+date: 2022-01-17T00:13:41.985Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-16T23:54:35.386Z
@@ -26,7 +26,7 @@ The operator inputs a job information and production quantity into the human mac
 
 ## Available Data
 
-Below lists the available data points from the Rocwell logic controller.
+Below lists the available data points from the Rockwell logic controller.
 
 ![strut-assy-tags.png](/strut-assy/strut-assy-tags.png)
 
