@@ -2,7 +2,7 @@
 title: Modeling Technique - Strut Assembly Station
 description: 
 published: true
-date: 2022-01-17T15:50:28.064Z
+date: 2022-01-17T15:59:22.887Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-16T23:54:35.386Z
@@ -39,6 +39,16 @@ After some discussion we arrived the the following draft of the controller state
 Using the [XState](https://xstate.js.org/) library we created the controller state machine for later simulation and the MTConnect model itself.
 
 ![strut-assy-xstate-vis.png](/strut-assy/strut-assy-xstate-vis.png)
+
+## Simulated Controller Inputs
+
+- SIG_POWER - Station power supply switch.
+- SIG_JOB - Operator job information input.
+- SIG_PRESENT_PART - Operator action of presenting part to fixture, engaging part detection proximity sensors.
+- SIG_REMOVE_PART - Operator action of removing part from fixture, disengaging part detection proximity sensors.
+- SIG_OPERATOR_START - Operator action pressing cycle start button.
+- SIG_INTERRUPT - Operator action pressing E-Stop, breaking light curtain, or internal machine fault during cycle.
+- SIG_RESET_FAULT - Operator action resetting fault via E-Stop or reset button.
 
 ## Iteration #1
 
