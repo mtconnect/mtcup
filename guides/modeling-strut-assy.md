@@ -2,7 +2,7 @@
 title: Modeling Technique - Strut Assembly Station
 description: 
 published: true
-date: 2022-01-17T15:33:57.421Z
+date: 2022-01-17T15:50:28.064Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-16T23:54:35.386Z
@@ -18,7 +18,7 @@ The 'Strut Assembly Station' accepts strut housing and rod assemblies of varying
 
 ![strut-assy-front.png](/strut-assy/strut-assy-front.png)
 
-The operator inputs a job information and production quantity into the human machine interface, presents a strut assembly, inserts end fittings, and cycles the machine.  At cycle end, a label is printed and applied with relevant job information, and the assembly is removed.
+The operator inputs job information and production quantity into the human machine interface, presents a strut assembly, inserts end fittings, and cycles the machine.  At cycle end, a label is printed and applied with relevant job information, and the assembly is removed.
 
 ![strut-assy-view.png](/strut-assy/strut-assy-view.png)
 
