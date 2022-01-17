@@ -1,0 +1,1106 @@
+[
+    {
+        "id": "674e4713ae68a879",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8e1f17b5168ac658",
+        "type": "group",
+        "z": "674e4713ae68a879",
+        "name": "manual signals",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "bd2b23df33f5495c",
+            "707eab9666b76a4b",
+            "8b29b77779d9f310",
+            "90783e83ab2ec7ea",
+            "1d8f8380f9513812",
+            "6fb986a39c7042c1",
+            "1e72469c25b058fd",
+            "c6b04bb41ee8bb64",
+            "1c5665b86cc7cb71",
+            "3945547d8f9872ea",
+            "b7ed3ed3d7232edb",
+            "3450d087bfeec361",
+            "bf1dc0c46030deeb",
+            "b266218a9289bbba"
+        ],
+        "x": 174,
+        "y": 259,
+        "w": 472,
+        "h": 322
+    },
+    {
+        "id": "8f27c3087924c00e",
+        "type": "group",
+        "z": "674e4713ae68a879",
+        "name": "PLC Controller",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "3e89811a316a7d9c",
+            "18c8c55b2fed860c"
+        ],
+        "x": 954,
+        "y": 299,
+        "w": 272,
+        "h": 142
+    },
+    {
+        "id": "db2395586afefc24",
+        "type": "group",
+        "z": "674e4713ae68a879",
+        "name": "viz management",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "1c5aef036d105e51",
+            "482a277fc492db98",
+            "21eeef81620855e1",
+            "67f501483e1ab18c",
+            "b10cd9e2791ad2f4",
+            "87c5d530a4cc60c3",
+            "8114e2c2fb782098"
+        ],
+        "x": 1414,
+        "y": 239,
+        "w": 532,
+        "h": 222
+    },
+    {
+        "id": "38ab9175b1d316c8",
+        "type": "group",
+        "z": "674e4713ae68a879",
+        "name": "data items",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "4bae6f433cb1bed3",
+            "9cf7cdfca7917849",
+            "ee1f9e028cb8ed8b",
+            "14ee73e0f8b1638e",
+            "0177a45e1872f8c4",
+            "df58683e5ce28766",
+            "410bd7985a4de1a3",
+            "53b0766d64450719"
+        ],
+        "x": 954,
+        "y": 699,
+        "w": 232,
+        "h": 502
+    },
+    {
+        "id": "9ba2be6a61853c8f",
+        "type": "ui_group",
+        "name": "Strut-Assy",
+        "tab": "38f44478ebbc69f2",
+        "order": 1,
+        "disp": false,
+        "width": "18",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "38f44478ebbc69f2",
+        "type": "ui_tab",
+        "name": "Strut-Assy",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": true
+    },
+    {
+        "id": "75b2b5e2320d54c1",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "3e89811a316a7d9c",
+        "type": "smxstate",
+        "z": "674e4713ae68a879",
+        "g": "8f27c3087924c00e",
+        "name": "strut-assembly-controller",
+        "xstateDefinition": "const { assign } = xstate;\n\n/*** guards ***/\n\nconst isJobComplete = (context, event) => {\n  return context.job_finished;\n};\n\n/*** actions ***/\n\nconst resetContext = assign((context, event) => {\n  return {\n    job_name: '(none)',\n    job_qty_target: 0,\n    job_qty_remain: 0,\n    job_qty_good: 0,\n    job_qty_bad: 0,\n    job_finished: true,\n    cycle_start: 0,\n    cycle_end: 0\n  }\n});\n\nconst captureJob = assign((context, event) => {\n  return {\n    job_name: String.fromCharCode(65+Math.floor(Math.random() * 26)),\n    job_qty_target: 5,\n    job_qty_remain: 5,\n    job_qty_good: 0,\n    job_qty_bad: 0,\n    job_finished: false,\n    cycle_start: 0,\n    cycle_end: 0\n  }\n});\n\nconst makeFault = assign((context, event) => {\n  return {\n    ...context \n  }\n});\n\nconst cycleEndGood = assign((context, event) => {\n  return {\n    ...context,\n    job_qty_good: context.job_qty_good + 1,\n    job_qty_remain: context.job_qty_remain - 1,\n    job_finished: context.job_qty_remain - 1 == 0\n  }\n});\n\nconst cycleEndBad = assign((context, event) => {\n  return {\n    ...context,\n    job_qty_bad: context.job_qty_bad + 1,\n    job_qty_remain: context.job_qty_remain - 1,\n    job_finished: context.job_qty_remain - 1 == 0\n  }\n});\n\n/*** simulated out signals ***/\n\nconst simPowerSwitchOn = assign((context, event) => {\n  node.send({ topic: 'Devices/PowerSwitch', payload: { value: 1 }});\n  return { ...context }\n});\n\nconst simPowerSwitchOff = assign((context, event) => {\n  node.send({ topic: 'Devices/PowerSwitch', payload: { value: 0 }});\n  return { ...context }\n});\n\nconst simResetPushButtonOn = assign((context, event) => {\n  node.send({ topic: 'Devices/ResetPushButton', payload: { value: 1 }});\n  return { ...context }\n});\n\nconst simResetPushButtonOff = assign((context, event) => {\n  node.send({ topic: 'Devices/ResetPushButton', payload: { value: 0 }});\n  return { ...context }\n});\n\nconst simHousingPartPresentOn = assign((context, event) => {\n  node.send({ topic: 'Devices/HousingPartPresent', payload: { value: 1 }});\n  return { ...context }\n});\n\nconst simHousingPartPresentOff = assign((context, event) => {\n  node.send({ topic: 'Devices/HousingPartPresent', payload: { value: 0 }});\n  return { ...context }\n});\n\nconst simRodPartPresentOn = assign((context, event) => {\n  node.send({ topic: 'Devices/RodPartPresent', payload: { value: 1 }});\n  return { ...context }\n});\n\nconst simRodPartPresentOff = assign((context, event) => {\n  node.send({ topic: 'Devices/RodPartPresent', payload: { value: 0 }});\n  return { ...context }\n});\n\nconst simValveManifoldOn = assign((context, event) => {\n  node.send({ topic: 'Devices/ValveManifold', payload: { value: 1 }});\n  return { ...context }\n});\n\nconst simValveManifoldOff = assign((context, event) => {\n  node.send({ topic: 'Devices/ValveManifold', payload: { value: 0 }});\n  return { ...context }\n});\n\nconst simEStopOn = assign((context, event) => {\n  node.send({ topic: 'Devices/EStop', payload: { value: 1 }});\n  return { ...context }\n});\n\nconst simEStopOff = assign((context, event) => {\n  node.send({ topic: 'Devices/EStop', payload: { value: 0 }});\n  return { ...context }\n});\n\nconst simJobChange = (context, event) => {\n  node.send({ topic: 'Data/Job', payload: { value: context }});\n};\n\nconst simCycleTime = (context, event) => {\n  //node.warn(`ct sim ${context.cycle_end - context.cycle_start}`)\n  node.send({ topic: 'Data/CycleTime', payload: { value: context.cycle_end - context.cycle_start }});\n};\n\nconst captureCycleTimeStart = assign((context, event) => {\n  //node.warn('ct start')\n  return { \n    ...context, \n    cycle_start: Date.now()\n  }\n});\n\nconst captureCycleTimeEnd = assign((context, event) => {\n  //node.warn('ct end')\n  return { \n    ...context, \n    cycle_end: Date.now()\n  }\n});\n\n\nreturn {\n  machine: {\n    id: 'strut-assy-controller',\n    initial: 'unknown',\n    context: {\n      job_name: '(none)',\n      job_qty_target: 0,\n      job_qty_remain: 0,\n      job_qty_good: 0,\n      job_qty_bad: 0,\n      job_finished: true,\n      cycle_start: 0,\n      cycle_end: 0\n    },\n    states: {\n      unknown: {\n        on: {\n          SIG_NODERED_STARTUP : [\n            {\n              actions: ['simPowerSwitchOff'],\n              target: 'off'\n            }\n          ]\n        }  \n      },\n      off: {\n        on: {\n          SIG_POWER : [\n            {\n              actions: ['simPowerSwitchOn'],\n              target: 'on'\n            }\n          ]\n        }\n      },\n      on: {\n        entry: [\n          'simEStopOff',\n          'simHousingPartPresentOff',\n          'simRodPartPresentOff',\n          'simJobChange',\n          'simCycleTime'\n        ],\n        on: {\n          SIG_POWER : [\n            {\n              actions: ['resetContext','simPowerSwitchOff'],\n              target: 'off'\n            }\n          ]\n        },\n        initial: 'setup',\n        states: {\n          setup: {\n            on: {\n              SIG_JOB: [\n                {\n                  actions: ['resetContext','captureJob','simJobChange'],\n                  target: 'idle'\n                }\n              ]\n            }\n          },\n          idle: {\n            on: {\n              SIG_PRESENT_PART: [\n                {\n                  actions: ['simHousingPartPresentOn','simRodPartPresentOn'],\n                  target: 'ready'\n                }\n              ]\n            }\n          },\n          ready: {\n            on: {\n              SIG_OPERATOR_START: [\n                {\n                  target: 'running'\n                }\n              ]\n            }\n          },\n          running: {\n            entry: ['captureCycleTimeStart','simValveManifoldOn'],\n            on: {\n              SIG_INTERRUPT: [\n                {\n                  actions: ['makeFault','simEStopOn'],\n                  target: 'faulted'\n                }\n              ]\n            },\n            after: {\n              DLY_CYCLE_TIME: [ \n                {\n                  actions: ['cycleEndGood'],\n                  target: 'cycle_ended'\n                }\n              ]\n            },\n            exit: ['captureCycleTimeEnd','simCycleTime','simValveManifoldOff']\n          },\n          cycle_ended: {\n            on: {\n              SIG_REMOVE_PART: [\n                {\n                  target: 'setup',\n                  cond: 'isJobComplete'\n                },\n                {\n                  target: 'idle'\n                }\n              ]\n            },\n            exit: ['simHousingPartPresentOff','simRodPartPresentOff']\n          },\n          faulted: {\n            on: {\n              SIG_RESET_FAULT: [\n                {\n                  actions: ['cycleEndBad','simResetPushButtonOn'],\n                  target: 'cycle_ended',\n                }\n              ]\n            },\n            exit: ['simEStopOff','simResetPushButtonOff']\n          }\n        }\n      }\n    }\n  },\n  config: {\n    guards: { \n      isJobComplete\n    },\n    actions: { \n      resetContext,\n      captureJob,\n      makeFault,\n      cycleEndGood,\n      cycleEndBad,\n\n      simPowerSwitchOn,\n      simPowerSwitchOff,\n      simResetPushButtonOn,\n      simResetPushButtonOff,\n      simHousingPartPresentOn,\n      simHousingPartPresentOff,\n      simRodPartPresentOn,\n      simRodPartPresentOff,\n      simValveManifoldOn,\n      simValveManifoldOff,\n      simEStopOn,\n      simEStopOff,\n      simCycleTime,\n      captureCycleTimeStart,\n      captureCycleTimeEnd\n    },\n    delays: {\n      DLY_CYCLE_TIME: (context, event) => {\n        const min = 2000;\n        const max = 3000;\n        const r = Math.floor(Math.random() * (max - min + 1) + min);\n        node.warn(`cycle time: ${r}`);\n        return r;\n      }\n    }\n  },\n};\n",
+        "noerr": 0,
+        "x": 1090,
+        "y": 400,
+        "wires": [
+            [
+                "18c8c55b2fed860c"
+            ],
+            [
+                "81c16c65d5beaab9"
+            ]
+        ]
+    },
+    {
+        "id": "97217440febd22e5",
+        "type": "comment",
+        "z": "674e4713ae68a879",
+        "name": "required nodes",
+        "info": "- node-red-contrib-xstate-machine\n- node-red-dashboard\n- node-red-contrib-ui-svg\n- node-red-node-ui-table",
+        "x": 280,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "21eeef81620855e1",
+        "type": "ui_svg_graphics",
+        "z": "674e4713ae68a879",
+        "g": "db2395586afefc24",
+        "group": "9ba2be6a61853c8f",
+        "order": 1,
+        "width": "18",
+        "height": "8",
+        "svgString": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" class=\"background\" viewBox=\"0 0 360 185\" zoomAndPan=\"disable\" onload=\"if (parent.svgViewerNotifyOnLoad) parent.svgViewerNotifyOnLoad(evt);\" width=\"100%\" height=\"100%\" preserveAspectRatio=\"xMidYMid meet\">\n  <rect id=\"svgEditorBackground\" x=\"0\" y=\"0\" width=\"100\" height=\"100\" style=\"fill:none; stroke: none;\"/>\n  <text style=\"fill:black;font-family:Arial;font-size:8px;\" x=\"177.591\" y=\"66.5148\" id=\"lbl_state\" xml:space=\"preserve\"> PLC STATE:</text>\n  <text style=\"fill:black;font-family:Arial;font-size:8px;\" x=\"229.722\" y=\"66.8357\" id=\"txt_state\" xml:space=\"preserve\">UNKNOWN</text>\n  <text style=\"fill:black;font-family:Arial;font-size:8px;\" x=\"8.97298\" y=\"114.534\" id=\"lbl_job\" xml:space=\"preserve\">JOB:</text>\n  <text style=\"fill:black;font-family:Arial;font-size:8px;\" x=\"32.1781\" y=\"114.696\" id=\"txt_job\" xml:space=\"preserve\">NONE</text>\n  <rect x=\"103.632000\" y=\"73.957200\" style=\"fill:rosybrown;stroke:black;stroke-width:1px;\" id=\"machine_body\" width=\"230.748000\" height=\"44.326400\"/>\n  <g id=\"piece_part_in\">\n    <rect x=\"67.599400\" y=\"49.325600\" style=\"fill:silver;stroke:silver;stroke-width:1px;\" id=\"e2_pin\" width=\"32.676000\" height=\"1.431560\" transform=\"matrix(0.707107 -0.707107 0.707107 0.707107 6.32162 50.0089)\"/>\n    <rect x=\"74.307600\" y=\"52.972900\" style=\"fill:black;stroke:black;stroke-width:1px;\" id=\"e2_cylinder\" width=\"20.587000\" height=\"4.918250\" transform=\"matrix(0.707107 -0.707107 0.707107 0.707107 6.6732 50.224)\"/>\n  </g>\n  <g id=\"piece_part_good\" transform=\"matrix(1 0 0 1 179.037 -0.320856)\">\n    <rect x=\"68.969200\" y=\"49.782200\" style=\"fill:silver;stroke:silver;stroke-width:1px;\" id=\"e16_pin\" width=\"32.676000\" height=\"1.431560\" transform=\"matrix(0.707107 -0.707107 0.707107 0.707107 6.32162 50.0089)\"/>\n    <rect x=\"75.449100\" y=\"47.722000\" style=\"fill:black;stroke:black;stroke-width:1px;\" id=\"e16_cylinder\" width=\"20.587000\" height=\"4.918250\" transform=\"matrix(0.707107 -0.707107 0.707107 0.707107 6.6732 50.224)\"/>\n  </g>\n  <g id=\"piece_part_bad\" transform=\"matrix(1 0 0 1 221.069 -0.641712)\">\n    <rect x=\"68.969200\" y=\"49.782200\" style=\"fill:silver;stroke:silver;stroke-width:1px;\" id=\"e17_pin\" width=\"17.8365\" height=\"1.20326\" transform=\"matrix(0.903531 -0.428523 0.428523 0.903531 5.24533 19.7154)\"/>\n    <rect x=\"75.449100\" y=\"47.722000\" style=\"fill:black;stroke:black;stroke-width:1px;\" id=\"e17_cylinder\" width=\"8.9437\" height=\"4.68995\" transform=\"matrix(0.903531 -0.428523 0.428523 0.903531 5.50423 20.0361)\"/>\n    <rect x=\"82.870900\" y=\"46.405100\" style=\"fill:silver;stroke:silver;stroke-width:1px;\" id=\"e1_pin\" width=\"15.008900\" height=\"1.506710\" transform=\"matrix(0.65012 -0.694596 0.694596 0.65012 16.0002 55.9966)\"/>\n    <rect x=\"85.880000\" y=\"48.338700\" style=\"fill:black;stroke:black;stroke-width:1px;\" id=\"e3_cylinder\" width=\"8.943700\" height=\"4.689950\" transform=\"matrix(-0.673862 0.738857 -0.738857 -0.673862 203.983 -6.29406)\"/>\n  </g>\n  <g id=\"piece_part\">\n    <rect x=\"140.237000\" y=\"91.096300\" style=\"fill:silver;stroke:silver;stroke-width:1px;\" id=\"piece_part_pin\" width=\"157.167000\" height=\"7.527860\"/>\n    <rect x=\"168.856000\" y=\"88.394400\" style=\"fill:black;stroke:black;stroke-width:1px;\" id=\"piece_part_cylinder\" width=\"100.803000\" height=\"13.260800\"/>\n  </g>\n  <path d=\"M103.632459,73.957612l29.304625,20.499081l-29.782261,24.007943Z\" style=\"fill:gainsboro;stroke:black;stroke-width:1px;\" id=\"left_torque\"/>\n  <path d=\"M334.193931,73.479976l-31.677214,21.635353l31.859214,22.986307Z\" style=\"fill:gainsboro;stroke:black;stroke-width:1px;\" id=\"right_torque\"/>\n  <g id=\"btn_new_job\">\n    <rect x=\"6.775190\" y=\"136.705000\" style=\"fill:lightgray;stroke:black;stroke-width:1px;\" id=\"e1_rectangle\" width=\"64.781000\" height=\"35.130000\"/>\n    <text style=\"fill:black;font-family:Arial;font-size:8px;\" x=\"20.3119\" y=\"157.332\" id=\"e2_texte\" xml:space=\"preserve\">NEW JOB</text>\n  </g>\n  <g id=\"btn_present_part\">\n    <text style=\"fill:black;font-family:Arial;font-size:8px;\" x=\"14.1798\" y=\"156.876\" id=\"e3_texte\" xml:space=\"preserve\"/>\n  </g>\n  <g id=\"btn_power\">\n    <rect x=\"81.431600\" y=\"136.900000\" style=\"fill:ghostwhite;stroke:black;stroke-width:1px;\" id=\"e5_rectangle\" width=\"64.781000\" height=\"35.130000\"/>\n    <text style=\"fill:black;font-family:Arial;font-size:8px;\" x=\"86.5886\" y=\"157.527\" id=\"e7_texte\" xml:space=\"preserve\">\n      <tspan x=\"97.2199\" id=\"e7_tspan\">POWER</tspan>\n    </text>\n  </g>\n  <g id=\"btn_start\">\n    <rect x=\"150.433000\" y=\"137.220000\" style=\"fill:lightgreen;stroke:black;stroke-width:1px;\" id=\"e3_rectangle\" width=\"64.781000\" height=\"35.130000\"/>\n    <text style=\"fill:black;font-family:Arial;font-size:8px;\" x=\"155.59\" y=\"157.848\" id=\"e4_texte\" xml:space=\"preserve\">\n      <tspan x=\"169.113\" id=\"e4_tspan\">START</tspan>\n    </text>\n  </g>\n  <g id=\"btn_stop\">\n    <rect x=\"219.421000\" y=\"137.220000\" style=\"fill:lightcoral;stroke:black;stroke-width:1px;\" id=\"e4_rectangle\" width=\"64.781000\" height=\"35.130000\"/>\n    <text style=\"fill:black;font-family:Arial;font-size:8px;\" x=\"226.836\" y=\"157.848\" id=\"e5_texte\" xml:space=\"preserve\">\n      <tspan x=\"241.327\" id=\"text_stop\">STOP</tspan>\n    </text>\n  </g>\n  <g id=\"btn_reset\">\n    <rect x=\"287.442000\" y=\"137.220000\" style=\"fill:wheat;stroke:black;stroke-width:1px;\" id=\"e6_rectangle\" width=\"64.781000\" height=\"35.130000\"/>\n    <text style=\"fill:black;font-family:Arial;font-size:8px;\" x=\"294.857\" y=\"157.848\" id=\"e6_texte\" xml:space=\"preserve\">\n      <tspan x=\"308.383\" id=\"e6_stop\">RESET</tspan>\n    </text>\n  </g>\n  <text style=\"fill:black;font-family:Arial;font-size:8px;\" x=\"9.28369\" y=\"125.375\" id=\"e2_job\" xml:space=\"preserve\">TARGET:</text>\n  <text style=\"fill:black;font-family:Arial;font-size:8px;\" x=\"81.8938\" y=\"50.5157\" id=\"e1_job\" xml:space=\"preserve\">REMAIN:</text>\n  <text style=\"fill:black;font-family:Arial;font-size:8px;\" x=\"264.153\" y=\"49.3352\" id=\"e3_job\" xml:space=\"preserve\">GOOD:</text>\n  <text style=\"fill:black;font-family:Arial;font-size:8px;\" x=\"309.107\" y=\"49.0517\" id=\"e4_job\" xml:space=\"preserve\">BAD:</text>\n  <text style=\"fill:black;font-family:Arial;font-size:8px;\" x=\"45.4466\" y=\"125.698\" id=\"txt_qty_target\" xml:space=\"preserve\">0</text>\n  <text style=\"fill:black;font-family:Arial;font-size:8px;\" x=\"117.896\" y=\"50.693\" id=\"txt_qty_remain\" xml:space=\"preserve\">0</text>\n  <text style=\"fill:black;font-family:Arial;font-size:8px;\" x=\"293.548\" y=\"49.367\" id=\"txt_qty_good\" xml:space=\"preserve\">0</text>\n  <text style=\"fill:black;font-family:Arial;font-size:8px;\" x=\"330.767\" y=\"49.4218\" id=\"txt_qty_bad\" xml:space=\"preserve\">0</text>\n  <text style=\"fill:black;font-family:Arial;font-size:6px;\" x=\"106.063\" y=\"69.4886\" id=\"e2_state\" xml:space=\"preserve\">(Click part to remove.)</text>\n  <polyline style=\"stroke:black;fill:none;stroke-width:1px;\" id=\"e8_polyline\" points=\"85.9897,19.8933,85.9897,41.0693,116.471,41.0693,116.15,20.2143\"/>\n  <polyline style=\"stroke:green;fill:none;stroke-width:1px;\" id=\"e4_polyline\" points=\"265.99,17.9681,265.99,39.1441,296.471,39.1441,296.15,18.2891\"/>\n  <polyline style=\"stroke:red;fill:none;stroke-width:1px;\" id=\"e1_polyline\" points=\"307.701,17.9681,307.701,39.1441,338.182,39.1441,337.861,18.2891\"/>\n  <text style=\"fill:black;font-family:Arial;font-size:6px;\" x=\"72.8082\" y=\"8.79052\" id=\"e3_state\" xml:space=\"preserve\">(Click part to present.)</text>\n<text style=\"fill:black;font-family:Arial;font-size:8px;\" x=\"82.5856\" y=\"182.335\" id=\"e5_job\" xml:space=\"preserve\">OPERATORS:</text><text style=\"fill:black;font-family:Arial;font-size:8px;\" x=\"136.817\" y=\"182.199\" id=\"txt_ops\" xml:space=\"preserve\">0</text></svg>",
+        "clickableShapes": [
+            {
+                "targetId": "#btn_power",
+                "action": "click",
+                "payload": "{}",
+                "payloadType": "json",
+                "topic": "SIG_POWER"
+            },
+            {
+                "targetId": "#btn_new_job",
+                "action": "click",
+                "payload": "{}",
+                "payloadType": "json",
+                "topic": "SIG_JOB"
+            },
+            {
+                "targetId": "#piece_part_in",
+                "action": "click",
+                "payload": "{}",
+                "payloadType": "json",
+                "topic": "SIG_PRESENT_PART"
+            },
+            {
+                "targetId": "#piece_part",
+                "action": "click",
+                "payload": "{}",
+                "payloadType": "json",
+                "topic": "SIG_REMOVE_PART"
+            },
+            {
+                "targetId": "#btn_start",
+                "action": "click",
+                "payload": "{}",
+                "payloadType": "json",
+                "topic": "SIG_OPERATOR_START"
+            },
+            {
+                "targetId": "#btn_stop",
+                "action": "click",
+                "payload": "{}",
+                "payloadType": "json",
+                "topic": "SIG_INTERRUPT"
+            },
+            {
+                "targetId": "#btn_reset",
+                "action": "click",
+                "payload": "{}",
+                "payloadType": "json",
+                "topic": "SIG_RESET_FAULT"
+            }
+        ],
+        "javascriptHandlers": [],
+        "smilAnimations": [],
+        "bindings": [],
+        "showCoordinates": false,
+        "autoFormatAfterEdit": false,
+        "showBrowserErrors": false,
+        "showBrowserEvents": false,
+        "enableJsDebugging": false,
+        "sendMsgWhenLoaded": false,
+        "noClickWhenDblClick": false,
+        "outputField": "payload",
+        "editorUrl": "//drawsvg.org/drawsvg.html",
+        "directory": "",
+        "panning": "disabled",
+        "zooming": "disabled",
+        "panOnlyWhenZoomed": false,
+        "doubleClickZoomEnabled": false,
+        "mouseWheelZoomEnabled": false,
+        "dblClickZoomPercentage": 150,
+        "cssString": "div.ui-svg svg{\n    color: var(--nr-dashboard-widgetColor);\n    fill: currentColor !important;\n}\ndiv.ui-svg path {\n    fill: inherit;\n}",
+        "name": "",
+        "x": 1840,
+        "y": 360,
+        "wires": [
+            [
+                "668ab3d5e951ae8d"
+            ]
+        ]
+    },
+    {
+        "id": "18c8c55b2fed860c",
+        "type": "function",
+        "z": "674e4713ae68a879",
+        "g": "8f27c3087924c00e",
+        "name": "make state+substate",
+        "func": "if(msg.topic === 'state' && msg.payload.changed) {\n    if(typeof msg.payload.state === 'object') {\n        msg.state = [\n            Object.keys(msg.payload.state)[0],\n            msg.payload.state[Object.keys(msg.payload.state)[0]]\n        ];\n    } else {\n        msg.state = [\n            msg.payload.state,\n            ''\n        ];\n    }\n    \n    //node.warn(msg.state);\n    \n    return [\n        msg,\n        { topic: `State/${msg.state[1]==='' ? msg.state[0] : msg.state.join('+')}` }\n    ];\n}\n\nreturn null;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 340,
+        "wires": [
+            [
+                "67f501483e1ab18c",
+                "b10cd9e2791ad2f4"
+            ],
+            [
+                "4dc716b5d579b143"
+            ]
+        ]
+    },
+    {
+        "id": "67f501483e1ab18c",
+        "type": "function",
+        "z": "674e4713ae68a879",
+        "g": "db2395586afefc24",
+        "name": "update viz text",
+        "func": "return {\n    payload: [\n        {\n            command: 'update_text',\n            selector: '#txt_state',\n            textContent: msg.state.join(',')\n        },\n        {\n            command: 'update_text',\n            selector: '#txt_job',\n            textContent: msg.payload.context.job_name\n        },\n        {\n            command: 'update_text',\n            selector: '#txt_qty_target',\n            textContent: msg.payload.context.job_qty_target\n        },\n        {\n            command: 'update_text',\n            selector: '#txt_qty_remain',\n            textContent: msg.payload.context.job_qty_remain\n        },\n        {\n            command: 'update_text',\n            selector: '#txt_qty_good',\n            textContent: msg.payload.context.job_qty_good\n        },\n        {\n            command: 'update_text',\n            selector: '#txt_qty_bad',\n            textContent: msg.payload.context.job_qty_bad\n        }\n    ]\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1520,
+        "y": 360,
+        "wires": [
+            [
+                "21eeef81620855e1"
+            ]
+        ]
+    },
+    {
+        "id": "668ab3d5e951ae8d",
+        "type": "link out",
+        "z": "674e4713ae68a879",
+        "name": "out:svg_click",
+        "mode": "link",
+        "links": [
+            "ef59e8fc2022aff8"
+        ],
+        "x": 1995,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "ef59e8fc2022aff8",
+        "type": "link in",
+        "z": "674e4713ae68a879",
+        "name": "in:svg_click",
+        "links": [
+            "668ab3d5e951ae8d"
+        ],
+        "x": 895,
+        "y": 520,
+        "wires": [
+            [
+                "3e89811a316a7d9c"
+            ]
+        ]
+    },
+    {
+        "id": "a421ecc19f2a74e5",
+        "type": "comment",
+        "z": "674e4713ae68a879",
+        "name": "signal from viz (on click)",
+        "info": "",
+        "x": 980,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "b10cd9e2791ad2f4",
+        "type": "function",
+        "z": "674e4713ae68a879",
+        "g": "db2395586afefc24",
+        "name": "update viz part",
+        "func": "//node.warn(msg);\n\nvar part_visible = ['ready','running','cycle_ended','faulted'].includes(msg.state[1]);\n\nreturn {\n    payload: [\n        {\n            command: 'update_style',\n            selector: '#piece_part',\n            attributeName: 'visibility',\n            attributeValue: part_visible ? 'visible' : 'hidden'\n        },\n        {\n            command: 'update_style',\n            selector: '#piece_part_in',\n            attributeName: 'visibility',\n            attributeValue: msg.payload.context.job_qty_remain > 0 ? 'visible' : 'hidden'\n        },\n        {\n            command: 'update_style',\n            selector: '#piece_part_good',\n            attributeName: 'visibility',\n            attributeValue: msg.payload.context.job_qty_good > 0 ? 'visible' : 'hidden'\n        },\n        {\n            command: 'update_style',\n            selector: '#piece_part_bad',\n            attributeName: 'visibility',\n            attributeValue: msg.payload.context.job_qty_bad > 0 ? 'visible' : 'hidden'\n        }\n    ]\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1520,
+        "y": 320,
+        "wires": [
+            [
+                "21eeef81620855e1"
+            ]
+        ]
+    },
+    {
+        "id": "bf6965c6259cd617",
+        "type": "inject",
+        "z": "674e4713ae68a879",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 270,
+        "y": 220,
+        "wires": [
+            [
+                "f7393d35d38b899b"
+            ]
+        ]
+    },
+    {
+        "id": "f7393d35d38b899b",
+        "type": "function",
+        "z": "674e4713ae68a879",
+        "name": "SIG_NODERED_STARTUP",
+        "func": "msg.topic = 'SIG_NODERED_STARTUP';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 220,
+        "wires": [
+            [
+                "3e89811a316a7d9c"
+            ]
+        ]
+    },
+    {
+        "id": "1c5aef036d105e51",
+        "type": "ui_table",
+        "z": "674e4713ae68a879",
+        "g": "db2395586afefc24",
+        "group": "9ba2be6a61853c8f",
+        "name": "agent",
+        "order": 2,
+        "width": "18",
+        "height": "8",
+        "columns": [
+            {
+                "field": "ts",
+                "title": "ts",
+                "width": "15%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "id",
+                "title": "id",
+                "width": "10%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "path",
+                "title": "path",
+                "width": "20%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "category",
+                "title": "category",
+                "width": "10%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "type",
+                "title": "type.subType",
+                "width": "25%",
+                "align": "left",
+                "formatter": "html",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "value",
+                "title": "value",
+                "width": "20%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 1690,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "8b29b77779d9f310",
+        "type": "inject",
+        "z": "674e4713ae68a879",
+        "g": "8e1f17b5168ac658",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 270,
+        "y": 420,
+        "wires": [
+            [
+                "90783e83ab2ec7ea"
+            ]
+        ]
+    },
+    {
+        "id": "90783e83ab2ec7ea",
+        "type": "function",
+        "z": "674e4713ae68a879",
+        "g": "8e1f17b5168ac658",
+        "name": "SIG_REMOVE_PART",
+        "func": "msg.topic = 'SIG_REMOVE_PART';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 420,
+        "wires": [
+            [
+                "3e89811a316a7d9c"
+            ]
+        ]
+    },
+    {
+        "id": "1d8f8380f9513812",
+        "type": "function",
+        "z": "674e4713ae68a879",
+        "g": "8e1f17b5168ac658",
+        "name": "SIG_POWER",
+        "func": "msg.topic = 'SIG_POWER';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 300,
+        "wires": [
+            [
+                "3e89811a316a7d9c"
+            ]
+        ]
+    },
+    {
+        "id": "6fb986a39c7042c1",
+        "type": "inject",
+        "z": "674e4713ae68a879",
+        "g": "8e1f17b5168ac658",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 270,
+        "y": 300,
+        "wires": [
+            [
+                "1d8f8380f9513812"
+            ]
+        ]
+    },
+    {
+        "id": "1e72469c25b058fd",
+        "type": "function",
+        "z": "674e4713ae68a879",
+        "g": "8e1f17b5168ac658",
+        "name": "SIG_JOB",
+        "func": "msg.topic = 'SIG_JOB';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 340,
+        "wires": [
+            [
+                "3e89811a316a7d9c"
+            ]
+        ]
+    },
+    {
+        "id": "c6b04bb41ee8bb64",
+        "type": "inject",
+        "z": "674e4713ae68a879",
+        "g": "8e1f17b5168ac658",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 270,
+        "y": 340,
+        "wires": [
+            [
+                "1e72469c25b058fd"
+            ]
+        ]
+    },
+    {
+        "id": "1c5665b86cc7cb71",
+        "type": "function",
+        "z": "674e4713ae68a879",
+        "g": "8e1f17b5168ac658",
+        "name": "SIG_PRESENT_PART",
+        "func": "msg.topic = 'SIG_PRESENT_PART';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 380,
+        "wires": [
+            [
+                "3e89811a316a7d9c"
+            ]
+        ]
+    },
+    {
+        "id": "3945547d8f9872ea",
+        "type": "inject",
+        "z": "674e4713ae68a879",
+        "g": "8e1f17b5168ac658",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 270,
+        "y": 380,
+        "wires": [
+            [
+                "1c5665b86cc7cb71"
+            ]
+        ]
+    },
+    {
+        "id": "b7ed3ed3d7232edb",
+        "type": "function",
+        "z": "674e4713ae68a879",
+        "g": "8e1f17b5168ac658",
+        "name": "SIG_OPERATOR_START",
+        "func": "msg.topic = 'SIG_OPERATOR_START';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 460,
+        "wires": [
+            [
+                "3e89811a316a7d9c"
+            ]
+        ]
+    },
+    {
+        "id": "3450d087bfeec361",
+        "type": "inject",
+        "z": "674e4713ae68a879",
+        "g": "8e1f17b5168ac658",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 270,
+        "y": 460,
+        "wires": [
+            [
+                "b7ed3ed3d7232edb"
+            ]
+        ]
+    },
+    {
+        "id": "bf1dc0c46030deeb",
+        "type": "function",
+        "z": "674e4713ae68a879",
+        "g": "8e1f17b5168ac658",
+        "name": "SIG_INTERRUPT",
+        "func": "msg.topic = 'SIG_INTERRUPT';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 500,
+        "wires": [
+            [
+                "3e89811a316a7d9c"
+            ]
+        ]
+    },
+    {
+        "id": "b266218a9289bbba",
+        "type": "inject",
+        "z": "674e4713ae68a879",
+        "g": "8e1f17b5168ac658",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 270,
+        "y": 500,
+        "wires": [
+            [
+                "bf1dc0c46030deeb"
+            ]
+        ]
+    },
+    {
+        "id": "bd2b23df33f5495c",
+        "type": "inject",
+        "z": "674e4713ae68a879",
+        "g": "8e1f17b5168ac658",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 270,
+        "y": 540,
+        "wires": [
+            [
+                "707eab9666b76a4b"
+            ]
+        ]
+    },
+    {
+        "id": "707eab9666b76a4b",
+        "type": "function",
+        "z": "674e4713ae68a879",
+        "g": "8e1f17b5168ac658",
+        "name": "SIG_RESET_FAULT",
+        "func": "msg.topic = 'SIG_RESET_FAULT';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 540,
+        "wires": [
+            [
+                "3e89811a316a7d9c"
+            ]
+        ]
+    },
+    {
+        "id": "4bae6f433cb1bed3",
+        "type": "smxstate",
+        "z": "674e4713ae68a879",
+        "g": "38ab9175b1d316c8",
+        "name": "avail",
+        "xstateDefinition": "const { assign } = xstate;\n\nconst sendInfo = (context, event, mta) => {\n  var metas = {\n      ...mta.state.meta[Object.keys(mta.state.meta)[0]],\n      ...mta.state.meta[Object.keys(mta.state.meta)[1]]\n  }\n  \n  node.send({ \n    payload: {\n      ts: Date.now(),\n      ...metas\n    }\n  });\n  \n};\n\nreturn {\n  machine: {\n    id: 'avail',\n    meta: {\n      id: 'avail',\n      path: 'Device',\n      category: 'EVENT',\n      type: 'AVAILABILITY',\n      link: 'https://model.mtconnect.org/#Architecture__efa904df-e614-4dde-81d4-3d9d41ea5596'\n    },\n    context: { },\n    initial: 'unsettled',\n    states: {\n      unsettled: {\n        always: [\n          {\n            target: 'unavailable'\n          }    \n        ]\n      },\n      unavailable: {\n        meta: {\n          value: 'UNAVAILABLE'\n        },\n        entry: ['sendInfo'],\n        on: {\n          \"Devices/PowerSwitch\" : [\n            {\n              target: 'available',\n              cond: (context, event) => event.payload.value === 1\n            }\n          ]\n        }\n      },\n      available: {\n        meta: {\n          value: 'AVAILABLE'\n        },\n        entry: ['sendInfo'],\n        on: {\n          \"Devices/PowerSwitch\" : [\n            {\n              target: 'unavailable',\n              cond: (context, event) => event.payload.value === 0\n            }\n          ]\n        }\n      }\n    }\n  },\n  config: {\n    guards: { },\n    actions: {\n      sendInfo\n    },\n    activities: { }\n  }\n};",
+        "noerr": 0,
+        "x": 1030,
+        "y": 740,
+        "wires": [
+            [],
+            [
+                "012ed527cf850eb2"
+            ]
+        ]
+    },
+    {
+        "id": "482a277fc492db98",
+        "type": "function",
+        "z": "674e4713ae68a879",
+        "g": "db2395586afefc24",
+        "name": "add row",
+        "func": "node.send({\n    payload: {\n        command: 'addRow',\n        arguments: [\n          {\n            ...msg.payload,\n            type: `<span><a href=\"${msg.payload.link}\" target=\"_blank\">${msg.payload.type}</a></span>` \n          },\n        true\n    ],\n    returnPromise: false\n    }\n});",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1500,
+        "y": 420,
+        "wires": [
+            [
+                "1c5aef036d105e51"
+            ]
+        ]
+    },
+    {
+        "id": "9cf7cdfca7917849",
+        "type": "smxstate",
+        "z": "674e4713ae68a879",
+        "g": "38ab9175b1d316c8",
+        "name": "func",
+        "xstateDefinition": "const { assign } = xstate;\n\nconst sendInfo = (context, event, mta) => {\n  var metas = {\n      ...mta.state.meta[Object.keys(mta.state.meta)[0]],\n      ...mta.state.meta[Object.keys(mta.state.meta)[1]]\n  }\n  \n  node.send({ \n    payload: {\n      ts: Date.now(),\n      ...metas\n    }\n  });\n  \n};\n\nreturn {\n  machine: {\n    id: 'func',\n    meta: {\n      id: 'func',\n      path: 'Device',\n      category: 'EVENT',\n      type: 'FUNCTIONAL_MODE',\n      link: 'https://model.mtconnect.org/#Architecture__f43a20be-9afb-4479-8d7a-a0d87a490143'\n    },\n    context: { },\n    initial: 'unsettled',\n    states: {\n      unsettled: {\n        always: [\n          {\n            target: 'unavailable'\n          }    \n        ]\n      },\n      unavailable: {\n        meta: {\n          value: 'UNAVAILABLE'\n        },\n        entry: ['sendInfo'],\n        on: {\n          \"State/on+setup\" : [\n            {\n              target: 'setup'\n            }\n          ]\n        }\n      },\n      setup: {\n        meta: {\n          value: 'SETUP'\n        },\n        entry: ['sendInfo'],\n        on: {\n          \"State/on+idle\" : [\n            {\n              target: 'production'\n            }  \n          ]\n        }\n      },\n      production: {\n        meta: {\n          value: 'PRODUCTION'\n        },\n        entry: ['sendInfo'],\n        on: {\n          \"State/on+setup\" : [\n            {\n              target: 'setup'\n            }  \n          ]\n        }\n      }\n    },\n    on: {\n      \"State/off\" : [\n        {\n          target: 'unavailable'\n        }\n      ]\n    }\n  },\n  config: {\n    actions: {\n      sendInfo\n    }\n  }\n};",
+        "noerr": 0,
+        "x": 1030,
+        "y": 800,
+        "wires": [
+            [],
+            [
+                "012ed527cf850eb2"
+            ]
+        ]
+    },
+    {
+        "id": "4dc716b5d579b143",
+        "type": "link out",
+        "z": "674e4713ae68a879",
+        "name": "out:ctl-state",
+        "mode": "link",
+        "links": [
+            "438e4d9f94502b22",
+            "06604e217d3cd348"
+        ],
+        "x": 1295,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "81c16c65d5beaab9",
+        "type": "link out",
+        "z": "674e4713ae68a879",
+        "name": "out:ctl-sig",
+        "mode": "link",
+        "links": [
+            "438e4d9f94502b22",
+            "06604e217d3cd348"
+        ],
+        "x": 1295,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "438e4d9f94502b22",
+        "type": "link in",
+        "z": "674e4713ae68a879",
+        "name": "",
+        "links": [
+            "4dc716b5d579b143",
+            "81c16c65d5beaab9"
+        ],
+        "x": 875,
+        "y": 860,
+        "wires": [
+            [
+                "4bae6f433cb1bed3",
+                "9cf7cdfca7917849",
+                "ee1f9e028cb8ed8b",
+                "14ee73e0f8b1638e",
+                "0177a45e1872f8c4",
+                "df58683e5ce28766",
+                "53b0766d64450719"
+            ]
+        ]
+    },
+    {
+        "id": "57cba0a1f1e1dc55",
+        "type": "link in",
+        "z": "674e4713ae68a879",
+        "name": "in:mtc-add-row",
+        "links": [
+            "012ed527cf850eb2"
+        ],
+        "x": 1375,
+        "y": 420,
+        "wires": [
+            [
+                "482a277fc492db98"
+            ]
+        ]
+    },
+    {
+        "id": "012ed527cf850eb2",
+        "type": "link out",
+        "z": "674e4713ae68a879",
+        "name": "out:mtc-add-row",
+        "mode": "link",
+        "links": [
+            "57cba0a1f1e1dc55"
+        ],
+        "x": 1315,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "87c5d530a4cc60c3",
+        "type": "ui_ui_control",
+        "z": "674e4713ae68a879",
+        "g": "db2395586afefc24",
+        "name": "",
+        "events": "all",
+        "x": 1500,
+        "y": 280,
+        "wires": [
+            [
+                "8114e2c2fb782098"
+            ]
+        ]
+    },
+    {
+        "id": "8114e2c2fb782098",
+        "type": "function",
+        "z": "674e4713ae68a879",
+        "g": "db2395586afefc24",
+        "name": "operator count",
+        "func": "ops = context.get('op_count');\n\nif(msg.payload==='connect' || msg.payload==='lost') {\n    ops = ops + (msg.payload==='connect' ? 1 : -1);\n    context.set('op_count', ops);\n    node.send({\n        payload: [\n            {\n                command: 'update_text',\n                selector: '#txt_ops',\n                textContent: ops\n            }\n        ]\n    });\n}\n\nreturn null;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "context.set('op_count',0);",
+        "finalize": "",
+        "libs": [],
+        "x": 1670,
+        "y": 280,
+        "wires": [
+            [
+                "21eeef81620855e1"
+            ]
+        ]
+    },
+    {
+        "id": "ee1f9e028cb8ed8b",
+        "type": "smxstate",
+        "z": "674e4713ae68a879",
+        "g": "38ab9175b1d316c8",
+        "name": "estop",
+        "xstateDefinition": "const { assign } = xstate;\n\nconst sendInfo = (context, event, mta) => {\n  var metas = {\n      ...mta.state.meta[Object.keys(mta.state.meta)[0]],\n      ...mta.state.meta[Object.keys(mta.state.meta)[1]]\n  }\n  \n  node.send({ \n    payload: {\n      ts: Date.now(),\n      ...metas\n    }\n  });\n  \n};\n\nreturn {\n  machine: {\n    id: 'estop',\n    meta: {\n      id: 'estop',\n      path: 'Device.Controller',\n      category: 'EVENT',\n      type: 'COMPOSITION_STATE.SWITCHED',\n      link: 'https://model.mtconnect.org/#Architecture__40bd332b-d954-4b82-96f3-71e7a6321fc8'\n    },\n    context: { },\n    initial: 'unsettled',\n    states: {\n      unsettled: {\n        always: [\n          {\n            target: 'unavailable'\n          }    \n        ]\n      },\n      unavailable: {\n        meta: {\n          value: 'UNAVAILABLE'\n        },\n        entry: ['sendInfo'],\n        on: {\n          \"Devices/EStop\" : [\n            {\n              target: 'on',\n              cond: (context, event) => event.payload.value === 1\n            },\n            {\n              target: 'off',\n              cond: (context, event) => event.payload.value === 0\n            }\n          ]\n        }\n      },\n      on: {\n        meta: {\n          value: 'ON'\n        },\n        entry: ['sendInfo'],\n        on: {\n          \"Devices/EStop\" : [\n            {\n              target: 'off',\n              cond: (context, event) => event.payload.value === 0\n            }\n          ]\n        }\n      },\n      off: {\n        meta: {\n          value: 'OFF'\n        },\n        entry: ['sendInfo'],\n        on: {\n          \"Devices/EStop\" : [\n            {\n              target: 'on',\n              cond: (context, event) => event.payload.value === 1\n            }\n          ]\n        }\n      }\n    },\n    on: {\n      \"State/off\" : [\n        {\n          target: 'unavailable'\n        }\n      ]\n    }\n  },\n  config: {\n    actions: {\n      sendInfo\n    }\n  }\n};",
+        "noerr": 0,
+        "x": 1030,
+        "y": 860,
+        "wires": [
+            [],
+            [
+                "012ed527cf850eb2"
+            ]
+        ]
+    },
+    {
+        "id": "14ee73e0f8b1638e",
+        "type": "smxstate",
+        "z": "674e4713ae68a879",
+        "g": "38ab9175b1d316c8",
+        "name": "uptime",
+        "xstateDefinition": "const { assign } = xstate;\n\nconst resetContext = assign((context, event) => {\n  return {\n    accumulator: 0\n  }\n});\n\nconst accumulate = assign((context, event) => {\n  return {\n    accumulator: context.accumulator + 10\n  }\n});\n\nconst sendInfo = (context, event, mta) => {\n  var sortedMetaKeys = Object.keys(mta.state.meta).sort();\n  var subStateMeta = mta.state.meta[sortedMetaKeys[1]];\n  var subStateValue = subStateMeta.value;\n  if('dynamic' in subStateMeta && subStateMeta.dynamic) {\n    subStateValue = eval(subStateMeta.value);        \n  }\n  \n  var metas = {\n      ...mta.state.meta[sortedMetaKeys[0]],\n      value: subStateValue\n  }\n  \n  node.send({ \n    payload: {\n      ts: Date.now(),\n      ...metas\n    }\n  });\n};\n\nconst tick = (ctx, ev) => (cb) => {\n    const id = setInterval(() => cb({\n      type: 'TICK'\n    }),10000);\n    return () => clearInterval(id);\n};\n\nreturn {\n  machine: {\n    id: 'uptime',\n    meta: {\n      id: 'uptime',\n      path: 'Device.Controller',\n      category: 'SAMPLE',\n      type: 'EQUIPMENT_TIMER.POWERED',\n      units: 'SECOND',\n      link: 'https://model.mtconnect.org/#Architecture__0c3f6799-5984-4e43-98c4-7f4d694e318c'\n    },\n    context: {\n      accumulator: 0\n    },\n    initial: 'unsettled',\n    states: {\n      unsettled: {\n        always: [\n          {\n            target: 'unavailable'\n          }    \n        ]\n      },\n      unavailable: {\n        meta: {\n          value: 'UNAVAILABLE'\n        },\n        entry: ['resetContext','sendInfo'],\n        on: {\n          \"State/on+setup\" : [\n            {\n              target: 'accumulating'\n            }  \n          ]\n        }\n      },\n      accumulating: {\n        meta: {\n          dynamic: true,\n          value: 'context.accumulator'\n        },\n        entry: ['sendInfo'],\n        invoke: { src: 'tick' },\n        on: {\n          TICK : [\n            {\n              actions: ['accumulate','sendInfo']\n            }  \n          ]\n        }\n      }\n    },\n    on: {\n      \"State/off\" : [\n        {\n          target: 'unavailable'\n        }\n      ]\n    }\n  },\n  config: {\n    actions: {\n      resetContext,\n      accumulate,\n      sendInfo\n    },\n    services: { \n      tick\n    }\n  }\n};",
+        "noerr": 0,
+        "x": 1030,
+        "y": 920,
+        "wires": [
+            [],
+            [
+                "012ed527cf850eb2"
+            ]
+        ]
+    },
+    {
+        "id": "0177a45e1872f8c4",
+        "type": "smxstate",
+        "z": "674e4713ae68a879",
+        "g": "38ab9175b1d316c8",
+        "name": "system-condition",
+        "xstateDefinition": "const { assign } = xstate;\n\nconst sendInfo = (context, event, mta) => {\n  var metas = {\n      ...mta.state.meta[Object.keys(mta.state.meta)[0]],\n      ...mta.state.meta[Object.keys(mta.state.meta)[1]]\n  }\n  \n  node.send({ \n    payload: {\n      ts: Date.now(),\n      ...metas\n    }\n  });\n  \n};\n\nreturn {\n  machine: {\n    id: 'system-condition',\n    meta: {\n      id: 'system-condition',\n      path: 'Device.Controller',\n      category: 'CONDITION',\n      type: 'SYSTEM',\n      link: 'https://model.mtconnect.org/#Architecture__b5a9fb61-fd07-4e9d-a7a5-83ead254c35d'\n    },\n    context: { },\n    initial: 'unsettled',\n    states: {\n      unsettled: {\n        always: [\n          {\n            target: 'unavailable'\n          }    \n        ]\n      },\n      unavailable: {\n        meta: {\n          value: 'UNAVAILABLE'\n        },\n        entry: ['sendInfo'],\n        on: {\n          \"Devices/EStop\" : [\n            {\n              target: 'fault',\n              cond: (context, event) => event.payload.value === 1\n            },\n            {\n              target: 'normal',\n              cond: (context, event) => event.payload.value === 0\n            }\n          ]\n        }\n      },\n      normal: {\n        meta: {\n          value: 'NORMAL'\n        },\n        entry: ['sendInfo'],\n        on: {\n          \"Devices/EStop\" : [\n            {\n              target: 'fault',\n              cond: (context, event) => event.payload.value === 1\n            }\n          ]\n        }\n      },\n      warning: {\n        meta: {\n          value: 'WARNING'\n        }\n      },\n      fault: {\n        meta: {\n          value: 'FAULT'\n        },\n        entry: ['sendInfo'],\n        on: {\n          \"Devices/EStop\" : [\n            {\n              target: 'normal',\n              cond: (context, event) => event.payload.value === 0\n            }\n          ]\n        }\n      }\n    },\n    on: {\n      \"State/off\" : [\n        {\n          target: 'unavailable'\n        }\n      ]\n    }\n  },\n  config: {\n    actions: {\n      sendInfo\n    }\n  }\n};",
+        "noerr": 0,
+        "x": 1070,
+        "y": 980,
+        "wires": [
+            [],
+            [
+                "012ed527cf850eb2"
+            ]
+        ]
+    },
+    {
+        "id": "df58683e5ce28766",
+        "type": "smxstate",
+        "z": "674e4713ae68a879",
+        "g": "38ab9175b1d316c8",
+        "name": "part-present",
+        "xstateDefinition": "const { assign } = xstate;\n\nconst resetContext = assign((context, event) => {\n  return {\n    housing: 0,\n    rod: 0\n  }\n});\n\nconst captureHousingPartSignal = assign((context, event) => {\n  return {\n    ...context,\n    housing: event.payload.value\n  }\n});\n\nconst captureRodPartSignal = assign((context, event) => {\n  return {\n    ...context,\n    rod: event.payload.value\n  }\n});\n\nconst sendInfo = (context, event, mta) => {\n  var metas = {\n      ...mta.state.meta[Object.keys(mta.state.meta)[0]],\n      ...mta.state.meta[Object.keys(mta.state.meta)[1]]\n  }\n  \n  node.send({ \n    payload: {\n      ts: Date.now(),\n      ...metas\n    }\n  });\n  \n};\n\nreturn {\n  machine: {\n    id: 'part-present',\n    meta: {\n      id: 'part-present',\n      path: 'Device.Controller',\n      category: 'EVENT',\n      type: 'PART_DETECT',\n      link: 'https://model.mtconnect.org/#Architecture__6557d357-6c9a-43e2-ac74-5b1037f62770'\n    },\n    context: { \n        housing: 0,\n        rod: 0\n    },\n    initial: 'unsettled',\n    states: {\n      unsettled: {\n        always: [\n          {\n            target: 'unavailable'\n          }    \n        ]\n      },\n      unavailable: {\n        meta: {\n          value: 'UNAVAILABLE'\n        },\n        entry: ['resetContext','sendInfo'],\n        on: {\n          \"Devices/HousingPartPresent\" : [\n            {\n              actions: ['captureHousingPartSignal'],\n              target: 'not_present'\n            }\n          ],\n          \"Devices/RodPartPresent\" : [\n            {\n              actions: ['captureRodPartSignal'],\n              target: 'not_present'\n            }\n          ]\n        }\n      },\n      not_present: {\n        meta: {\n          value: 'NOT_PRESENT'\n        },\n        entry: ['sendInfo'],\n        on: {\n          \"Devices/HousingPartPresent\" : [\n            {\n              actions: ['captureHousingPartSignal'],\n              target: 'present',\n              cond: (context, event) => event.payload.value === 1 && context.rod === 1\n            },\n            {\n              actions: ['captureHousingPartSignal']\n            }\n          ],\n          \"Devices/RodPartPresent\" : [\n            {\n              actions: ['captureRodPartSignal'],\n              target: 'present',\n              cond: (context, event) => event.payload.value === 1 && context.housing === 1\n            },\n            {\n              actions: ['captureRodPartSignal']\n            }\n          ]\n        }\n      },\n      present: {\n        meta: {\n          value: 'PRESENT'\n        },\n        entry: ['sendInfo'],\n        on: {\n          \"Devices/HousingPartPresent\" : [\n            {\n              actions: ['captureHousingPartSignal'],\n              target: 'not_present',\n              cond: (context, event) => event.payload.value === 0\n            }\n          ],\n          \"Devices/RodPartPresent\" : [\n            {\n              actions: ['captureRodPartSignal'],\n              target: 'not_present',\n              cond: (context, event) => event.payload.value === 0\n            }\n          ]\n        }\n      }\n    },\n    on: {\n      \"State/off\" : [\n        {\n          target: 'unavailable'\n        }\n      ]\n    }\n  },\n  config: {\n    actions: {\n      sendInfo,\n      resetContext,\n      captureHousingPartSignal,\n      captureRodPartSignal\n    }\n  }\n};",
+        "noerr": 0,
+        "x": 1050,
+        "y": 1040,
+        "wires": [
+            [],
+            [
+                "012ed527cf850eb2"
+            ]
+        ]
+    },
+    {
+        "id": "410bd7985a4de1a3",
+        "type": "smxstate",
+        "z": "674e4713ae68a879",
+        "d": true,
+        "g": "38ab9175b1d316c8",
+        "name": "job-start",
+        "xstateDefinition": "const { assign } = xstate;\n\nconst captureTs = assign((context, event) => {\n  return {\n    ts: new Date().toISOString()\n  }\n});\n\nconst sendInfo = (context, event, mta) => {\n  var metas = {\n      ...mta.state.meta[Object.keys(mta.state.meta)[0]],\n      ...mta.state.meta[Object.keys(mta.state.meta)[1]]\n  }\n  \n  node.send({ \n    payload: {\n      ts: Date.now(),\n      ...metas\n    }\n  });\n  \n};\n\nreturn {\n  machine: {\n    id: 'job-start',\n    meta: {\n      id: 'job-start',\n      path: 'Device.Controller.ProcessOccurrence',\n      category: 'EVENT',\n      type: 'PROCESS_TIME.START',\n      link: 'https://model.mtconnect.org/#Architecture__686755ea-ff11-4439-91a6-0a3b81216302'\n    },\n    context: { \n      ts: ''\n    },\n    initial: 'unsettled',\n    states: {\n      unsettled: {\n        always: [\n          {\n            target: 'unavailable'\n          }    \n        ]\n      },\n      unavailable: {\n        meta: {\n          value: 'UNAVAILABLE'\n        },\n        entry: ['sendInfo'],\n        on: {\n          \"Data/Job\" : [\n            {\n              target: 'started',\n              cond: (context, event) => event.payload.value.job !== '(none)'\n            }\n          ]\n        }\n      },\n      started: {\n        meta: {\n          dynamic: true,\n          value: 'context.ts'\n        },\n        entry: ['sendInfo'],\n        on: {\n          \"Data/Job\" : [\n            {\n              target: 'unavailable',\n              cond: (context, event) => event.payload.value.job === '(none)'\n            }\n          ]\n        }\n      }\n    },\n    on: {\n      \"State/off\" : [\n        {\n          target: 'unavailable'\n        }\n      ]\n    }\n  },\n  config: {\n    guards: { },\n    actions: {\n      sendInfo,\n      captureTs\n    },\n    activities: { }\n  }\n};",
+        "noerr": 0,
+        "x": 1040,
+        "y": 1160,
+        "wires": [
+            [],
+            [
+                "012ed527cf850eb2"
+            ]
+        ]
+    },
+    {
+        "id": "53b0766d64450719",
+        "type": "smxstate",
+        "z": "674e4713ae68a879",
+        "g": "38ab9175b1d316c8",
+        "name": "cycle-time",
+        "xstateDefinition": "const { assign } = xstate;\n\nconst isValidValue = (context, event) => {\n  return event.payload.value > 0;\n};\n\nconst resetContext = assign((context, event) => {\n  return {\n    value: 0\n  }\n});\n\nconst capture = assign((context, event) => {\n  return {\n    value: event.payload.value / 1000\n  }\n});\n\nconst sendInfo = (context, event, mta) => {\n    node.warn(event)\n  var sortedMetaKeys = Object.keys(mta.state.meta).sort();\n  var subStateMeta = mta.state.meta[sortedMetaKeys[1]];\n  var subStateValue = subStateMeta.value;\n  if('dynamic' in subStateMeta && subStateMeta.dynamic) {\n    subStateValue = eval(subStateMeta.value);        \n  }\n  \n  var metas = {\n      ...mta.state.meta[sortedMetaKeys[0]],\n      value: subStateValue\n  }\n  \n  node.send({ \n    payload: {\n      ts: Date.now(),\n      ...metas\n    }\n  });\n};\n\nreturn {\n  machine: {\n    id: 'cycle-time',\n    meta: {\n      id: 'cycle-time',\n      path: 'Device.Controller.ProcessOccurrence',\n      category: 'SAMPLE',\n      type: 'PROCESS_TIMER.PROCESS',\n      units: 'SECOND',\n      link: 'https://model.mtconnect.org/#Architecture__683746cd-c233-4e1d-8f37-d11f8d0856fd'\n    },\n    context: { \n      value: 0\n    },\n    initial: 'unsettled',\n    states: {\n      unsettled: {\n        always: [\n          {\n            target: 'unavailable'\n          }    \n        ]\n      },\n      unavailable: {\n        meta: {\n          value: 'UNAVAILABLE'\n        },\n        entry: ['resetContext','sendInfo'],\n        on: {\n          \"Data/CycleTime\" : [\n            {\n              actions: ['capture'],\n              target: 'captured',\n              cond: 'isValidValue'\n            },\n            {\n              target: 'unavailable'\n            }\n          ]\n        }\n      },\n      captured: {\n        meta: {\n          dynamic: true,\n          value: 'context.value'\n        },\n        entry: ['sendInfo'],\n        on: {\n          \"Data/CycleTime\" : [\n            {\n              actions: ['capture'],\n              target: 'captured'\n            }  \n          ]\n        }\n      }\n    },on: {\n      \"State/off\" : [\n        {\n          target: 'unavailable'\n        }\n      ]\n    }\n  },\n  config: {\n    guards: {\n      isValidValue  \n    },\n    actions: {\n      resetContext,\n      capture,\n      sendInfo\n    }\n  }\n};",
+        "noerr": 0,
+        "x": 1050,
+        "y": 1100,
+        "wires": [
+            [],
+            [
+                "012ed527cf850eb2"
+            ]
+        ]
+    }
+]
