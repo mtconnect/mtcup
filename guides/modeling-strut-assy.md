@@ -2,7 +2,7 @@
 title: Modeling Technique - Strut Assembly Station
 description: 
 published: true
-date: 2022-01-17T15:59:22.887Z
+date: 2022-01-17T16:23:34.347Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-16T23:54:35.386Z
@@ -49,6 +49,24 @@ Using the [XState](https://xstate.js.org/) library we created the controller sta
 - SIG_OPERATOR_START - Operator action pressing cycle start button.
 - SIG_INTERRUPT - Operator action pressing E-Stop, breaking light curtain, or internal machine fault during cycle.
 - SIG_RESET_FAULT - Operator action resetting fault via E-Stop or reset button.
+
+## Simulated Controller Outputs
+
+- Devices/PowerSwitch (0,1)
+- Devices/ResetPushButton (0,1)
+- Devices/HousingPartPresent (0,1)
+- Devices/RodPartPresent (0,1)
+- Devices/ValveManifold (0,1)
+- Devices/EStop (0,1)
+- Data/Job
+- Data/CycleTime
+- State/off
+- State/on+setup
+- State/on+idle
+- State/on+ready
+- State/on+running
+- State/on+cycle_ended
+- State/on+faulted
 
 ## Iteration #1
 
