@@ -2,7 +2,7 @@
 title: Modeling Technique - Strut Assembly Station
 description: 
 published: true
-date: 2022-01-17T16:23:34.347Z
+date: 2022-03-14T13:59:45.083Z
 tags: 
 editor: markdown
 dateCreated: 2022-01-16T23:54:35.386Z
@@ -319,8 +319,7 @@ TODO: revise model
 
 Controller and MTConnect output simulated using NodeRed.
 
-[Live Flow](http://143.198.106.54:1880/)  
-[Live User Interface](http://143.198.106.54:1880/ui)  
+[Live User Interface](https://nodered-dashboard.ladder99.com/)  
 [Download Flows](/strut-assy/flows-strut-assy.json)
 
 
