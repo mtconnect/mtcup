@@ -2,7 +2,7 @@
 title: Installing C++ Agent on Ubuntu
 description: 
 published: true
-date: 2022-06-01T14:44:39.779Z
+date: 2022-06-01T14:45:50.792Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-24T00:31:47.231Z
@@ -156,7 +156,7 @@ To see the output in the browser, open the browser and go to `http://localhost:5
 
 ---
 
-Learn how to configure the Agent: [Usage and Configuration](/Agent-Configuration-and-Usage "wikilink")
+Learn how to configure the Agent: [Usage and Configuration](/Agent-Usage-and-Configuration "wikilink")
 
 Learn how to write your own Device file for the Agent: [Model Devices](/MTConnect_Device_File "wikilink")
 
