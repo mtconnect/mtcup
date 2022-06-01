@@ -2,7 +2,7 @@
 title: C++ Agent
 description: 
 published: true
-date: 2022-06-01T11:52:13.156Z
+date: 2022-06-01T12:26:25.288Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-24T00:30:40.556Z
@@ -66,7 +66,7 @@ To make data collection more efficient, all data that changes at the same time c
 
 Each pair will get a separate sequence number, but they will all have the same timestamp. This save bandwidth having to repeat the timestamp multiple times. There are some exceptions to this rule; some data items require more than a single value, they have multiple arguments. These are: Alarm (deprecated), Condition, TimeSeries, and Message. Each of these require a themselves to be on a separate line.
 
-### Conditions
+#### Conditions
 
 A condition represents the state of an alarm or warning on the machine. The standard specifies there can be a lot of additional information passed through to represent a condition. These are:
 
@@ -81,11 +81,11 @@ The level can be one of the following:
 
 The `native_code` is whatever the controller call this alarm, usually a number or pneumonic representation. The `native_severity` is also controller defined and will be merely passed through. The `qualifier` can be currently `HIGH` or `LOW` and the `error_text` is just a pass through from the controller of the text from the controller.
 
-### Message
+#### Message
 
 The message is simply a `|name|native_code|message` where the `native_code` is similar to the condition and is just what the controller calls the alarm in a numeric or pneumonic form.
 
-### Time Series
+#### Time Series
 
 When time series data items are passed through, they must have two additional arguments (the second is optional since it can be defaulted, but an empty cell must be present. The time series is represented as follows:
 
