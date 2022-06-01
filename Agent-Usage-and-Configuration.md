@@ -2,7 +2,7 @@
 title: C++ Agent Usage and Configuration
 description: 
 published: true
-date: 2022-06-01T14:20:07.784Z
+date: 2022-06-01T14:39:56.887Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-01T14:19:42.467Z
@@ -10,6 +10,7 @@ dateCreated: 2022-06-01T14:19:42.467Z
 
 ## Usage
 
+```
     agent [help|install|debug|run] [configuration_file]
        help           Prints this message
        install        Installs the service
@@ -18,16 +19,15 @@ dateCreated: 2022-06-01T14:19:42.467Z
        run            Runs the agent on the command line
        config_file    The configuration file to load
                       Default: agent.cfg in current directory
+```
 
-When the agent is started without any arguments it is assumed it will
-be running as a service and will begin the service initialization
-sequence. The full path to the configuration file is stored in the
-registry in the following location:
+When the agent is started without any arguments it is assumed it will be running as a service and will begin the service initialization sequence. The full path to the configuration file is stored in the registry in the following location:
 
+```
     \\HKEY_LOCAL_MACHINE\SOFTWARE\MTConnect\MTConnect Agent\ConfigurationFile
+```
 
-Directories
------
+### Directories
 
 * `agent/`        - This contains the application source files and CMake file.
 
@@ -48,44 +48,21 @@ Directories
 
 * `win32/`        - Libraries required only for the win32 build and the win32 solution.
 
-Windows Binary Release
------
+## Configuration
 
-The windows binary releases come with a prebuilt exe that is
-statically linked with the Microsoft Runtime libraries. Aside from the
-standard system libraries, the agent only requires winsock
-libraries. The agent has been test with version of Windows 2000 and
-later.
+The configuration file is using the standard Boost C++ file format. The configuration file format is flexible and allows for both many adapters to be served from one agent and an adapter to feed multiple agents. The format is:
 
-* `bin/`         - Win32 binary (no dependencies required).
-
-Building
--------
-
-Platform specific instructions are at the end of the README.
-
-Configuration
-------
-
-The configuration file is using the standard Boost C++ file
-format. The configuration file format is flexible and allows for both
-many adapters to be served from one agent and an adapter to feed
-multiple agents. The format is:
-
+```
     Key = Value
+```
 
-The key can only occur once within a section and the value can be any
-sequence of characters followed by a `<CR>`. There no significance to
-the order of the keys, so the file can be specified in free form. We
-will go over some configurations from a minimal configuration to more
-complex multi-adapter configurations.
+The key can only occur once within a section and the value can be any sequence of characters followed by a `<CR>`. There no significance to the order of the keys, so the file can be specified in free form. We will go over some configurations from a minimal configuration to more complex multi-adapter configurations.
 
-### Serving Static Content ###
+### Serving Static Content
 
-Using a Files Configuration section, individual files or directories can be inserted
-into the request file space from the agent. To do this, we use the Files top level 
-configuration declaration as follows:
+Using a Files Configuration section, individual files or directories can be inserted into the request file space from the agent. To do this, we use the Files top level  configuration declaration as follows:
 
+```
     Files {
         schemas {
             Path = ../schemas
@@ -96,86 +73,79 @@ configuration declaration as follows:
             Location = /styles/
         }
     }
+```
 
-Each set of files must be declared using a named file description, like schema or
-styles and the local `Path` and the `Location` the files will be mapped to in the
-HTTP server namespace. For example:
+Each set of files must be declared using a named file description, like schema or styles and the local `Path` and the `Location` the files will be mapped to in the HTTP server namespace. For example:
 
+```
     http://example.com:5000/schemas/MTConnectStreams_2.0.xsd will map to ../schemas/MTConnectStreams_2.0.xsd
+```
 
 All files will be mapped and the directory names do not need to be the same. These files can be either served directly or can be used to extend the schema or add XSLT stylesheets for formatting the XML in browsers.
 
-### Specifying the Extended Schemas ###
+### Specifying the Extended Schemas
 
 To specify the new schema for the documents, use the following declaration:
 
+```
     StreamsNamespaces {
       e {
         Urn = urn:example.com:ExampleStreams:2.0
         Location = /schemas/ExampleStreams_2.0.xsd
       }
     }
+```
 
-This will use the ExampleStreams_2.0.xsd schema in the document. The `e` is the alias that will be
-used to reference the extended schema. The `Location` is the location of the xsd file relative in 
-the agent namespace. The `Location` must be mapped in the `Files` section.
+This will use the ExampleStreams_2.0.xsd schema in the document. The `e` is the alias that will be used to reference the extended schema. The `Location` is the location of the xsd file relative in  the agent namespace. The `Location` must be mapped in the `Files` section.
 
-An optional `Path` can be added to the `...Namespaces` declaration instead of declaring the 
-`Files` section. The `Files` makes it easier to include multiple files from a directory and will
-automatically include all the default MTConnect schema files for the correct version. 
-(See `SchemaVersion` option below)
+An optional `Path` can be added to the `...Namespaces` declaration instead of declaring the  `Files` section. The `Files` makes it easier to include multiple files from a directory and will automatically include all the default MTConnect schema files for the correct version. (See `SchemaVersion` option below)
 
 You can do this for any one of the other documents: 
 
+```
     StreamsNamespaces
     DevicesNamespaces
     AssetsNamespaces
     ErrorNamespaces
+```
 
-### Specifying the XML Document Style ###
+### Specifying the XML Document Style
 
 The same can be done with style sheets, but only the Location is required.
 
+```
     StreamsStyle {
       Location = /styles/Streams.xsl
     }
+```
     
-An optional `Path` can also be used to reference the xsl file directly. This will not 
-include other files in the path like css or included xsl transforms. It is advised to
-use the `Files` declaration.
+An optional `Path` can also be used to reference the xsl file directly. This will not include other files in the path like css or included xsl transforms. It is advised to use the `Files` declaration.
     
 The following can also be declared:
 
+```
     DevicesStyle
     StreamsStyle
     AssetsStyle
     ErrorStyle
+```
 
-### Example 1: ###
+#### Example 1:
 
-Here’s an example configuration file. The `#` character can be used to
-comment sections of the file. Everything on the line after the `#` is
-ignored. We will start with an extremely simple configuration file.
+Here’s an example configuration file. The `#` character can be used to comment sections of the file. Everything on the line after the `#` is ignored. We will start with an extremely simple configuration file.
 
+```
     # A very simple file...
     Devices = VMC-3Axis.xml
+```
 
-This is a one line configuration that specifies the XML file to load
-for the devices. Since all the values are defaulted, an empty
-configuration file can be specified. This configuration file will load
-the `VMC-3Axis.xml` file and try to connect to an adapter located on the
-localhost at port 7878. `VMC-3Axis.xml` must only contain the definition
-for one device; if more devices exist, an error will be raised and the
-process will exit.
+This is a one line configuration that specifies the XML file to load for the devices. Since all the values are defaulted, an empty configuration file can be specified. This configuration file will load the `VMC-3Axis.xml` file and try to connect to an adapter located on the localhost at port 7878. `VMC-3Axis.xml` must only contain the definition for one device; if more devices exist, an error will be raised and the process will exit.
 
-### Example 2: ###
+#### Example 2:
 
-Most configuration files will specify at least one adapter. The
-adapters are contained within a block. The Boost configuration file
-format allows for nested configurations and block associations. There
-are a number of configurations that can be given for each
-adapter. Multiple adapters can be specified for one device as well.
+Most configuration files will specify at least one adapter. The adapters are contained within a block. The Boost configuration file format allows for nested configurations and block associations. There are a number of configurations that can be given for each adapter. Multiple adapters can be specified for one device as well.
 
+```
     Devices = VMC-3Axis.xml
 
     Adapters
@@ -186,12 +156,11 @@ adapter. Multiple adapters can be specified for one device as well.
             Port = 7878 # *Default* value...
         }
     }
+```
 
-This example loads the devices file as before, but specifies the list
-of adapters. The device is taken from the name `VMC-3Axis` that starts
-the nested block and connects to the adapter on `192.168.10.22` and port
-`7878`. Another way of specifying the equivalent configuration is:
+This example loads the devices file as before, but specifies the list of adapters. The device is taken from the name `VMC-3Axis` that starts the nested block and connects to the adapter on `192.168.10.22` and port `7878`. Another way of specifying the equivalent configuration is:
 
+```
     Devices = VMC-3Axis.xml
 
     Adapters
@@ -203,16 +172,15 @@ the nested block and connects to the adapter on `192.168.10.22` and port
             Port = 7878 # *Default* value...
         }
     }
+```
 
-Line 7 specifies the Device name associated with this adapter
-explicitly. We will show how this is used in the next example.
+Line 7 specifies the Device name associated with this adapter explicitly. We will show how this is used in the next example.
 
-### Example 3: ###
+#### Example 3:
 
-Multiple adapters can supply data to the same device. This is done by
-creating multiple adapter entries and specifying the same Device for
-each.
+Multiple adapters can supply data to the same device. This is done by creating multiple adapter entries and specifying the same Device for each.
 
+```
     Devices = VMC-3Axis.xml
 
     Adapters
@@ -232,11 +200,11 @@ each.
             Port = 7878 # *Default* value...
         }
     }
+```
 
-Both `Adapter_1` and `Adapter_2` will feed the `VMC-3Axis` device with
-different data items.  The `Adapter_1` name is arbitrary and could just
-as well be named `EnergySensor` if desired as illustrated below.
+Both `Adapter_1` and `Adapter_2` will feed the `VMC-3Axis` device with different data items.  The `Adapter_1` name is arbitrary and could just as well be named `EnergySensor` if desired as illustrated below.
 
+```
     Devices = VMC-3Axis.xml
 
     Adapters
@@ -255,12 +223,13 @@ as well be named `EnergySensor` if desired as illustrated below.
             Port = 7878 # *Default* value...
         }
     }
+```
 
-### Example 4: ###
+#### Example 4:
 
-In this example we change the port to 80 which is the default http port. 
-This also allows HTTP PUT from the local machine and 10.211.55.2. 
+In this example we change the port to 80 which is the default http port.  This also allows HTTP PUT from the local machine and 10.211.55.2.  
 
+```
     Devices = MyDevices.xml
     Port = 80
     AllowPutFrom = localhost, 10.211.55.2
@@ -268,14 +237,15 @@ This also allows HTTP PUT from the local machine and 10.211.55.2.
     Adapters
     {
         ...
+```
 
 For browsers you will no longer need to specify the port to connect to.
 
-### Example 5: ###
+#### Example 5:
 
-If multiple devices are specified in the XML file, there must be an
-adapter feeding each device.
+If multiple devices are specified in the XML file, there must be an adapter feeding each device.
 
+```
     Devices = MyDevices.xml
 
     Adapters
@@ -290,86 +260,83 @@ adapter feeding each device.
             Host = 192.168.10.24
         }
     }
+```
 
-This will associate the adapters for these two machines to the VMC
-and HMC devices in `MyDevices.xml` file. The ports are defaulted to
-7878, so we are not required to specify them.
+This will associate the adapters for these two machines to the VMC and HMC devices in `MyDevices.xml` file. The ports are defaulted to 7878, so we are not required to specify them.
 
-### Example 6: ###
+#### Example 6:
 
-In this example we  demonstrate how to change the service name of the agent. This 
-allows a single machine to run multiple agents and/or customize the name of the service. 
-Multiple configuration files can be created for each service, each with a different 
-ServiceName. The configuration file must be referenced as follows:
+In this example we  demonstrate how to change the service name of the agent. This allows a single machine to run multiple agents and/or customize the name of the service. 
+Multiple configuration files can be created for each service, each with a different ServiceName. The configuration file must be referenced as follows:
 
+```
     C:> agent install myagent.cfg
+```
 
 If myagent.cfg contains the following statements:
 
+```
     Devices = MyDevices.xml
     ServiceName = MTC Agent 1
 
     Adapters
     {
         ...
+```
 
-
-The service will now be displayed as "MTC Agent 1" as opposed to "MTConnect Agent"
-and it will automatically load the contents of myagent.cfg with it starts. You can now 
+The service will now be displayed as "MTC Agent 1" as opposed to "MTConnect Agent" and it will automatically load the contents of myagent.cfg with it starts. You can now 
 use the following command to start this from a command prompt:
 
+```
     C:> net start "MTC Agent 1"
+```
 
 To remove the service, do the following:
 
+```
     C:> agent remove myagent.cfg
+```
 
-### Example 7: ###
+#### Example 7:
 
-Logging configuration is specified using the `logger_config` block. You
-can change the `logging_level` to specify the verbosity of the logging
-as well as the destination of the logging output.
+Logging configuration is specified using the `logger_config` block. You can change the `logging_level` to specify the verbosity of the logging as well as the destination of the logging output.
 
+```
     logger_config
     {
         logging_level = debug
         output = file debug.log
     }
+```
 
-This will log everything from debug to fatal to the file
-debug.log. For only fatal errors you can specify the following:
+This will log everything from debug to fatal to the file debug.log. For only fatal errors you can specify the following:
 
+```
     logger_config
     {
         logging_level = fatal
     }
+```
 
-The default file is agent.log in the same directory as the agent.exe
-file resides. The default logging level is `info`. To have the agent log
-to the command window:
+The default file is agent.log in the same directory as the agent.exe file resides. The default logging level is `info`. To have the agent log to the command window:
 
+```
     logger_config
     {
         logging_level = debug
         output = cout
     }
+```
 
-This will log debug level messages to the current console window. When
-the agent is run with debug, it sets the logging configuration to
-debug and outputs to the standard output as specified above.
+This will log debug level messages to the current console window. When the agent is run with debug, it sets the logging configuration to debug and outputs to the standard output as specified above.
 
-### Example: 8 ###
+#### Example 8:
 
-The MTConnect C++ Agent supports extensions by allowing you to specify your
-own XSD schema files. These files must include the MTConnect schema and the top
-level node is required to be MTConnect. The "x" in this case is the namespace. You
-MUST NOT use the namespace "m" since it is reserved for MTConnect. See example 9
-for an example of changing the MTConnect schema file location.
+The MTConnect C++ Agent supports extensions by allowing you to specify your own XSD schema files. These files must include the MTConnect schema and the top level node is required to be MTConnect. The "x" in this case is the namespace. You **MUST NOT** use the namespace "m" since it is reserved for MTConnect. See example 9 for an example of changing the MTConnect schema file location.
 
-There are four namespaces in MTConnect: Devices, Streams, Assets, and Error. In 
-this example we will replace the Streams and Devices namespace with our own namespace
-so we can have validatable XML documents. 
+There are four namespaces in MTConnect: Devices, Streams, Assets, and Error. In this example we will replace the Streams and Devices namespace with our own namespace so we can have validatable XML documents. 
 
+```
 	StreamsNamespaces {
 	  x {
 	    Urn = urn:example.com:ExampleStreams:1.2
@@ -385,20 +352,15 @@ so we can have validatable XML documents.
 	    Path = ./ExampleDevices_1.2.xsd
 	  }
 	}
+```
 	
-For each schema file we have three options we need to specify. The Urn
-is the urn in the schema file that will be used in the header. The Location
-is the path specified in the URL when requesting the schema file from the 
-HTTP client and the Path is the path on the local file system.
+For each schema file we have three options we need to specify. The Urn is the urn in the schema file that will be used in the header. The Location is the path specified in the URL when requesting the schema file from the HTTP client and the Path is the path on the local file system.
 
-### Example: 9 ###
+#### Example 9:
 
-If you only want to change the schema location of the MTConnect schema files and 
-serve them from your local agent and not from the default internet location, you
-can use the namespace "m" and give the new schema file location. This MUST be the 
-MTConnect schema files and the urn will always be the MTConnect urn for the "m" 
-namespace -- you cannot change it.
+If you only want to change the schema location of the MTConnect schema files and serve them from your local agent and not from the default internet location, you can use the namespace "m" and give the new schema file location. This MUST be the MTConnect schema files and the urn will always be the MTConnect urn for the "m" namespace -- you cannot change it.
 
+```
 	StreamsNamespaces {
 	  m {
 	    Location = /schemas/MTConnectStreams_2.0.xsd
@@ -412,18 +374,16 @@ namespace -- you cannot change it.
 	    Path = ./MTConnectDevices_2.0.xsd
 	  }
 	}
+```
     
-The MTConnect agent will now serve the standard MTConnect schema files
-from the local directory using the schema path /schemas/MTConnectDevices_2.0.xsd.
+The MTConnect agent will now serve the standard MTConnect schema files from the local directory using the schema path `/schemas/MTConnectDevices_2.0.xsd`.
 
 
-### Example: 10 ###
+#### Example 10:
 
-We can also serve files from the MTConnect Agent as well. In this example
-we can assume we don't have access to the public internet and we would still 
-like to provide the MTConnect streams and devices files but have the MTConnect
-Agent serve them up locally. 
+We can also serve files from the MTConnect Agent as well. In this example we can assume we don't have access to the public internet and we would still like to provide the MTConnect streams and devices files but have the MTConnect Agent serve them up locally. 
 
+```
 	DevicesNamespaces {
 	  x {
 	    Urn = urn:example.com:ExampleDevices:2.0
@@ -441,51 +401,53 @@ Agent serve them up locally.
 	    Path = ./MTConnectDevices_2.0.xsd
 	  }
 	}
+```
 	
 Or use the short form for all files:
 
+```
         Files {
           schemas { 
             Location = /schemas/MTConnectStreams_2.0.xsd
             Path = ./MTConnectStreams_2.0.xsd
           }
         }
+```
     
-If you have specified in your xs:include schemaLocation inside the 
-ExampleDevices_2.0.xsd file the location "/schemas/MTConnectStreams_2.0.xsd",
-this will allow it to be served properly. This can also be done using the 
-Devices namespace:
+If you have specified in your xs:include schemaLocation inside the ExampleDevices_2.0.xsd file the location "/schemas/MTConnectStreams_2.0.xsd", this will allow it to be served properly. This can also be done using the Devices namespace:
 
+```
 	DevicesNamespaces {
 	  m {
 	    Location = /schemas/MTConnectDevices_2.0.xsd
 	    Path = ./MTConnectDevices_2.0.xsd
 	  }
 	}
+```
 
-The MTConnect agent will allow you to serve any other files you wish as well. You 
-can specify a new static file you would like to deliver:
+The MTConnect agent will allow you to serve any other files you wish as well. You can specify a new static file you would like to deliver:
 
+```
 	Files {
 	  myfile { 
 	    Location = /files/xxx.txt
 	    Path = ./files/xxx.txt
 	  }
+```
 
-The agent will not serve all files from a directory and will not provide an index 
-function as this is insecure and not the intended function of the agent.
+The agent will not serve all files from a directory and will not provide an index function as this is insecure and not the intended function of the agent.
 
-Ruby
----------
+### Ruby
 
 If the "-o with_ruby=True" build is selected, then use to following configuration:
 
+```
     Ruby {
       module = path/to/module.rb
     }
+```
 
-The module specified at the path given will be loaded. There are examples in the test/Resources/ruby directory in 
-github: [Ruby Tests](https://github.com/mtconnect/cppagent/tree/master/test/resources/ruby).
+The module specified at the path given will be loaded. There are examples in the test/Resources/ruby directory in  github: [Ruby Tests](https://github.com/mtconnect/cppagent/tree/master/test/resources/ruby).
 
 The current functionality is limited to the pipeline transformations from the adapters. Future changes will include adding sources and sinks.
 
@@ -533,10 +495,9 @@ MTConnect.agent.sources.each do |s|
 end
 ```
 
-Configuration Parameters
----------
+## Configuration Parameters
 
-### Top level configuration items ####
+### Top level configuration items
 
 * `BufferSize` - The 2^X number of slots available in the circular
   buffer for samples, events, and conditions.
@@ -648,7 +609,7 @@ Configuration Parameters
 
     *Default*: 1
 	
-#### Configuration Pameters for TLS (https) Support ####
+#### Configuration Pameters for TLS (https) Support
 
 The following parameters must be present to enable https requests. If there is no password on the certificate, `TlsCertificatePassword` may be omitted.
 	
@@ -681,7 +642,7 @@ The following parameters must be present to enable https requests. If there is n
     *Default*: *NULL*
 
 
-### Adapter configuration items ###
+### Adapter configuration items
 
 * `Adapters` - Adapters begins a list of device blocks. If the Adapters
   are not specified and the Devices file only contains one device, a
@@ -691,14 +652,11 @@ The following parameters must be present to enable https requests. If there is n
 
     *Default*: localhost 5000 associated with the default device
 
-    * `Device` - The name of the device that corresponds to the name of
-      the device in the Devices file. Each adapter can map to one
-      device. Specifying a "*" will map to the default device.
-
+    * `Device` - The name of the device that corresponds to the name of the device in the Devices file. Each adapter can map to one device. Specifying a "*" will map to the default device.
+    
         *Default*: The name of the block for this adapter or if that is
         not found the default device if only one device is specified
         in the devices file.
-
 
     * `Host` - The host the adapter is located on.
 
@@ -736,27 +694,19 @@ The following parameters must be present to enable https requests. If there is n
 
         *Default*: no
 
-    * `LegacyTimeout` - length of time an adapter can be silent before it
-        is disconnected. This is only for legacy adapters that do not support 
-        heartbeats. If heartbeats are present, this will be ignored.
+    * `LegacyTimeout` - length of time an adapter can be silent before it is disconnected. This is only for legacy adapters that do not support heartbeats. If heartbeats are present, this will be ignored.
 
         *Default*: 600
 
-    * `ReconnectInterval` - The amount of time between adapter reconnection attempts. 
-       This is useful for implementation of high performance adapters where availability
-       needs to be tracked in near-real-time. Time is specified in milliseconds (ms).
-       Defaults to the top level ReconnectInterval.
+    * `ReconnectInterval` - The amount of time between adapter reconnection attempts. This is useful for implementation of high performance adapters where availability needs to be tracked in near-real-time. Time is specified in milliseconds (ms). Defaults to the top level `ReconnectInterval`.
       
         *Default*: 10000
         
-    * `IgnoreTimestamps` - Overwrite timestamps with the agent time. This will correct
-      clock drift but will not give as accurate relative time since it will not take into
-      consideration network latencies. This can be overridden on a per adapter basis.
+    * `IgnoreTimestamps` - Overwrite timestamps with the agent time. This will correct clock drift but will not give as accurate relative time since it will not take into consideration network latencies. This can be overridden on a per adapter basis.
 
         *Default*: Top Level Setting
         
-    * `PreserveUUID` - Do not overwrite the UUID with the UUID from the adapter, preserve
-		  the UUID in the Devices.xml file. This can be overridden on a per adapter basis.
+    * `PreserveUUID` - Do not overwrite the UUID with the UUID from the adapter, preserve the UUID in the Devices.xml file. This can be overridden on a per adapter basis.
 
 		    *Default*: false
 		
@@ -764,9 +714,7 @@ The following parameters must be present to enable https requests. If there is n
 
         *Default*: false
     
-    * `RelativeTime` - The timestamps will be given as relative offsets represented as a floating 
-      point number of milliseconds. The offset will be added to the arrival time of the first 
-      recorded event.
+    * `RelativeTime` - The timestamps will be given as relative offsets represented as a floating point number of milliseconds. The offset will be added to the arrival time of the first recorded event.
 
         *Default*: false
 
@@ -811,8 +759,8 @@ The following parameters must be present to enable https requests. If there is n
 
     *Default*: 10000ms
 
-logger_config configuration items
------
+### logger_config configuration items
+
 
 * `logger_config` - The logging configuration section.
 
@@ -821,15 +769,11 @@ logger_config configuration items
 
         *Default*: `info`
 
-    * `output` - The output file or stream. If using a file, specify
-      as: `"file <filename>"`. cout and cerr can be used to specify the
-      standard output and standard error streams. *Default*s to the same
-      directory as the executable.
+    * `output` - The output file or stream. If using a file, specify  as: `"file <filename>"`. cout and cerr can be used to specify the standard output and standard error streams. *Default*s to the same directory as the executable.
 
         *Default*: file `adapter.log`
         
-    * `max_size` - The maximum log file size. Suffix can be K for kilobytes, M for megabytes, or
-      G for gigabytes. No suffix will default to bytes (B). Case is ignored.
+    * `max_size` - The maximum log file size. Suffix can be K for kilobytes, M for megabytes, or G for gigabytes. No suffix will default to bytes (B). Case is ignored.
     
         *Default*: 10M
         
@@ -841,8 +785,7 @@ logger_config configuration items
             
         *Default*: NEVER
     
-Adapter Agent Protocol Version 2.0
-=======
+## Adapter Agent Protocol Version 2.0
 
 The principle adapter data format is a simple plain text stream separated by the pipe character `|`. Every line except for commands starts with an optional timestamp in UTC. If the timestamp is not supplied the agent will supply a timestamp of its own taken at the arrival time of the data to the agent. The remainder of the line is a key followed by data – depending on the type of data item is being written to.
 
@@ -854,71 +797,103 @@ A line is a sequence of fields separated by `|`. The simplest requires one key/v
 
 If the value itself contains a pipe character `|` the pipe must be escaped using a leading backslash `\`. In addition the entire value has to be wrapped in quotes:
 
+```
         2009-06-15T00:00:00.000000|description|"Text with \| (pipe) character."
+```
 
 Conditions require six (6) fields as follows:
 
+```
 	<timestamp>|<data_item_name>|<level>|<native_code>|<native_severity>|<qualifier>|<message>
+```
 	
 For a complete description of these fields, see the standard. An example line will look like this:
 
+```
 	2014-09-29T23:59:33.460470Z|htemp|WARNING|HTEMP|1|HIGH|Oil Temperature High
+```
 	
 The next special format is the Message. There is one additional field, native_code, which needs to be included:
 
+```
 	2014-09-29T23:59:33.460470Z|message|CHG_INSRT|Change Inserts
+```
 	
 Time series data also gets special treatment, the count and optional frequency are specified. In the following example we have 10 items at a frequency of 100hz:
 
+```
 	2014-09-29T23:59:33.460470Z|current|10|100|1 2 3 4 5 6 7 8 9 10
+```
 
 The data item name can also be prefixed with the device name if this adapter is supplying data to multiple devices. The following is an example of a power meter for three devices named `device1`, `device2`, and `device3`:
 
+```
 	2014-09-29T23:59:33.460470Z|device1:current|12|device2:current|11|device3:current|10
+```
 
 All data items follow the formatting requirements in the MTConnect standard for the vocabulary and coordinates like PathPosition.
 
 A new feature introduced in version 1.4 is the ability to announce a reset has been triggered. If we have a part count named `pcount` that gets reset daily, the new protocol is as follows:
 
+```
 	2014-09-29T23:59:33.460470Z|pcount|0:DAY
+```
 	
 To specify the duration of the static, indicate it with an `@` sign after the timestamp as follows:
 
+```
 	2014-09-29T23:59:33.460470Z@100.0|pcount|0:DAY
+```
 	
-### `DATA_SET` Representation ###
+### `DATA_SET` Representation
 
 A new feature in version 1.5 is the `DATA_SET` representation which allows for key value pairs to be given. The protocol is similar to time series where each pair is space delimited. The agent automatically removes duplicate values from the stream and allows for addition, deletion and resetting of the values. The format is as follows:
 
+```
 	2014-09-29T23:59:33.460470Z|vars|v1=10 v2=20 v3=30
+```
 
 This will create a set of three values. To remove a value
 
+```
 	2014-09-29T23:59:33.460470Z|vars|v2 v3=
+```
 
 This will remove v2 and v3. If text after the equal `=` is empty or the `=` is not given, the value is deleted. To clear the set, specify a `resetTriggered` value such as `MANUAL` or `DAY` by preceeding it with a colon `:` at the beginning of the line.
 
+```
 	2014-09-29T23:59:33.460470Z|vars|:MANUAL
+```
 
 This will remove all the values from the current set. The set can also be reset to a specific set of values:
 
+```
 	2014-09-29T23:59:33.460470Z|vars|:MANUAL v5=1 v6=2
+```
 
 This will remove all the old values from the set and set the current set. Values will accumulate when addition pairs are given as in:
 
+```
 	2014-09-29T23:59:33.460470Z|vars|v8=1 v9=2 v5=10
+```
 
 This will add values for v8 and v9 and update the value for v5 to 10. If the values are duplcated they will be removed from the stream unless a `resetTriggered` value is given.
 
+```
 	2014-09-29T23:59:33.460470Z|vars|v8=1 v9=2 v5=0
+```
 
 Will be detected as a duplicate with respect to the previous values and will be removed. If a partial update is given and the other values are duplicates, then will be stripped:
 
+```
 	2014-09-29T23:59:33.460470Z|vars|v8=1 v9=3 v5=10
+```
 
 Will be effectively the same as specifying:
 
+```
 	2014-09-29T23:59:33.460470Z|vars|v9=2
+```
 
 And the streams will only have the one value when a sample is request is made at that point in the stream.
 
@@ -926,45 +901,55 @@ When the `discrete` flag is set to `true` in the data item, all change tracking 
 
 One can quote values using the following methods: `"<text>"`, `'<text>'`, and `{<text>}`. Spaces and other characters can be included in the text and the matching character can be escaped with a `\` if it is required as follows: `"hello \"there\""` will yield the value: `hellow "there"`.
 
-### `TABLE` Representation ###
+### `TABLE` Representation
 
 A `TABLE` representation is similar to the `DATA_SET` that has a key value pair as the value. Using the encoding mentioned above, the following representations are allowed for tables:
 
+```
     <timestamp>|wpo|G53.1={X=1.0 Y=2.0 Z=3.0 s='string with space'} G53.2={X=4.0 Y=5.0 Z=6.0} G53.3={X=7.0 Y=8.0 Z=9 U=10.0}
+```
 
 Using the quoting conventions explained in the previous section, the inner content can contain quoted text and exscaped values. The value is interpreted as a key/value pair in the same way as the `DATA_SET`. A table can be thought of as a data set of data sets.
 
 All the reset rules of data set apply to tables and the values are treated as a unit.
 
-Assets
------
+### Assets
 
 Assets are associated with a device but do not have a data item they are mapping to. They therefore get the special data item name `@ASSET@`. Assets can be sent either on one line or multiple lines depending on the adapter requirements. The single line form is as follows:
 
+```
 	2012-02-21T23:59:33.460470Z|@ASSET@|KSSP300R.1|CuttingTool|<CuttingTool>...
+```
 
 This form updates the asset id KSSP300R.1 for a cutting tool with the text at the end. For multiline assets, use the keyword `--multiline--` with a following unique string as follows:
 
+```
 		2012-02-21T23:59:33.460470Z|@ASSET@|KSSP300R.1|CuttingTool|--multiline--0FED07ACED
 		<CuttingTool>
 		...
 		</CuttingTool>
 		--multiline--0FED07ACED
+```
 		
 The terminal text must appear on the first position after the last line of text. The adapter can also remove assets (1.3) by sending a @REMOVE_ASSET@ with an asset id:
 
+```
 	2012-02-21T23:59:33.460470Z|@REMOVE_ASSET@|KSSP300R.1
+```
 
 Or all assets can be removed in one shot for a certain asset type:
 
+```
 	2012-02-21T23:59:33.460470Z|@REMOVE_ALL_ASSETS@|CuttingTool
+```
 
 Partial updates to assets is also possible by using the @UPDATE_ASSET@ key, but this will only work for cutting tools. The asset id needs to be given and then one of the properties or measurements with the new value for that entity. For example to update the overall tool length and the overall diameter max, you would provide the following:
 
+```
 	2012-02-21T23:59:33.460470Z|@UPDATE_ASSET@|KSSP300R.1|OverallToolLength|323.64|CuttingDiameterMax|76.211
+```
 
-Commands
------
+### Commands
 
 There are a number of commands that can be sent as part of the adapter stream. These change some dynamic elements of the device information, the interpretation of the data, or the associated default device. Commands are given on a single line starting with an asterisk `* ` as the first character of the line and followed by a <key>: <value>. They are as follows:
 
@@ -1022,48 +1007,56 @@ There are a number of commands that can be sent as part of the adapter stream. T
 
 Any other command will be logged as a warning.
 
-Protocol
-----
+### Protocol
 
 The agent and the adapter have a heartbeat that makes sure each is responsive to properly handle disconnects in a timely manner. The Heartbeat frequency is set by the adapter and honored by the agent. When the agent connects to the adapter, it first sends a `* PING` and then expects the response `* PONG <timeout>` where `<timeout>` is specified in milliseconds. So if the following communications are given:
 
 Agent:
 
+```
 	* PING
+```
 
 Adapter:
 
+```
 	* PONG 10000
+```
 
 This indicates that the adapter is expecting a `PING` every 10 seconds and if there is no `PING`, in 2x the frequency, then the adapter should close the connection. At the same time, if the agent does not receive a `PONG` within 2x frequency, then it will close the connection. If no `PONG` response is received, the agent assumes the adapter is incapable of participating in heartbeat protocol and uses the legacy time specified above.
 	
 Just as with the SHDR protocol, these messages must end with an LF (ASCII 10) or CR-LF (ASCII 15 followed by ASCII 10).
 
-HTTP PUT/POST Method of Uploading Data
------
+#### HTTP PUT/POST Method of Uploading Data
 
-There are two configuration settings mentioned above: `AllowPut` and `AllowPutFrom`. `AllowPut` alone will allow any process to use `HTTP` `POST` or `PUT` to send data to the agent and modify values. To restrict this to a limited number of
-machines, you can list the IP Addresses that are allowed to `POST` data to the agent. 
+There are two configuration settings mentioned above: `AllowPut` and `AllowPutFrom`. `AllowPut` alone will allow any process to use `HTTP` `POST` or `PUT` to send data to the agent and modify values. To restrict this to a limited number of machines, you can list the IP Addresses that are allowed to `POST` data to the agent. 
 
 An example would be:
 
+```
     AllowPut = yes
     AllowPutFrom = 192.168.1.72, 192.168.1.73
+```
   
 This will allow the two machines to post data to the MTConnect agent. The data can be either data item values or assets. The primary use of this capability is uploading assets from a process or even the command line using utilities like curl. I'll be using curl for these examples.
 
 For example, with curl you can use the -d option to send data to the server. The data will be in standard form data format, so all you need to do is to pass the `<data_item_name>=<data_item_value>` to set the values, as follows:
 
+```
     curl -d 'avail=AVAILABLE&program_1=XXX' 'http://localhost:5000/ExampleDevice'
+```
     
 By specifying the device at the end of the URL, you tell the agent which device to use for the POST. This will set the availability tag to AVAILABLE and the program to XXX:
 
+```XML
     <Availability dataItemId="dtop_3" timestamp="2015-05-18T18:20:12.278236Z" name="avail" sequence="65">AVAILABLE</Availability>
     ...
     <Program dataItemId="path_51" timestamp="2015-05-18T18:20:12.278236Z" name="program_1" sequence="66">XXX</Program>
+```
     
 The full raw data being passed over looks like this:
 
+```
     => Send header, 161 bytes (0xa1)
     0000: POST /ExampleDevice HTTP/1.1
     001e: User-Agent: curl/7.37.1
@@ -1087,25 +1080,33 @@ The full raw data being passed over looks like this:
     <= Recv data, 10 bytes (0xa)
     0000: <success/>
     >== Info: Closing connection 0
+```
     
 This is using the --trace - to dump the internal data. The response will be a simple `<success/>` or `<fail/>`.
     
 Any data item can be set in this fashion. Similarly conditions are set using the following syntax:
 
+```
     curl -d 'system=fault|XXX|1|LOW|Feeling%20low' 'http://localhost:5000/ExampleDevice'
+```
     
 One thing to note, the data and values are URL encoded, so the space needs to be encoded as a %20 to appear correctly. 
 
+```XML
     <Fault dataItemId="controller_46" timestamp="2015-05-18T18:24:48.407898Z" name="system" sequence="67" nativeCode="XXX" nativeSeverity="1" qualifier="LOW" type="SYSTEM">Feeling Low</Fault>
+```
 
 Assets are posted in a similar fashion. The data will be taken from a file containing the XML for the content. The syntax is very similar to the other requests:
 
+```
     curl -d @B732A08500HP.xml 'http://localhost:5000/asset/B732A08500HP.1?device=ExampleDevice&type=CuttingTool'
+```
 
 The @... uses the named file to pass the data and the URL must contain the asset id and the device name as well as the asset type. If the type is CuttingTool or CuttingToolArchetype, the data will be parsed and corrected if properties are out of order as with the adapter. If the device is not specified and there are more than one device in this adapter, it will cause an error to be returned.
 
 Programmatically, send the data as the body of the POST or PUT request as follows. If we look at the raw data, you will see the data is sent over verbatim as follows: 
 
+```
     => Send header, 230 bytes (0xe6)
     0000: POST /asset/B732A08500HP.1?device=ExampleDevice&type=CuttingTool
     0040:  HTTP/1.1
@@ -1131,9 +1132,11 @@ Programmatically, send the data as the body of the POST or PUT request as follow
     <= Recv data, 10 bytes (0xa)
     0000: <success/>
     <success/>== Info: Closing connection 0
+```
 
 The file that was included looks like this:
 
+```XML
     <CuttingTool serialNumber="1 " toolId="B732A08500HP" timestamp="2011-05-11T13:55:22" assetId="B732A08500HP.1" manufacturers="KMT">
     	<Description>
     		Step Drill KMT, B732A08500HP Grade KC7315
@@ -1171,9 +1174,11 @@ The file that was included looks like this:
     		</CuttingItems>
     	</CuttingToolLifeCycle>
     </CuttingTool>
+```
 
 An example in ruby is as follows:
 
+```
     > require 'net/http'
     => true
     > h = Net::HTTP.new('localhost', 5000)
@@ -1182,3 +1187,4 @@ An example in ruby is as follows:
     => #<Net::HTTPOK 200 OK readbody=true>
     > r.body
     => "<success/>"
+```
