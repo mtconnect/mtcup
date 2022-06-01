@@ -2,7 +2,7 @@
 title: C++ Agent
 description: 
 published: true
-date: 2022-06-01T14:06:05.626Z
+date: 2022-06-01T14:08:55.896Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-24T00:30:40.556Z
@@ -100,6 +100,15 @@ Here we have ten samples at 10 hertz. If the 10 hertz was set as part of the dat
 `2013-09-01T21:00:23.0123|temp|10||18.2 18.4 18.3 18.9 19.0 19.2 19.1 19.3 19.4 19.7`
 
 ## Installing C++ Agent
+  
+The agent build is dependent on the following utilities:
+
+- C++ Compiler compliant with C++ 17
+- git is optional but suggested to download source and update when changes occur
+- cmake for build generator and testing
+- python 3 and pip to support conan for dependency and package management
+- ruby and rake for mruby to support building the embedded scripting engine [not required if -o with_ruby=False]
+
   
 ### Raspberry Pi OS
 
