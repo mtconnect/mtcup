@@ -2,7 +2,7 @@
 title: C++ Agent Usage and Configuration
 description: 
 published: true
-date: 2022-06-01T14:39:56.887Z
+date: 2022-06-01T14:50:45.231Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-01T14:19:42.467Z
@@ -129,6 +129,8 @@ The following can also be declared:
     AssetsStyle
     ErrorStyle
 ```
+
+### Examples
 
 #### Example 1:
 
