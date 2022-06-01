@@ -2,7 +2,7 @@
 title: C++ Agent
 description: 
 published: true
-date: 2022-06-01T12:26:25.288Z
+date: 2022-06-01T14:06:05.626Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-24T00:30:40.556Z
@@ -99,22 +99,24 @@ Here we have ten samples at 10 hertz. If the 10 hertz was set as part of the dat
 
 `2013-09-01T21:00:23.0123|temp|10||18.2 18.4 18.3 18.9 19.0 19.2 19.1 19.3 19.4 19.7`
 
-## Installing C++ Agent on Raspberry Pi
+## Installing C++ Agent
+  
+### Raspberry Pi OS
 
 [Installing C++ Agent on Raspberry Pi](/Installing_C++_Agent_on_Raspberry_Pi "wikilink")
 
-## Installing C++ Agent on Ubuntu
+### Ubuntu
 
 [Installing C++ Agent on Ubuntu](/Installing_C++_Agent_on_Ubuntu "wikilink")
 
-## Installing C++ Agent on Windows
+### Windows
 
 [Installing C++ Agent on Windows](/Installing_C++_Agent_on_Windows "wikilink")
   
-## Installing C++ Agent on Mac
+### Mac
 
 [Installing C++ Agent on Mac](/Installing_C++_Agent_on_Mac "wikilink")
   
-## Installing C++ Agent on Fedora Alpine
+### Fedora Alpine
 
 [Installing C++ Agent on Fedora Alpine](/Installing_C++_Agent_on_Fedora "wikilink")
