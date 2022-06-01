@@ -2,7 +2,7 @@
 title: Protocol
 description: 
 published: true
-date: 2022-06-01T14:56:52.186Z
+date: 2022-06-01T15:00:54.420Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-24T00:32:21.529Z
@@ -10,7 +10,7 @@ dateCreated: 2021-09-24T00:32:21.529Z
 
 ## Overview
 
-MTConnect includes a protocol based on HTTP. View it in the model browser here: [MTConnect Protocol](https://model.mtconnect.org/#Package__9eede38c-aa3e-4786-ba3a-416344b1d745).
+The MTConnect Standard defines the normative information model and protocol for retrieving information from manufacturing equipment. It also specifies the agent behavior and protocol. See the model here: [MTConnect Protocol](https://model.mtconnect.org/#Package__9eede38c-aa3e-4786-ba3a-416344b1d745).
 
 To use OPC UA as a protocol, see
 [MTConnect OPCUA CS](https://www.mtconnect.org/opc-ua-companion-specification).
