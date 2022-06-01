@@ -2,7 +2,7 @@
 title: Installing C++ Agent on Windows
 description: Build, install, configure and run MTConnect C++ Agent on Windows.
 published: true
-date: 2022-06-01T12:39:42.594Z
+date: 2022-06-01T12:40:18.304Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-01T12:39:42.594Z
@@ -18,7 +18,7 @@ The windows binary releases come with a prebuilt exe that is statically linked w
 
 Aside from the standard system libraries, the agent only requires winsock libraries. The agent has been test with version of Windows 2000 and later.
 
-You can download the C++ Agent toolkit - Pre-built binaries here: [C++ Windows](https://github.com/mtconnect/cppagent/releases)
+You can download the C++ Agent toolkit - Pre-built binaries here: [C++ Windows Binaries](https://github.com/mtconnect/cppagent/releases)
 
 ## Building on Windows
 
