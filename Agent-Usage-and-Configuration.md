@@ -2,7 +2,7 @@
 title: C++ Agent Usage and Configuration
 description: 
 published: true
-date: 2022-06-01T14:56:34.806Z
+date: 2022-06-01T14:57:50.017Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-01T14:19:42.467Z
@@ -789,5 +789,5 @@ The following parameters must be present to enable https requests. If there is n
     
 ## Adapter Agent Protocol Version 2.0
 
-[Agent Protocol](/Protocol "wikilink")
+[Adapter Agent Protocol](/Protocol "wikilink")
 
