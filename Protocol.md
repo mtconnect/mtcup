@@ -2,7 +2,7 @@
 title: Adapter Agent Protocol
 description: 
 published: true
-date: 2022-06-01T15:01:37.784Z
+date: 2022-06-01T18:15:37.100Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-24T00:32:21.529Z
@@ -423,4 +423,97 @@ An example in ruby is as follows:
     => #<Net::HTTPOK 200 OK readbody=true>
     > r.body
     => "<success/>"
+```
+  
+## Creating Test Certifications (see resources gen_certs shell script)
+
+This section assumes you have installed openssl and can use the command line. The subject of the certificate is only for testing and should not be used in production. This section is provided to support testing and verification of the functionality. A certificate provided by a real certificate authority should be used in a production process.
+
+> NOTE: The certificates must be generated with OpenSSL version 1.1.1 or later. LibreSSL 2.8.3 is not compatible with 
+      more recent version of SSL on raspian (Debian).
+
+### Server Creating self-signed certificate chain
+
+#### Create Signing authority key and certificate
+
+```
+	openssl req -x509 -nodes -sha256 -days 3650 -newkey rsa:3072 -keyout rootca.key -out rootca.crt -subj "/C=US/ST=State/L=City/O=Your Company, Inc./OU=IT/CN=serverca.org"
+```
+
+#### User Key
+
+```
+    openssl genrsa -out user.key 3072
+```
+
+##### Signing Request
+
+```
+    openssl req -new -sha256 -key user.key -out user.csr -subj "/C=US/ST=State/L=City/O=Your Company, Inc./OU=IT/CN=user.org"
+```
+
+##### User Certificate using root signing certificate
+
+```
+    openssl x509 -req -in user.csr -CA rootca.crt -CAkey rootca.key -CAcreateserial -out user.crt -days 3650
+```
+
+#### Create DH Parameters
+
+```
+    openssl dhparam -out dh2048.pem 3072
+```
+
+#### Verify
+
+```
+    openssl verify -CAfile rootca.crt rootca.crt
+    openssl verify -CAfile rootca.crt user.crt
+```
+
+### Client Certificate
+
+#### Create Signing authority key
+
+```
+    openssl req -x509 -nodes -sha256 -days 3650 -newkey rsa:3072 -keyout clientca.key -out clientca.crt -subj "/C=US/ST=State/L=City/O=Your Company, Inc./OU=IT/CN=clientca.org"
+```
+
+#### Create client key
+
+```
+    openssl genrsa -out client.key 3072
+```
+
+#### Create client signing request
+
+```
+    openssl req -new -key client.key -out client.csr -subj "/C=US/ST=State/L=City/O=Your Company, Inc./OU=IT/CN=client.org"
+```
+
+#### Create Client Certificate
+
+For client.cnf
+
+```
+    basicConstraints = CA:FALSE
+    nsCertType = client, email
+    nsComment = "OpenSSL Generated Client Certificate"
+    subjectKeyIdentifier = hash
+    authorityKeyIdentifier = keyid,issuer
+    keyUsage = critical, nonRepudiation, digitalSignature, keyEncipherment
+    extendedKeyUsage = clientAuth, emailProtection
+```
+
+#### Create the cert
+
+```
+    openssl x509 -req -in client.csr -CA clientca.crt -CAkey clientca.key -out client.crt -CAcreateserial -days 3650 -sha256 -extfile client.cnf
+```
+
+#### Verify
+
+```
+    openssl verify -CAfile clientca.crt clientca.crt
+    openssl verify -CAfile clientca.crt client.crt
 ```
