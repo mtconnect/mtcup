@@ -2,7 +2,7 @@
 title: Installing C++ Agent on Mac
 description: 
 published: true
-date: 2022-06-01T13:57:54.464Z
+date: 2022-06-01T13:59:23.049Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-01T13:57:54.464Z
@@ -24,10 +24,10 @@ Install brew and xcode command line tools
 ### Setup the build
 
 ```
-  brew install git
-  brew install cmake
+brew install git
+brew install cmake
 
-	pip3 install conan
+pip3 install conan
 ```
 
 ### Download the source
