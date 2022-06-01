@@ -1,8 +1,8 @@
 ---
-title: Protocol
+title: Adapter Agent Protocol
 description: 
 published: true
-date: 2022-06-01T15:00:54.420Z
+date: 2022-06-01T15:01:37.784Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-24T00:32:21.529Z
