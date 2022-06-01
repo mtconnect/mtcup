@@ -2,7 +2,7 @@
 title: C++ Agent
 description: 
 published: true
-date: 2022-06-01T14:08:55.896Z
+date: 2022-06-01T14:17:22.898Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-24T00:30:40.556Z
@@ -129,3 +129,7 @@ The agent build is dependent on the following utilities:
 ### Fedora Alpine
 
 [Installing C++ Agent on Fedora Alpine](/Installing_C++_Agent_on_Fedora "wikilink")
+
+## Usage and Configuration
+
+[Usage and Configuration](/Agent-Usage-and-Configuration "wikilink")
