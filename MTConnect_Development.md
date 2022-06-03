@@ -2,7 +2,7 @@
 title: What is Available?
 description: Lists what is available for a developer to build their own MTConnect solution.
 published: true
-date: 2022-06-03T09:52:26.365Z
+date: 2022-06-03T10:39:30.169Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-03T09:52:26.365Z
@@ -34,9 +34,10 @@ See [White Paper on MTConnect Architecture](/Getting_Started_with_MTConnect_–_
 - Examples for Application. See
   - [Dataminer Example](https://github.com/mtconnect/dataminer)
   - [MTExplorer](https://github.com/mtconnect/mtexplorer)
+  - See [Application](/Application "wikilink") for more details.
 
 ## What needs to be developed?
 
-- Adapter.
+- [Adapter.](/MTConnect_Adapter "wikilink")
 
-- Application.
+- [Application.](/Application "wikilink")
