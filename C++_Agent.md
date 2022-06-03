@@ -2,7 +2,7 @@
 title: C++ Agent
 description: 
 published: true
-date: 2022-06-03T01:44:19.478Z
+date: 2022-06-03T02:06:40.663Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-24T00:30:40.556Z
@@ -33,11 +33,13 @@ The agent main responsibility is data collection, transformation, and delivery t
 * unzip the archive
   * The agent executable is in the `bin` directory with a sample `agent.cfg` file
   * The distribution comes with an example `Device.xml` file providing a description of the machine
-  * In the `styles` directory there are example stylesheets that format the `xml` for easier viewing
- * To run the agent with output to the command window: `agent debug`
- * To run the agent with logging to a file: `agent run`
- * To install the agent as a windows service: `agent install`
-   * You can then start the agent from the Windows services management app
+ * Open a command prompt:
+ ```cmd
+       C:> cd cppagent-2.<version>-win64\bin
+       C:> agent debug
+```       
+   > replace `<version>` with the release version number, such as `2.0.0.7`
+ * Open a broswer and navigate to: http://localhost:5000/probe
  
  #### Next Steps
  
