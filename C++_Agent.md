@@ -2,7 +2,7 @@
 title: C++ Agent
 description: 
 published: true
-date: 2022-06-03T01:43:45.854Z
+date: 2022-06-03T01:44:19.478Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-24T00:30:40.556Z
@@ -57,36 +57,6 @@ The agent main responsibility is data collection, transformation, and delivery t
 
 [Agent Usage and Configuration](/Agent-Usage-and-Configuration "wikilink")
 
-## Change History
-
-* Version 2.0.0: Rearchitecture of the agent with the following additions:
-  * Full HTTP 1.1 support
-  * TLS 1.2 and dual certificate support
-  * Lighter weight runtime
-  * QIF and Raw Material implicit support
-  * File monitoring supports inplace updates of device data
-  * Agent sources for aggregation
-  * MQTT Source
-  * Plug-in architecture to extend sources, sinks, and transformations
-  * mruby embedded scripting for run-time defined transformations
-
-* Version 1.8.0: No major changes
-
-* Version 1.7.0: added kinematics, solid models, and new specifications types.
-
-* Version 1.6.0: added coordinate systems, specifications, and tabular data.
-
-* Version 1.5.0: added Data Set capabilities and has been updated to use C++ 14.
-
-* Version 1.4.0: added time period filter constraint, compositions, initial values, and reset triggers.
-
-* Version 1.3.0: added the filter constraints, references, cutting tool archetypes, and formatting styles.
-
-* Version 1.2.0: added the capability to support assets.
-
-* Version 1.1.0: add the ability to run the C++ Agent as a Windows service and support for a configuration file instead of command line arguments. The agent can accept input from a socket in a pipe (|) delimited stream according to the descriptions given in the adapter guide.
-
-
 ## Adapter Connectivity
 
 [Adapter Connectivity](/Agent-Adapter-Connectivity "wikilink")
@@ -123,3 +93,31 @@ The agent build is dependent on the following utilities:
 
 [Installing C++ Agent on Fedora Alpine](/Installing_C++_Agent_on_Fedora "wikilink")
 
+## Change History
+
+* Version 2.0.0: Rearchitecture of the agent with the following additions:
+  * Full HTTP 1.1 support
+  * TLS 1.2 and dual certificate support
+  * Lighter weight runtime
+  * QIF and Raw Material implicit support
+  * File monitoring supports inplace updates of device data
+  * Agent sources for aggregation
+  * MQTT Source
+  * Plug-in architecture to extend sources, sinks, and transformations
+  * mruby embedded scripting for run-time defined transformations
+
+* Version 1.8.0: No major changes
+
+* Version 1.7.0: added kinematics, solid models, and new specifications types.
+
+* Version 1.6.0: added coordinate systems, specifications, and tabular data.
+
+* Version 1.5.0: added Data Set capabilities and has been updated to use C++ 14.
+
+* Version 1.4.0: added time period filter constraint, compositions, initial values, and reset triggers.
+
+* Version 1.3.0: added the filter constraints, references, cutting tool archetypes, and formatting styles.
+
+* Version 1.2.0: added the capability to support assets.
+
+* Version 1.1.0: add the ability to run the C++ Agent as a Windows service and support for a configuration file instead of command line arguments. The agent can accept input from a socket in a pipe (|) delimited stream according to the descriptions given in the adapter guide.
