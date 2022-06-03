@@ -2,7 +2,7 @@
 title: ROS - MTConnect
 description: 
 published: true
-date: 2021-09-24T00:32:30.503Z
+date: 2022-06-03T17:41:06.955Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-24T00:32:28.428Z
@@ -21,4 +21,4 @@ The most current information about this project can be found on the ROS
 wiki: [mtconnect - ROS Wiki](http://ros.org/wiki/mtconnect)
 
 There is a technical writeup as well here: [CNC Robot
-Integration](http://www.manufacturingbigdata.com/blog/2013/06/07/mtconnect-ros-i-robot-cnc-integration/)
+Integration](https://www.nist.gov/system/files/documents/2019/07/11/nist_ros-i_mtconnect_-_performance_technical_report-end_of_project.pdf)
