@@ -2,13 +2,19 @@
 title: Adapter Connectivity
 description: 
 published: true
-date: 2022-06-03T01:14:00.623Z
+date: 2022-06-03T01:34:13.096Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-03T01:12:57.141Z
 ---
 
 # Adapter Connectivity
+
+## Instructional Video
+
+There are also videos on how to develop adapters here [Other_Resources](/Other_Resources "wikilink").
+
+## Protocol Overview
 
 The adapters communicate with the MTConnect agent using a simple TCP sockets protocol. TCP is merely a convenient streaming character based protocol that has been around for over 30 years and is supported on every machine known to man (except for some manufacturing equipment\!) The semantics were chosen as the simplest possible format to get data from a device to another process with minimal overhead, but still easily verifiable. The format is a pipe delimited line of data terminated with a <LF> or a <CR><LF>, both work. The format is as follows:
 
