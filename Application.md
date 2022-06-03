@@ -2,7 +2,7 @@
 title: Application
 description: 
 published: true
-date: 2022-06-03T12:25:17.461Z
+date: 2022-06-03T12:26:37.563Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-03T12:24:58.134Z
@@ -147,12 +147,6 @@ http://localhost:5000/current?path=//Devices/Device/DataItems/DataItem[@type="AS
 http://172.26.83.83:5000/current?path=//DataItems/DataItem[@type="ASSET_CHANGED" or @type="ASSET_REMOVED"]
 ```
 
-### Data Streaming Example
-
-```
-http://172.26.83.83:5000/Mazak/sample?from=172&interval=2000&path=//DataItems/DataItem[@type="ASSET_CHANGED" or @type="ASSET_REMOVED"]
-```
-
 > WARNING! `instanceId`s in device files can change anytime agent reboots.  Check and track the `instanceId` in the header.
 
 ## Best Practices for Querying
@@ -161,17 +155,16 @@ HTTP data streaming is a method for an agent to provide a continuous stream of o
 
 When an HTTP Request includes an interval parameter, an agent MUST provide data with a minimum delay in milliseconds between the end of one data transmission and the beginning of the next. A value of zero (0) for the interval parameter indicates that the agent should deliver data at the highest rate possible and is only relevant for sample requests.
 
-Example:
+
+To learn more about data streaming see [REST Protocol Model](https://model.mtconnect.org/#Package__8082e379-d82e-4b0e-abad-83cdf92f7fe6).
+
+### Data Streaming Example
 
 ```
 http://172.26.83.83:5000/Mazak/sample?from=172&interval=2000&path=//DataItems/DataItem[@type="ASSET_CHANGED" or @type="ASSET_REMOVED"]
 ```
 
-To learn more about data streaming see [REST Protocol Model](https://model.mtconnect.org/#Package__8082e379-d82e-4b0e-abad-83cdf92f7fe6).
-
-
-
-## Examples
+## Application Examples
 
 - [Dataminer](https://github.com/mtconnect/dataminer)
 - [MTExplorer](https://github.com/mtconnect/mtexplorer)
