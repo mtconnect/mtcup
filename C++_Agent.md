@@ -2,13 +2,13 @@
 title: C++ Agent
 description: 
 published: true
-date: 2022-06-03T01:12:06.061Z
+date: 2022-06-03T01:25:09.926Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-24T00:30:40.556Z
 ---
 
-## Reference MTConnect Agent
+# Reference MTConnect Agent
 
 The MTConnect implementation that has been most closely tracking the MTConnect standard and is used in most production implementation is the C++ Agent that resides on the MTConnect project pages of github [C++ Agent](http://github.com/mtconnect/cppagent). 
 
@@ -19,11 +19,11 @@ The C++ Agent provides the fullest implementation of the standard available at t
 
 The agent has a rich level of configuration and is capable of serving up content from the local file system and allowing changes to be pushed. To get the full details on the configuration, again, visit the [C++ Agent github page](http://github.com/mtconnect/cppagent) and scroll down to the readme file. There are many features built in to the agent, some documented better than others. We will try to document some of the more interesting capabilities on these pages.
 
-### Responsibilities
+## Responsibilities
 
 The MTConnect agent receives data from an adapter and transforms it as required by the MTConnect standard. The adapter communicates with the device's propriatary interface and delivers accoring to the MTConnect standard. There are certain responsibilities the Agent has and certain responsibilities the Adapter has in this architecture. 
 
-#### The adapter is responsible for the following functionality:
+### The adapter is responsible for the following functionality:
 
 1.  Connect to the controller's proprietary interface.
 2.  Make the requisite calls to the controllers interfaces to retrieve the necessary data.
@@ -32,7 +32,7 @@ The MTConnect agent receives data from an adapter and transforms it as required 
 5.  Respond to PING requests from the Agent in a timely manor to provide keep-alive heartbeats.
 6.  Provide a complete snapshot of the data when an agent connects.
 
-#### The agent is responsible for the following:
+### The agent is responsible for the following:
 
 1.  Receive RESTful requests from application and respond with proper MTConnect XML.
 2.  Provide push based streaming data when requested.
@@ -52,7 +52,26 @@ The agent is by far the more complex piece of software and takes a lot of work t
 
 ## Quick Start
 
+### Windows
 
+* Download the pre-built Agent from [Releases](http://github.com/mtconnect/cppagent/releases)
+* unzip the archive
+  * The agent executable is in the `bin` directory with a sample `agent.cfg` file
+  * The distribution comes with an example `Device.xml` file providing a description of the machine
+  * In the `styles` directory there are example stylesheets that format the `xml` for easier viewing
+ * To run the agent with output to the command window: `agent debug`
+ * To run the agent with logging to a file: `agent run`
+ * To install the agent as a windows service: `agent install`
+   * You can then start the agent from the Windows services management app
+ 
+ #### Next Steps
+ 
+ * Configure the agent for your machine and adapter
+   * The new agent supports many incoming data feeds as follows:
+     * Classic SHDR (pipe delimited. timestamped data)
+     * MQTT
+     * Another agent
+     * Plugins available for OPC UA and other protocols.
 
 ## Usage and Configuration
 
