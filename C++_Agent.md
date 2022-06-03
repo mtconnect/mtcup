@@ -2,7 +2,7 @@
 title: C++ Agent
 description: 
 published: true
-date: 2022-06-01T14:42:25.592Z
+date: 2022-06-03T00:30:13.609Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-24T00:30:40.556Z
@@ -21,9 +21,9 @@ The agent has a rich level of configuration and is capable of serving up content
 
 ### Responsibilities
 
-There are certain responsibilities the Agent has and certain responsibilities the Adapter has in this architecture. 
+The MTConnect agent receives data from an adapter and transforms it as required by the MTConnect standard. The adapter communicates with the device's propriatary interface and delivers accoring to the MTConnect standard. There are certain responsibilities the Agent has and certain responsibilities the Adapter has in this architecture. 
 
-The adapter is responsible for the following functionality:
+#### The adapter is responsible for the following functionality:
 
 1.  Connect to the controller's proprietary interface.
 2.  Make the requisite calls to the controllers interfaces to retrieve the necessary data.
@@ -32,7 +32,7 @@ The adapter is responsible for the following functionality:
 5.  Respond to PING requests from the Agent in a timely manor to provide keep-alive heartbeats.
 6.  Provide a complete snapshot of the data when an agent connects.
 
-The agent is responsible for the following:
+#### The agent is responsible for the following:
 
 1.  Receive RESTful requests from application and respond with proper MTConnect XML.
 2.  Provide push based streaming data when requested.
@@ -49,6 +49,14 @@ The agent is responsible for the following:
 13. Handle timestamps from adapters or overwrite the timestamps using relative time adjustment or current clock time.
 
 The agent is by far the more complex piece of software and takes a lot of work to get right. The adapters can be written in as little as 5 lines of Python or Ruby script and be perfectly adequate. The architecture was designed to operate in this way to make reduce the complexity of the adapter tools. Visit the C++ adapter SDK and the C\# adapter SDK to get a feel for what it takes to write an adapter. There are also videos on how to develop adapters here [Other_Resources](/Other_Resources "wikilink").
+
+## Quick Start
+
+
+
+## Usage and Configuration
+
+[Agent Usage and Configuration](/Agent-Usage-and-Configuration "wikilink")
 
 ### Adapter Connectivity
 
@@ -113,7 +121,7 @@ Here we have ten samples at 10 hertz. If the 10 hertz was set as part of the dat
 2013-09-01T21:00:23.0123|temp|10||18.2 18.4 18.3 18.9 19.0 19.2 19.1 19.3 19.4 19.7
 ```
 
-## Installing C++ Agent
+## Building the C++ Agent
   
 The agent build is dependent on the following utilities:
 
@@ -144,6 +152,3 @@ The agent build is dependent on the following utilities:
 
 [Installing C++ Agent on Fedora Alpine](/Installing_C++_Agent_on_Fedora "wikilink")
 
-## Usage and Configuration
-
-[Agent Usage and Configuration](/Agent-Usage-and-Configuration "wikilink")
