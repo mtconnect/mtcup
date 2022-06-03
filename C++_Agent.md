@@ -2,7 +2,7 @@
 title: C++ Agent
 description: 
 published: true
-date: 2022-06-03T01:42:09.001Z
+date: 2022-06-03T01:43:45.854Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-24T00:30:40.556Z
@@ -48,6 +48,10 @@ The agent main responsibility is data collection, transformation, and delivery t
    * MQTT
    * Another agent
    * Plugins available for OPC UA and other protocols.
+
+### Linux
+
+### Docker
 
 ## Usage and Configuration
 
