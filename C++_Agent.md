@@ -2,7 +2,7 @@
 title: C++ Agent
 description: 
 published: true
-date: 2022-06-03T01:25:09.926Z
+date: 2022-06-03T01:33:10.465Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-24T00:30:40.556Z
@@ -21,34 +21,11 @@ The agent has a rich level of configuration and is capable of serving up content
 
 ## Responsibilities
 
-The MTConnect agent receives data from an adapter and transforms it as required by the MTConnect standard. The adapter communicates with the device's propriatary interface and delivers accoring to the MTConnect standard. There are certain responsibilities the Agent has and certain responsibilities the Adapter has in this architecture. 
+The MTConnect agent receives data from an adapter and transforms it as required by the MTConnect standard. The adapter communicates with the device's propriatary interface and delivers a simple pipe-delimited stream of data on change. The agent take the stream of data and associates it with the data model, performs any conversions, and then renders it in XML or JSON according to the standard. The agent exists to facilitate implemention by providing the protocol and transformat responsibilities away from the adapter. 
 
-### The adapter is responsible for the following functionality:
+The agent main responsibility is data collection, transformation, and delivery to various sinks (destination protocols). The agent supports REST as the primary method using HTTP optionally with TLS (SSL) according to the MTConnect standard. Starting with version 2.0, various plugins are available for OPC UA, Kafka, InfluxDB, and MQTT.
 
-1.  Connect to the controller's proprietary interface.
-2.  Make the requisite calls to the controllers interfaces to retrieve the necessary data.
-3.  Convert the controller state to events in the proper vocabulary. For example convert from Register 0x32 bit 6-9 to READY, ACTIVE, STOPPED.
-4.  Format the data in the pipe delimited format described below.
-5.  Respond to PING requests from the Agent in a timely manor to provide keep-alive heartbeats.
-6.  Provide a complete snapshot of the data when an agent connects.
-
-### The agent is responsible for the following:
-
-1.  Receive RESTful requests from application and respond with proper MTConnect XML.
-2.  Provide push based streaming data when requested.
-3.  Connect to the adapters and maintain the connections using heartbeats. Detect failures and cleanup connections.
-4.  Receive the data from the adapter and parse the pipe delimited values.
-5.  Minimally validate the data.
-6.  Convert numeric values from the native units to the MTConnect units if required.
-7.  Maintain the circular storage of events and assets.
-8.  Handle many-to-many mappings from adapters to devices.
-9.  Manage time series data in efficient manor.
-10. Handle near-real-time updates to applications that have requested interval=0 notifications.
-11. Efficiently format XML for applications.
-12. Serve static XSD and other static assets as configured.
-13. Handle timestamps from adapters or overwrite the timestamps using relative time adjustment or current clock time.
-
-The agent is by far the more complex piece of software and takes a lot of work to get right. The adapters can be written in as little as 5 lines of Python or Ruby script and be perfectly adequate. The architecture was designed to operate in this way to make reduce the complexity of the adapter tools. Visit the C++ adapter SDK and the C\# adapter SDK to get a feel for what it takes to write an adapter. There are also videos on how to develop adapters here [Other_Resources](/Other_Resources "wikilink").
+There are also videos on how to develop adapters here [Other_Resources](/Other_Resources "wikilink").
 
 ## Quick Start
 
