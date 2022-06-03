@@ -2,7 +2,7 @@
 title: C++ Agent
 description: 
 published: true
-date: 2022-06-03T00:30:13.609Z
+date: 2022-06-03T01:10:46.112Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-24T00:30:40.556Z
@@ -57,6 +57,8 @@ The agent is by far the more complex piece of software and takes a lot of work t
 ## Usage and Configuration
 
 [Agent Usage and Configuration](/Agent-Usage-and-Configuration "wikilink")
+
+## Change History
 
 ### Adapter Connectivity
 
