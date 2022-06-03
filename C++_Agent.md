@@ -2,7 +2,7 @@
 title: C++ Agent
 description: 
 published: true
-date: 2022-06-03T01:33:10.465Z
+date: 2022-06-03T01:42:09.001Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-24T00:30:40.556Z
@@ -25,8 +25,6 @@ The MTConnect agent receives data from an adapter and transforms it as required 
 
 The agent main responsibility is data collection, transformation, and delivery to various sinks (destination protocols). The agent supports REST as the primary method using HTTP optionally with TLS (SSL) according to the MTConnect standard. Starting with version 2.0, various plugins are available for OPC UA, Kafka, InfluxDB, and MQTT.
 
-There are also videos on how to develop adapters here [Other_Resources](/Other_Resources "wikilink").
-
 ## Quick Start
 
 ### Windows
@@ -44,17 +42,46 @@ There are also videos on how to develop adapters here [Other_Resources](/Other_R
  #### Next Steps
  
  * Configure the agent for your machine and adapter
-   * The new agent supports many incoming data feeds as follows:
-     * Classic SHDR (pipe delimited. timestamped data)
-     * MQTT
-     * Another agent
-     * Plugins available for OPC UA and other protocols.
+   * Modify the Device.xml with the components and data available from you adapter(s)
+ * The new agent supports many incoming data feeds as follows:
+   * Classic SHDR (pipe delimited. timestamped data)
+   * MQTT
+   * Another agent
+   * Plugins available for OPC UA and other protocols.
 
 ## Usage and Configuration
 
 [Agent Usage and Configuration](/Agent-Usage-and-Configuration "wikilink")
 
 ## Change History
+
+* Version 2.0.0: Rearchitecture of the agent with the following additions:
+  * Full HTTP 1.1 support
+  * TLS 1.2 and dual certificate support
+  * Lighter weight runtime
+  * QIF and Raw Material implicit support
+  * File monitoring supports inplace updates of device data
+  * Agent sources for aggregation
+  * MQTT Source
+  * Plug-in architecture to extend sources, sinks, and transformations
+  * mruby embedded scripting for run-time defined transformations
+
+* Version 1.8.0: No major changes
+
+* Version 1.7.0: added kinematics, solid models, and new specifications types.
+
+* Version 1.6.0: added coordinate systems, specifications, and tabular data.
+
+* Version 1.5.0: added Data Set capabilities and has been updated to use C++ 14.
+
+* Version 1.4.0: added time period filter constraint, compositions, initial values, and reset triggers.
+
+* Version 1.3.0: added the filter constraints, references, cutting tool archetypes, and formatting styles.
+
+* Version 1.2.0: added the capability to support assets.
+
+* Version 1.1.0: add the ability to run the C++ Agent as a Windows service and support for a configuration file instead of command line arguments. The agent can accept input from a socket in a pipe (|) delimited stream according to the descriptions given in the adapter guide.
+
 
 ## Adapter Connectivity
 
