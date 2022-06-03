@@ -2,13 +2,12 @@
 title: Application
 description: 
 published: true
-date: 2022-06-03T12:24:58.134Z
+date: 2022-06-03T12:25:17.461Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-03T12:24:58.134Z
 ---
 
-# Application
 
 ## Overview
 
