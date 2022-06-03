@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2022-06-03T12:27:31.703Z
+date: 2022-06-03T12:57:12.513Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-22T02:21:15.482Z
@@ -94,7 +94,7 @@ A typical MTConnect architecture has 4 key components: Device, Adapter, Agent an
 
 - [O3](/O3 "wikilink") - Develop real time simulation and verification built on standards.
 
-- [Smart Manufacturing Systems Testbed](/SMS_-_Testbed "wikilink") - Demonstrate data collection and storage architecture.
+- [Smart Manufacturing Systems Testbed](https://www.nist.gov/laboratories/tools-instruments/smart-manufacturing-systems-sms-test-bed) - Demonstrate data collection and storage architecture.
 
 - [VTech - AMT](/VTech_-_AMT "wikilink") - MTConnect Use Case Studies at the Virginia Tech Learning Factory
 
