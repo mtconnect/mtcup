@@ -2,13 +2,12 @@
 title: Adapter
 description: 
 published: true
-date: 2022-06-03T11:17:28.782Z
+date: 2022-06-03T12:27:03.037Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-03T11:14:50.014Z
 ---
 
-# Adapter
 
 ## Overview
 
