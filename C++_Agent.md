@@ -2,7 +2,7 @@
 title: C++ Agent
 description: 
 published: true
-date: 2022-06-03T02:06:40.663Z
+date: 2022-06-03T02:07:36.080Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-24T00:30:40.556Z
@@ -41,7 +41,11 @@ The agent main responsibility is data collection, transformation, and delivery t
    > replace `<version>` with the release version number, such as `2.0.0.7`
  * Open a broswer and navigate to: http://localhost:5000/probe
  
- #### Next Steps
+### Linux
+
+### Docker
+
+ ### Next...
  
  * Configure the agent for your machine and adapter
    * Modify the Device.xml with the components and data available from you adapter(s)
@@ -51,9 +55,6 @@ The agent main responsibility is data collection, transformation, and delivery t
    * Another agent
    * Plugins available for OPC UA and other protocols.
 
-### Linux
-
-### Docker
 
 ## Usage and Configuration
 
