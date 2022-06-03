@@ -2,7 +2,7 @@
 title: Adapter Connectivity
 description: 
 published: true
-date: 2022-06-03T01:12:57.141Z
+date: 2022-06-03T01:14:00.623Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-03T01:12:57.141Z
