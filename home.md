@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2022-06-03T19:10:27.039Z
+date: 2022-06-05T10:52:03.914Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-22T02:21:15.482Z
@@ -48,7 +48,7 @@ There are a set of companion specifications to ensure interoperability and consi
 
 - [OPC UA](https://www.mtconnect.org/opc-ua-companion-specification/)
 
-- [B2MML](https://www.mtconnect.org/b2mml-companion-specification/)
+- [B2MML](https://www.mtconnect.org/b2mml-companion-specification/) : Additional documentation for implementing B2MML with MTConnect can be found here: [MTC-B2MML Guide](/B2MML "wikilink")
 
 - [NC-Link](https://www.mtconnect.org/nclink-companion-specification/) - Ongoing
 
