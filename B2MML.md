@@ -2,7 +2,7 @@
 title: B2MML
 description: 
 published: true
-date: 2021-09-24T00:30:36.590Z
+date: 2022-06-05T11:03:16.591Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-24T00:30:32.989Z
@@ -17,20 +17,13 @@ collaborate to extend the reach of their existing manufacturing
 information data modeling standards and implementation technologies in
 order to:
 
-:\* Define the interaction between existing standards from each
-organization to provide a platform for improved manufacturing technology
-interoperability.
+* Define the interaction between existing standards from each organization to provide a platform for improved manufacturing technology interoperability.
 
-:\* Provide a forum for the exchange of information to support future
-continuous improvement of standards and specifications overseen by each
-body.
+* Provide a forum for the exchange of information to support future continuous improvement of standards and specifications overseen by each body.
 
-:\* Provide a mechanism for the exchange of insights, identification of
-overlaps, and harmonization of the works of both organizations; where
-appropriate.
+* Provide a mechanism for the exchange of insights, identification of overlaps, and harmonization of the works of both organizations; where appropriate.
 
-:\* Provide a roadmap for implementers to leverage the capabilities of
-the standards and specifications of both bodies.
+* Provide a roadmap for implementers to leverage the capabilities of the standards and specifications of both bodies.
 
 MESA is a not-for-profit global community of companies and academia
 encompassing a wide array of expertise focused on improving and
@@ -57,26 +50,11 @@ systems through the integration of these two manufacturing standards.
 
 The MTConnect-B2MML companion specification describes a methodology for:
 
-:\* Providing a platform for managing and transporting B2MML documents
-between software applications within a manufacturing information system
-as an MTConnect Asset document.
+* Providing a platform for managing and transporting B2MML documents between software applications within a manufacturing information system as an MTConnect Asset document.
 
-  -
-
-      - Define the mapping of data types that are common to both
-        standards to support interoperability, harmonization, and
-        consistency for the flow of information from the shop floor to
-        higher level software systems and from those systems down to the
-        shop floor.
-
-    <!-- end list -->
-
-      - The information presented in this Companion Specification is
-        non-proprietary; meaning it is built on open standards, backed
-        by both MESA and the MTConnect Institute whom together represent
-        hundreds of companies, individuals, government organizations and
-        nonprofits all working toward the goal of increased productivity
-        in the manufacturing arena.
+* Define the mapping of data types that are common to both standards to support interoperability, harmonization, and      consistency for the flow of information from the shop floor to higher level software systems and from those systems down to the shop floor.
+      
+The information presented in this Companion Specification is non-proprietary; meaning it is built on open standards, backed  by both MESA and the MTConnect Institute whom together represent hundreds of companies, individuals, government organizations and nonprofits all working toward the goal of increased productivity in the manufacturing arena.
 
 ## Capabilities and Application of B2MML Represented as MTConnect Assets
 
@@ -98,100 +76,51 @@ of information. As part of this cooperative effort between MESA and
 MTConnect, the following information models were initially of specific
 interest:
 
-:\* Product Definition
+* Product Definition
 
-:\* Production Schedule
+* Production Schedule
 
 MTConnect provides specific functionalities that support the
 inter-operability with other standards like B2MML. These are:
 
-:\* Semantic data models for representing information relating to the
-shop floor that is expressed in document form.
+* Semantic data models for representing information relating to the shop floor that is expressed in document form.
 
-:\* Definition and Reference Implementation software for an MTConnect
-Agent which stores and organizes information collected from a
-manufacturing operation. This Agent also produces structured documents
-containing the information collected for consumption by client software
-applications.
+* Definition and Reference Implementation software for an MTConnect Agent which stores and organizes information collected from a manufacturing operation. This Agent also produces structured documents containing the information collected for consumption by client software applications.
 
-:\* Extensibility that allows an implementer to expand the functionality
-of an MTConnect implementation to include additional content.
+* Extensibility that allows an implementer to expand the functionality of an MTConnect implementation to include additional content.
 
-MTConnect Assets provides a mechanism for representing complex
-information associated with manufacturing operations in electronic
-document form. Examples of types of information that could be modeled as
-MTConnect Assets include:
+MTConnect Assets provides a mechanism for representing complex information associated with manufacturing operations in electronic document form. Examples of types of information that could be modeled as MTConnect Assets include:
 
-:\* Description of Cutting Tools
+* Description of Cutting Tools
 
-:\* Electronic Documents such as Maintenance Manuals, Test Results,
-Operator Instructions, etc.
+* Electronic Documents such as Maintenance Manuals, Test Results, Operator Instructions, etc.
 
-:\* Description of Manufacturing Processes
+* Description of Manufacturing Processes
 
-:\* Routings to define the movement of parts through the manufacturing
-process
+* Routings to define the movement of parts through the manufacturing process
 
-:\* Part Genealogy
+* Part Genealogy
 
-:\* Quality Inspection Data
+* Quality Inspection Data
 
-The electronic documents representing MTConnect Assets are encoded using
-XML. As such, this provides a straightforward mechanism for integrating
-with B2MML documents that are also encoded using XML.
+The electronic documents representing MTConnect Assets are encoded using XML. As such, this provides a straightforward mechanism for integrating with B2MML documents that are also encoded using XML.
 
-Since B2MML addresses a wide variety of data models to support different
-types of information within the manufacturing environment and MTConnect
-represents a wide variety of data types collected from the manufacturing
-environment, the integration between these two standards can be an
-ever-growing effort with a variety of solutions. As such, the
-information provided here is intended to lay the groundwork for ongoing
-integration between these standards.
+Since B2MML addresses a wide variety of data models to support different types of information within the manufacturing environment and MTConnect represents a wide variety of data types collected from the manufacturing environment, the integration between these two standards can be an ever-growing effort with a variety of solutions. As such, the information provided here is intended to lay the groundwork for ongoing integration between these standards.
 
-An initial set of sample implementations are provided below to the open
-source community with the expectation that the community will continue
-to grow and expand the implementation examples and contribute their work
-back to the community through this MTCUP website.
+An initial set of sample implementations are provided below to the open source community with the expectation that the community will continue to grow and expand the implementation examples and contribute their work back to the community through this MTCUP website.
 
-The initial sample implementations were developed as part of the DMDII
-sponsored SPEC-OPS project.
+The initial sample implementations were developed as part of the DMDII sponsored SPEC-OPS project.
 
 ## Integration of B2MML Documents into an MTConnect Asset
 
-The main reason for integrating B2MML documents with MTConnect Assets is
-to provide a common mechanism for identifying, managing, storing, and
-transporting both B2MML documents and other MTConnect Assets (Parts,
-Processes, Cutting Tools, Files, etc.) in a common format and utilizing
-a common set of software tools and technologies.
+The main reason for integrating B2MML documents with MTConnect Assets is to provide a common mechanism for identifying, managing, storing, and transporting both B2MML documents and other MTConnect Assets (Parts, Processes, Cutting Tools, Files, etc.) in a common format and utilizing a common set of software tools and technologies.
 
-Since MTConnect is an extensible standard, an integrator can add
-additional content to an MTConnect implementation by extending the
-schema associated with any of the MTConnect Information Models. In this
-case, the MTConnect Assets Information Model would be extended to
-support additional Asset types – one for each of the B2MML document
-types that the integrator wishes to support in a system.
+Since MTConnect is an extensible standard, an integrator can add additional content to an MTConnect implementation by extending the schema associated with any of the MTConnect Information Models. In this case, the MTConnect Assets Information Model would be extended to support additional Asset types – one for each of the B2MML document types that the integrator wishes to support in a system.
 
-The integration of B2MML documents as a type of MTConnect Asset is a
-relatively straightforward process. B2MML and MTConnect encode documents
-using XML. XML documents are validated based upon a schema that is
-designed for each document type. XML has a useful feature that allows
-different parts of a document to be defined using different schemas.
-This feature allows an implementer to extend the MTConnect Assets schema
-for a new type of MTConnect Asset (B2MML) by defining a relatively small
-extension to the MTConnect Assets schema. This additional content
-provides identity and some basic information about the B2MML document.
-It is then possible to embed the entire B2MML document into the
-MTConnect Asset by merely identifying it and associating the B2MML
-schema and namespace for that document. By doing this, a software
-application can request and interpret MTConnect Assets representing
-B2MML information and then further interpret the B2MML content since the
-reference to the schema for that content is embedded into the MTConnect
-Asset document.
+The integration of B2MML documents as a type of MTConnect Asset is a relatively straightforward process. B2MML and MTConnect encode documents using XML. XML documents are validated based upon a schema that is designed for each document type. XML has a useful feature that allows different parts of a document to be defined using different schemas.
+This feature allows an implementer to extend the MTConnect Assets schema for a new type of MTConnect Asset (B2MML) by defining a relatively small extension to the MTConnect Assets schema. This additional content provides identity and some basic information about the B2MML document. It is then possible to embed the entire B2MML document into the MTConnect Asset by merely identifying it and associating the B2MML schema and namespace for that document. By doing this, a software application can request and interpret MTConnect Assets representing B2MML information and then further interpret the B2MML content since the reference to the schema for that content is embedded into the MTConnect Asset document.
 
-To accomplish this integration, the MTConnect Schema and namespace must
-be extended. The attached file represents a method for extending the
-MTConnect Schema and namespace to support two types of B2MML documents -
-Product Definition and Production Schedule.
+To accomplish this integration, the MTConnect Schema and namespace must be extended. The attached file represents a method for extending the MTConnect Schema and namespace to support two types of B2MML documents - Product Definition and Production Schedule.
 
 ## B2MML Product Definition Document as an MTConnect Asset
 
@@ -215,49 +144,37 @@ as an Asset
 The resulting MTConnect Assets document including a B2MML Product
 Definition type Asset is as follows:
 
+```XML
 <?xml version="1.0" encoding="UTF-8"?>
 
 <MTConnectAssets xsi:schemaLocation="urn:mtconnect.org:B2MML:1.3 /schemas/B2MML_1.3.xsd" xmlns:b="urn:mtconnect.org:B2MML:1.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ns="urn:mtconnect.org:MTConnectAssets:1.3" xmlns:m="urn:mtconnect.org:MTConnectAssets:1.3">
-
-  -
-
     <Header assetCount="132" assetBufferSize="10240" version="1.4.0.3" instanceId="1505504796" sender="ubuntu" creationTime="2017-10-12T13:50:35Z"/>
-
     <Assets>
-
-      -
         <B2mmlProductDefinition assetId="9ede2e6c-f2f2-55fb-ab60-f7ae2a21ad17" deviceUuid="itamco_Haas_1c2bc0" timestamp="2017-09-15T19:46:49.679251Z">
-          -
             <ProductDefinition ns="http://www.mesa.org/xml/B2MML-V0600">
-              -
                 <ID>TEST-00003 </ID>
                 <Description>Base, Part 1a, Rev. - Base, Part
                 1a</Description>
                 <ProductSegment>
-                  -
                     <ID>TEST-00003 </ID>
                 </ProductSegment>
             </ProductDefinition>
         </B2mmlProductDefinition>
         <B2mmlProductDefinition assetId="42078e08-169a-5183-ad38-78f2daa0593c" deviceUuid="itamco_Haas_1c2bc0" timestamp="2017-09-15T19:46:49.242110Z">
-          -
             <ProductDefinition ns="http://www.mesa.org/xml/B2MML-V0600">
-              -
                 <ID>TEST-00004 </ID>
                 <Description>Rear Mount, HV, Left, Rev. - Rear, HV,
                 Mount, Left</Description>
                 <ProductSegment>
-                  -
                     <ID>TEST-00004/ID\>
                 </ProductSegment>
             </ProductDefinition>
         </B2mmlProductDefinition>
-
     </Assets>
+</MTConnectAssets>
+```
 
-</MTConnectAssets
-
-== B2MML Production Schedule Document as an MTConnect Asset ==
+## B2MML Production Schedule Document as an MTConnect Asset
 
 The following figure demonstrates how a B2MML Production Schedule document can be embedded into an MTConnect Asset to create a B2MML Production Schedule Asset type.
 
@@ -272,104 +189,66 @@ Production Schedule as an Asset
 The resulting MTConnect Assets document containing a B2MML Production
 Schedule would be:
 
+```XML
 <?xml version="1.0" encoding="UTF-8"?>
-
 <MTConnectAssets xsi:schemaLocation="urn:mtconnect.org:B2MML:1.3 /schemas/B2MML_1.3.xsd" xmlns:b="urn:mtconnect.org:B2MML:1.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ns="urn:mtconnect.org:MTConnectAssets:1.3" xmlns:m="urn:mtconnect.org:MTConnectAssets:1.3">
-
-  -
-
     <Header assetCount="132" assetBufferSize="10240" version="1.4.0.3" instanceId="1505504796" sender="ubuntu" creationTime="2017-10-12T15:00:06Z"/>
-
     <Assets>
-
-      -
         <B2mmlProductionSchedule assetId="49d681d4-a790-5a71-91ec-6fe760e8a297" deviceUuid="6ee5c9" timestamp="2017-09-15T19:46:49.746808Z">
-          -
             <AssetArchetypeRef assetId="9ede2e6c-f2f2-55fb-ab60-f7ae2a21ad17" assetType="b:B2mmlProductDefinition"/>
             <Targets>
-              -
                 <Target type="DEVICE" targetId="WC81-SS">
-                  -
                     <TargetDevice>WC81-SS</TargetDevice>
                 </Target>
                 <Target type="DEVICE" targetId="WC41-HTC">
-                  -
                     <TargetDevice>WC41-HTC</TargetDevice>
                 </Target>
                 <Target type="DEVICE" targetId="WC89-QC">
-                  -
                     <TargetDevice>WC89-QC</TargetDevice>
                 </Target>
             </Targets>
             <ProductionSchedule ns="http://www.mesa.org/xml/B2MML-V0600">
-              -
                 <ID>M17-10450</ID>
                 <ProductionRequest>
-                  -
                     <ID>M17-10450</ID>
                     <Description>Base, Part 1a, Rev. - Base, Part
                     1a</Description>
                     <StartTime>2017-09-11T00:00:00-04:00</StartTime>
                     <EndTime>2017-09-15T17:00:00-04:00</EndTime>
                     <SegmentRequirement>
-                      -
                         <ProductSegmentID>TEST-00003 </ProductSegmentID>
                         <LatestEndTime>2017-09-15T17:00:00-04:00</LatestEndTime>
                         <Duration>PT15H30M</Duration>
                         <MaterialProducedRequirement>
-                          -
-                            <Quantity>
-                              -
-                                <QuantityString>0.1E2</QuantityString>
+                            <Quantity> <QuantityString>0.1E2</QuantityString>
                                 <DataType>Amount</DataType>
                             </Quantity>
                         </MaterialProducedRequirement>
-                        <MaterialConsumedRequirement>
-                          -
-                            <MaterialConsumedRequirementProperty>
-                              -
+                        <MaterialConsumedRequirement> <MaterialConsumedRequirementProperty>
                                 <ID>Availability</ID>
-                                <Value>
-                                  -
-                                    <ValueString>Available</ValueString>
-                                    <DataType>string</DataType>
-                                </Value>
-                            </MaterialConsumedRequirementProperty>
+                                <Value>                                    <ValueString>Available</ValueString> <DataType>string</DataType>
+                                </Value> </MaterialConsumedRequirementProperty>
                         </MaterialConsumedRequirement>
                     <SegmentRequirement>
-                      -
-
-                          -
                             <ID>005 </ID>
                             <Duration>PT10M</Duration>
                             <ProductionParameter>
-                              -
                                 <Parameter>
-                                  -
                                     <ID>SetupTime</ID>
-                                    <Value>
-                                      -
-                                        <ValueString>PT0S</ValueString>
-                                        <DataType>duration</DataType>
+                                    <Value> <ValueString>PT0S</ValueString>   <DataType>duration</DataType>
                                     </Value>
                                 </Parameter>
                             </ProductionParameter>
                             <EquipmentRequirement>
-                              -
                                 <EquipmentID>WC81-SS </EquipmentID>
                                 <Description>Shipping Support
                                 </Description>
                                 <EquipmentRequirementProperty>
-                                  -
                                     <ID>Cost</ID>
-                                    <Value>
-                                      -
-                                        <ValueString>6.918049999999999</ValueString>
-                                        <DataType>Amount</DataType>
+                                    <Value> <ValueString>6.918049999999999</ValueString> <DataType>Amount</DataType>
                                         <UnitOfMeasure>US
                                         Dollar</UnitOfMeasure>
-                                    </Value>
-                                </EquipmentRequirementProperty>
+                                    </Value> </EquipmentRequirementProperty>
                             </EquipmentRequirement>
                     </SegmentRequirement>
                     <RequestState>Released</RequestState>
@@ -377,10 +256,9 @@ Schedule would be:
                 <ScheduleState>Released</ScheduleState>
             </ProductionSchedule>
         </B2mmlProductionSchedule>
-
     </Assets>
-
-\</MTConnectAssets
+</MTConnectAssets>
+```
 
 ## Mapping of Terms Between the Standards
 
