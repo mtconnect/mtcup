@@ -2,82 +2,14 @@
 title: Annotated XML Examples
 description: 
 published: true
-date: 2021-09-24T00:30:31.920Z
+date: 2022-06-09T11:43:32.405Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-24T00:30:28.692Z
 ---
 
-## Simplest Device
 
-For the simplest possible [device](/Terminology "wikilink"), we are
-modeling a saw that has only an *Availability* (the minimal set of
-*[DataItem](/Terminology "wikilink")*). To retrieve this information, we
-send the following request to the *[Agent](/Terminology "wikilink")*:
-
-http://10.1.23.10/LinuxCNC/probe
-
-The *[Agent](/Terminology "wikilink")* responds as follows:
-
-``` xml
-
-1.  <?xml version="1.0" encoding="UTF-8"?>
-2.  <MTConnectDevices xmlns:m="urn:mtconnect.com:MTConnectDevices:0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ns="urn:mtconnect.com:MTConnectDevices:0.9" xsi:schemaLocation="urn:mtconnect.com:MTConnectDevices:0.9 /schemas/MTConnectDevices.xsd">
-3.  <Header sender="10.1.23.10" bufferSize="100000"
-      creationTime="2008-07-07T23:07:50-07:00" version="0.9"
-      instanceId="1214527986"/>
-```
-
-Line 3 provides the *instanceId* as a unique number for this request.
-For this example, the *[Agent](/Terminology "wikilink")* does not
-persist the *[Samples](/Terminology "wikilink")*,
-*[Events](/Terminology "wikilink")*, and *Condition*. Therefore, this
-number will change every time that it is recorded. The *bufferSize*
-indicates that this *[Agent](/Terminology "wikilink")* is capable of
-storing 100,000 *[DataItem](/Terminology "wikilink")* of category
-*[Sample](/Terminology "wikilink")*, *[Event](/Terminology "wikilink")*,
-and *Condition*.
-
-``` xml
-
-4.  <Devices>
-5.    <Device iso841Class="6" uuid="linux-01" name="LinuxCNC"
-               sampleInterval="100.0" id="d">
-6.      <Description manufacturer="NIST" serialNumber="01"/>
-```
-
-The above device description includes the unique *id* and a sample
-interval of ten times per second. Since there are no telemetry data
-being collected, sampling at once per second is typically adequate.
-
-``` xml
-
-7.      </Components>
-8.       <DataItems>
-9.          <DataItem type="AVAILABILITY" name="avail" category="EVENT"
-                   id="a"/>
-10.       </DataItems>
-```
-
-As was stated previously, the [device](/Terminology "wikilink") is only
-required to have one *[DataItem](/Terminology "wikilink")* and it is of
-the type *AVAILABILITY* which MUST report the
-[device](/Terminology "wikilink")’s present ability to communicate. The
-*[DataItem](/Terminology "wikilink")* on line 9 has an *id* of “a”. This
-will allow events responding to this
-*[DataItem](/Terminology "wikilink")* to be easily associated.
-
-``` xml
-
-11.       </Components>
-12.     </Device>
-13.   </Devices>
-14. </MTConnectDevices>
-```
-
-Lines 11 through 14 terminate each element type and close the document.
-
-## More Complex Probe Example
+## More Complex Device File Example
 
 The *[Sample](/Terminology "wikilink")* was generated with the following
 request:
