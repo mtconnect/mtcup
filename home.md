@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2022-06-05T10:52:03.914Z
+date: 2022-06-09T16:19:58.444Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-22T02:21:15.482Z
@@ -82,13 +82,15 @@ A typical MTConnect architecture has 4 key components: Device, Adapter, Agent an
 
 ## Research Projects
 
+- [MetaAgent](/MetaAgent "wikilink") - Seamless data integration for MTConnect, NC-Link and OPC UA and any other standards.
+
+- [Mazak MTConnect Testbed](http://mtconnect.mazakcorp.com/) - MTConnect Demo Agents.
+
 - [ROS - MTConnect](/ROS_-_MTConnect "wikilink") - Robot Automation Cell Testbed Development and Demonstration using ROS and MTConnect
 
 - [SPEC-OPS](/Spec_-_Ops "wikilink") - Standards-based dynamic scheduling and job routing.
 
 - [O3](/O3 "wikilink") - Develop real time simulation and verification built on standards.
-
-- [Mazak MTConnect Testbed](http://mtconnect.mazakcorp.com/) - MTConnect Demo Agents.
 
 - [VTech - AMT](/VTech_-_AMT "wikilink") - MTConnect Use Case Studies at the Virginia Tech Learning Factory
 
