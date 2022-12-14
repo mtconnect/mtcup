@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2022-12-14T13:28:49.054Z
+date: 2022-12-14T13:31:04.191Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-22T02:21:15.482Z
@@ -24,7 +24,7 @@ For more information, please visit the official MTConnect website at [mtconnect.
 
 Current and archived releases of the MTConnect Standard are free. Find them at [mtconnect.org/documents](https://www.mtconnect.org/documents)
 
-Installing the MTConnect Agent: [Install Agent]
+Installing the MTConnect Agent: [Install Agent](/InstallAgent "wikilink")
 
 ### MTConnect SysML Model
 
