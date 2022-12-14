@@ -2,7 +2,7 @@
 title: C++ Agent Usage and Configuration
 description: 
 published: true
-date: 2022-06-01T14:57:50.017Z
+date: 2022-12-14T13:54:30.034Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-01T14:19:42.467Z
@@ -56,7 +56,64 @@ The configuration file is using the standard Boost C++ file format. The configur
     Key = Value
 ```
 
-The key can only occur once within a section and the value can be any sequence of characters followed by a `<CR>`. There no significance to the order of the keys, so the file can be specified in free form. We will go over some configurations from a minimal configuration to more complex multi-adapter configurations.
+The key can only occur once within a block and the value can be any sequence of characters followed by a newline. There no significance to the order of the keys, so the file can be specified in free form. We will go over some configurations from a minimal configuration to more complex multi-adapter configurations.
+
+A block that contains and contextualizes a set of properties is specfied as follows:
+
+```
+  Block { 
+    Key = Value
+  }
+```
+
+A comment begins with a `#` until the end of the line. 
+
+```
+  # This is a comment
+  Key = Value # This is also a comment
+```
+
+### Basic Configuration
+
+For the simplest configuration, the MTConnect Agent will look for a Devices.xml file in the location of the executable application and will attempt to connect to the localhost port 7878 for an adapter. 
+
+This is equivilent to the following cofiguration: 
+
+```
+    Devices = Devices.xml
+    Adapters {
+      * { 
+        Host = localhost
+        Port = 7878
+      }
+    }
+```
+
+### General Configuration
+
+### Monitoring Configuration Files
+
+### Configuring REST Protocol
+
+#### Allowing HTTP PUT/POST
+
+#### Enabling TLS
+
+### Configuring Adapters
+
+#### SHDR Adapters
+
+#### Agent Adapter
+
+#### MQTT Adapters
+
+### Configuring Sinks
+
+#### MQTT Sink
+
+### Adding Plugins
+
+### Ruby Transformations
 
 ### Serving Static Content
 
