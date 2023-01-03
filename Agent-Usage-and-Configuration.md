@@ -2,7 +2,7 @@
 title: C++ Agent Usage and Configuration
 description: 
 published: true
-date: 2023-01-03T23:15:16.963Z
+date: 2023-01-03T23:18:41.397Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-01T14:19:42.467Z
@@ -99,7 +99,7 @@ This is equivilent to the following cofiguration:
 
 #### Configuring TLS (HTTPS)
 
-Transport Level Security is enabled by adding certificates to the agent. The minimum configuration options required are the following configuration items:
+Transport Layer Security is enabled by adding certificates to the agent. The minimum configuration options required are the following configuration items:
 
 * `TlsCertificateChain`: Specifies a file with a certificatate in `PEM` format for the REST server. If any intermediate certificates are required, they should be provide with the primary certificate first followed by the intermediate certificates in order. 
 * `TlsPrivateKey`: The file containing the secret key in `PEM` format.
