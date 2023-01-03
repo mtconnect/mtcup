@@ -2,7 +2,7 @@
 title: C++ Agent Usage and Configuration
 description: 
 published: true
-date: 2023-01-03T23:26:45.765Z
+date: 2023-01-03T23:28:21.805Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-01T14:19:42.467Z
@@ -92,6 +92,13 @@ This is equivilent to the following cofiguration:
 ### General Configuration
 
 ### Monitoring Configuration Files
+* `MonitorConfigFiles` - Monitor agent.cfg and Devices.xml files and restart agent if they change.
+    &nbsp;*Default*: false
+
+* `MinimumConfigReloadAge` - The minimum age of a config file before an agent reload is triggered (seconds).
+    &nbsp;*Default*: 15
+
+
 
 ### Configuring REST Protocol
 
