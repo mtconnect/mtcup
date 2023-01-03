@@ -2,7 +2,7 @@
 title: C++ Agent Usage and Configuration
 description: 
 published: true
-date: 2022-12-14T13:54:30.034Z
+date: 2023-01-03T23:10:02.737Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-01T14:19:42.467Z
@@ -98,6 +98,119 @@ This is equivilent to the following cofiguration:
 #### Allowing HTTP PUT/POST
 
 #### Enabling TLS
+
+Transport Level Security is enabled by adding certificates to the agent. The minimum configuration options required are the following configuration items:
+
+* `TlsCertificateChain`: Specifies a file with a certificatate in `PEM` format for the REST server. If any intermediate certificates are required, they should be provide with the primary certificate first followed by the intermediate certificates in order. 
+* `TlsPrivateKey`: The file containing the secret key in `PEM` format.
+* `TlsDHKey`: The file containing the Diffie–Hellman (D-H) parameters for the key exchange.
+
+The fllowing parameters are optional when configuring TLS:
+
+* `TlsOnly`: Reject any request that does not use TLS (https) to access the server.
+* `TlsCertificatePassword`: The password for the private key if required.
+* `TlsVerifyClientCertificate`: Require the client certificate to be validated against root certs.
+  * `TlsClientCAs`: A set of certificate authorities for client certiticate authentication. This is used when a self-signing client certificate is used.
+  
+#### Example Configuration
+
+Given there are files in a directory relative to the `agent` directory:
+
+```
+Devices = Device.xml
+Port = 5000
+
+# TLS
+TlsCertificateChain = ./CertificateChain.crt
+TlsPrivateKey = ./PrivateKey.key
+TlsDHKey = ./dh2048.pem
+TlsCertificatePassword = secret
+```
+
+If one wants to disable all non-TLS connections:
+
+```
+TlsOnly = yes
+```
+
+When a client certification chain is used, specifiy it as follows:
+
+```
+TlsVerifyClientCertificate = yes
+TlsClientCAs = ./ClientCA.crt
+```
+  
+#### Exmple creating self-signing certificates for the agent
+
+##### Creating Test Certifications (see resources gen_certs shell script)
+
+This section assumes you have installed openssl and can use the command line. The subject of the certificate is only for testing and should not be used in production. This section is provided to support testing and verification of the functionality. A certificate provided by a real certificate authority should be used in a production process.
+
+NOTE: The certificates must be generated with OpenSSL version 1.1.1 or later. LibreSSL 2.8.3 is not compatible with 
+      more recent version of SSL on raspian (Debian).
+
+###### Server Creating self-signed certificate chain
+
+###### Create Signing authority key and certificate
+
+	openssl req -x509 -nodes -sha256 -days 3650 -newkey rsa:3072 -keyout rootca.key -out rootca.crt -subj "/C=US/ST=State/L=City/O=Your Company, Inc./OU=IT/CN=serverca.org"
+
+###### User Key
+
+    openssl genrsa -out user.key 3072
+
+###### Signing Request
+
+    openssl req -new -sha256 -key user.key -out user.csr -subj "/C=US/ST=State/L=City/O=Your Company, Inc./OU=IT/CN=user.org"
+
+###### User Certificate using root signing certificate
+
+    openssl x509 -req -in user.csr -CA rootca.crt -CAkey rootca.key -CAcreateserial -out user.crt -days 3650
+
+###### Create DH Parameters
+
+    openssl dhparam -out dh2048.pem 3072
+
+###### Verify
+
+    openssl verify -CAfile rootca.crt rootca.crt
+    openssl verify -CAfile rootca.crt user.crt
+
+###### Client Certificate
+
+###### Create Signing authority key
+
+    openssl req -x509 -nodes -sha256 -days 3650 -newkey rsa:3072 -keyout clientca.key -out clientca.crt -subj "/C=US/ST=State/L=City/O=Your Company, Inc./OU=IT/CN=clientca.org"
+
+###### Create client key
+
+    openssl genrsa -out client.key 3072
+
+###### Create client signing request
+
+    openssl req -new -key client.key -out client.csr -subj "/C=US/ST=State/L=City/O=Your Company, Inc./OU=IT/CN=client.org"
+
+###### Create Client Certificate
+
+For client.cnf
+
+    basicConstraints = CA:FALSE
+    nsCertType = client, email
+    nsComment = "OpenSSL Generated Client Certificate"
+    subjectKeyIdentifier = hash
+    authorityKeyIdentifier = keyid,issuer
+    keyUsage = critical, nonRepudiation, digitalSignature, keyEncipherment
+    extendedKeyUsage = clientAuth, emailProtection
+
+##### Create the cert
+
+    openssl x509 -req -in client.csr -CA clientca.crt -CAkey clientca.key -out client.crt -CAcreateserial -days 3650 -sha256 -extfile client.cnf
+
+###### Verify
+
+    openssl verify -CAfile clientca.crt clientca.crt
+    openssl verify -CAfile clientca.crt client.crt
+
 
 ### Configuring Adapters
 
