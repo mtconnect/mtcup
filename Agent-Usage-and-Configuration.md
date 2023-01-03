@@ -2,7 +2,7 @@
 title: C++ Agent Usage and Configuration
 description: 
 published: true
-date: 2023-01-03T23:25:01.506Z
+date: 2023-01-03T23:26:45.765Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-01T14:19:42.467Z
@@ -152,7 +152,7 @@ TlsVerifyClientCertificate = yes
 TlsClientCAs = ./ClientCA.crt
 ```
   
-#### Exmple creating self-signing certificates for the agent
+#### *Example: Creating self-signing certificates for the agent*
 
 ##### Creating Test Certifications (see resources gen_certs shell script)
 
