@@ -2,7 +2,7 @@
 title: C++ Agent Usage and Configuration
 description: 
 published: true
-date: 2023-01-03T23:19:21.251Z
+date: 2023-01-03T23:23:06.720Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-01T14:19:42.467Z
@@ -21,7 +21,7 @@ dateCreated: 2022-06-01T14:19:42.467Z
                       Default: agent.cfg in current directory
 ```
 
-For Microsoft Windows® Services, when the agent is started without any arguments it is assumed it will be running as a service and will begin the service initialization sequence. The full path to the configuration file is stored in the registry in the following location:
+For Microsoft Windows® Services, when the agent is started without any arguments, it is assumed it will be running as a service and will begin the service initialization sequence. The full path to the configuration file is stored in the registry in the following location:
 
 ```
     \\HKEY_LOCAL_MACHINE\SOFTWARE\MTConnect\MTConnect Agent\ConfigurationFile
@@ -97,11 +97,14 @@ This is equivilent to the following cofiguration:
 
 #### Allowing HTTP PUT/POST
 
+
+* `AllowPut`	- Allow HTTP PUT or POST of data item values or assets.
+  &nbsp;*Default*: false
+
 * `AllowPutFrom`	- Allow HTTP PUT or POST from a specific host or 
   list of hosts. Lists are comma (,) separated and the host names will
-  be validated by translating them into IP addresses.
-
-    *Default*: none
+  be validated by translating them into IP addresses. 
+  &nbsp;*Default*: none
 
 
 #### Configuring TLS (HTTPS)
@@ -115,8 +118,10 @@ Transport Layer Security is enabled by adding certificates to the agent. The min
 The fllowing parameters are optional when configuring TLS:
 
 * `TlsOnly`: Reject any request that does not use TLS (https) to access the server.
+  &nbsp;*Default*: false
 * `TlsCertificatePassword`: The password for the private key if required.
 * `TlsVerifyClientCertificate`: Require the client certificate to be validated against root certs.
+  &nbsp;*Default*: false
   * `TlsClientCAs`: A set of certificate authorities for client certiticate authentication. This is used when a self-signing client certificate is used.
   
 #### Example Configuration
