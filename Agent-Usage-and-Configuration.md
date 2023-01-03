@@ -2,7 +2,7 @@
 title: C++ Agent Usage and Configuration
 description: 
 published: true
-date: 2023-01-03T23:18:41.397Z
+date: 2023-01-03T23:19:21.251Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-01T14:19:42.467Z
@@ -96,6 +96,13 @@ This is equivilent to the following cofiguration:
 ### Configuring REST Protocol
 
 #### Allowing HTTP PUT/POST
+
+* `AllowPutFrom`	- Allow HTTP PUT or POST from a specific host or 
+  list of hosts. Lists are comma (,) separated and the host names will
+  be validated by translating them into IP addresses.
+
+    *Default*: none
+
 
 #### Configuring TLS (HTTPS)
 
