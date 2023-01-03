@@ -2,7 +2,7 @@
 title: C++ Agent Usage and Configuration
 description: 
 published: true
-date: 2023-01-03T23:10:39.013Z
+date: 2023-01-03T23:15:16.963Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-01T14:19:42.467Z
@@ -21,7 +21,7 @@ dateCreated: 2022-06-01T14:19:42.467Z
                       Default: agent.cfg in current directory
 ```
 
-When the agent is started without any arguments it is assumed it will be running as a service and will begin the service initialization sequence. The full path to the configuration file is stored in the registry in the following location:
+For Microsoft Windows® Services, when the agent is started without any arguments it is assumed it will be running as a service and will begin the service initialization sequence. The full path to the configuration file is stored in the registry in the following location:
 
 ```
     \\HKEY_LOCAL_MACHINE\SOFTWARE\MTConnect\MTConnect Agent\ConfigurationFile
