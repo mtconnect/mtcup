@@ -2,7 +2,7 @@
 title: C++ Agent Usage and Configuration
 description: 
 published: true
-date: 2023-01-03T23:10:02.737Z
+date: 2023-01-03T23:10:39.013Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-01T14:19:42.467Z
@@ -97,7 +97,7 @@ This is equivilent to the following cofiguration:
 
 #### Allowing HTTP PUT/POST
 
-#### Enabling TLS
+#### Configuring TLS (HTTPS)
 
 Transport Level Security is enabled by adding certificates to the agent. The minimum configuration options required are the following configuration items:
 
