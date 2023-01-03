@@ -2,7 +2,7 @@
 title: C++ Agent Usage and Configuration
 description: 
 published: true
-date: 2023-01-03T23:28:21.805Z
+date: 2023-01-03T23:30:40.620Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-01T14:19:42.467Z
@@ -101,6 +101,13 @@ This is equivilent to the following cofiguration:
 
 
 ### Configuring REST Protocol
+
+* `Port`	- The port number the agent binds to for requests.
+		&nbsp;*Default*: 5000
+    
+* `ServerIp` - The server IP Address to bind to. Can be used to select the interface in IPV4 or IPV6.
+		&nbsp;*Default*: 0.0.0.0
+
 
 #### Allowing HTTP PUT/POST
 
