@@ -2,7 +2,7 @@
 title: Reference Agent Pipeline Architecture
 description: Internal architecture of the MTConnect Agent to extend data transformations
 published: true
-date: 2023-01-22T18:51:35.850Z
+date: 2023-01-22T19:16:13.895Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-22T18:46:52.518Z
@@ -11,6 +11,14 @@ dateCreated: 2023-01-22T18:46:52.518Z
 # MTConnect Agent Pipeline Architecture
 
 ## Overview
+
+The MTConnect Agent uses a data transformation pipeline to provide a flexible and mutable mechanism for processing incoming data from various sources and allowing for reusability of common transform components. 
+
+![Transforms](/images/transforms.png)
+
+The `Start` transform begins all pipelines and passes the incoming data to the downstream transforms. A transform has two required capabilities: `Guard` and `Transform`. The `Guard` allows the transformation to decide if the data is something it can handle if what action should be taken next. 
+
+If the guard returns `CONTINUE`, the search for a match will continue to the next transform in the list. If the guard returns `SKIP`, the transform will be skipped and the data will be passed to the transform's list of subsequent transforms. 
 
 ## Entities used in the pipelines
 
