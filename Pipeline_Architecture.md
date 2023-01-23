@@ -2,7 +2,7 @@
 title: Reference Agent Pipeline Architecture
 description: Internal architecture of the MTConnect Agent to extend data transformations
 published: true
-date: 2023-01-23T11:07:15.759Z
+date: 2023-01-23T14:37:04.733Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-22T18:46:52.518Z
@@ -178,12 +178,6 @@ MTConnect.agent.sources.each do |s|
     pipe = s.pipeline
     trans = MapMqttData.new()
     pipe.replace("JsonMapper", trans)
- 
-    # Find the duplicate filter transform and attach this 
-    # transform to it. This will ensure that only changes will
-    # get published and flow all the way through to delivery.
-    dup, = pipe.find("DuplicateFilter")
-    trans.bind(dup)    
   end
 end
 ```
