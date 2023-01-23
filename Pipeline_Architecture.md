@@ -2,7 +2,7 @@
 title: Reference Agent Pipeline Architecture
 description: Internal architecture of the MTConnect Agent to extend data transformations
 published: true
-date: 2023-01-23T10:34:46.172Z
+date: 2023-01-23T11:07:15.759Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-22T18:46:52.518Z
@@ -29,6 +29,8 @@ The guard can return one of the three following responses:
 * `CONTINUE`: the search for a match will continue to the next transform in the list. 
 * `SKIP`: The search stops, but the transform is not run. The transform's list of next transforms is evaluated to determine the next step. 
 * `RUN`: The transform is executed.
+
+Use the `bind` method to add a transform, given as an argument to the `bind` method, to the end of the list of next transforms.
 
 ## Pipelines
 
@@ -67,7 +69,7 @@ At present the `JsonMapper` cannot decode the data, so it ignores it. Otherwise 
 
 When using the mruby embedded language, one can write dynamic scripted transformation to support quick corrections or protocol transformations from JSON representations via MQTT. 
 
-An example of a ruby transform takes 
+An example of a ruby transform takes some data with the topic data and converts `1` to `READY` and `2` to `ACTIVE`. The transform is added as the first transform after the `Start` (the first transform). 
 
 ```ruby
 class MapMqttData < MTConnect::RubyTransform
@@ -116,10 +118,10 @@ MTConnect.agent.sources.each do |s|
 end
 ```
 
-Another example:
+The second example is interprestation of MQTT data. This replaces the dummy `JsonMapper` and the guard runs only on JsonMessages. The data in Json format is easily converted to a ruby Hash by just evaluating it. 
 
 ```ruby
-MTConnect::Logger.info "Declaring class MapMqttData"
+TConnect::Logger.info "Declaring class MapMqttData"
 
 class MapMqttData < MTConnect::RubyTransform
   def initialize
@@ -159,9 +161,12 @@ class MapMqttData < MTConnect::RubyTransform
     else
       MTConnect::Logger.warning "Not doing conditions at the moment"
     end
-    
-    return forward(obs) if obs
-    nil
+
+    if obs
+      forward(obs)
+    else
+      nil
+    end
   end
 end
 
@@ -173,6 +178,12 @@ MTConnect.agent.sources.each do |s|
     pipe = s.pipeline
     trans = MapMqttData.new()
     pipe.replace("JsonMapper", trans)
+ 
+    # Find the duplicate filter transform and attach this 
+    # transform to it. This will ensure that only changes will
+    # get published and flow all the way through to delivery.
+    dup, = pipe.find("DuplicateFilter")
+    trans.bind(dup)    
   end
 end
 ```
