@@ -2,7 +2,7 @@
 title: Adapter Agent Protocol
 description: 
 published: true
-date: 2023-05-27T04:18:04.336Z
+date: 2023-05-27T04:21:49.521Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-24T00:32:21.529Z
@@ -244,6 +244,7 @@ There are a number of commands that can be sent as part of the adapter stream. T
 * Set the device model of the associated device:
 	`* deviceModel: --multiline--AAAAA\n<XML Fragment>\n--multiline--AAAAA`
   * Note: The XML is expected to be an XML fragment of the `<Device />` intended to be injected into the local device configuration.
+  * *WARNING*: If the device configuration is empty, this SHDR command **MUST** be issued before other commands such as `* mtconnectVersion` or `* device`. The only exception is if a device is appropriately defined in the local device configuration *before* the Agent connectes to an adapter.
 
 Any other command will be logged as a warning.
 
