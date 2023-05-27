@@ -2,7 +2,7 @@
 title: Adapter Agent Protocol
 description: 
 published: true
-date: 2022-06-01T18:15:37.100Z
+date: 2023-05-27T04:16:28.600Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-24T00:32:21.529Z
@@ -240,6 +240,9 @@ There are a number of commands that can be sent as part of the adapter stream. T
 * Set the station in the device header of the associated device:
  
 	`* station: XXX`
+
+* Set the device model of the associated device:
+	`* deviceModel: --multiline--AAAAA\n<XML>\n--multiline--AAAAA`
 
 Any other command will be logged as a warning.
 
