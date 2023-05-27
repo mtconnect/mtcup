@@ -2,7 +2,7 @@
 title: Adapter Agent Protocol
 description: 
 published: true
-date: 2023-05-27T04:16:28.600Z
+date: 2023-05-27T04:18:04.336Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-24T00:32:21.529Z
@@ -242,7 +242,8 @@ There are a number of commands that can be sent as part of the adapter stream. T
 	`* station: XXX`
 
 * Set the device model of the associated device:
-	`* deviceModel: --multiline--AAAAA\n<XML>\n--multiline--AAAAA`
+	`* deviceModel: --multiline--AAAAA\n<XML Fragment>\n--multiline--AAAAA`
+  * Note: The XML is expected to be an XML fragment of the `<Device />` intended to be injected into the local device configuration.
 
 Any other command will be logged as a warning.
 
