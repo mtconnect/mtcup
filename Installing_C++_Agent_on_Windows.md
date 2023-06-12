@@ -2,7 +2,7 @@
 title: Installing C++ Agent on Windows
 description: Build, install, configure and run MTConnect C++ Agent on Windows.
 published: true
-date: 2022-06-01T14:03:44.027Z
+date: 2023-06-12T20:53:50.567Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-01T12:39:42.594Z
@@ -59,29 +59,35 @@ conan export conan\mruby
 
 ####  To build for 64 bit Windows
 	
-Make sure to setup the environment:
+Make sure to setup the environment For VS 2022:
 
 ```
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Auxiliary\Build\vcvars64.bat"
+"C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Auxiliary\Build\vcvars64.bat"
 ```
 or
 
 ```
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"	
-conan install . -if build -s build_type=Release --build=missing -pr conan/profiles/vs64
-conan build . -bf build
+"C:\Program Files (x86)\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"	
+```
+for Release Build Type 
+
+```
+conan build . --build=missing -pr conan/profiles/vs64 -o with_docs=False -o with_ruby=False
 ```
 
 #### To build for 32 bit Windows
 
 ```
-conan install . -if build -s build_type=Release --build=missing -pr conan/profiles/vs32
-conan build . -bf build
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Auxiliary\Build\vcvars32.bat"
+```
+for Release Build Type
+```
+conan build . --build=missing -pr conan/profiles/vs32 -o with_docs=False -o with_ruby=False
 ```
 
 #### To build for Windows XP
 
-The windows XP 140 XP toolchain needs to be installed under individual component in the Visual Studio 2019 installer. 
+The windows XP 140 XP toolchain needs to be installed under individual component in the Visual Studio 2022 installer. 
 
 ```
 conan install . -s build_type=Release --build=missing -pr conan/profiles/vsxp
