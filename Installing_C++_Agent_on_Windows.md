@@ -2,7 +2,7 @@
 title: Installing C++ Agent on Windows
 description: Build, install, configure and run MTConnect C++ Agent on Windows.
 published: true
-date: 2023-06-12T20:53:50.567Z
+date: 2023-06-13T13:58:00.950Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-01T12:39:42.594Z
@@ -63,26 +63,20 @@ Make sure to setup the environment For VS 2022:
 
 ```
 "C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Auxiliary\Build\vcvars64.bat"
+conan build . --build=missing -pr conan/profiles/vs64 
 ```
 or
 
 ```
 "C:\Program Files (x86)\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"	
-```
-for Release Build Type 
-
-```
-conan build . --build=missing -pr conan/profiles/vs64 -o with_docs=False -o with_ruby=False
+conan build . --build=missing -pr conan/profiles/vs64 
 ```
 
 #### To build for 32 bit Windows
 
 ```
 C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Auxiliary\Build\vcvars32.bat"
-```
-for Release Build Type
-```
-conan build . --build=missing -pr conan/profiles/vs32 -o with_docs=False -o with_ruby=False
+conan build . --build=missing -pr conan/profiles/vs32 
 ```
 
 #### To build for Windows XP
@@ -90,8 +84,7 @@ conan build . --build=missing -pr conan/profiles/vs32 -o with_docs=False -o with
 The windows XP 140 XP toolchain needs to be installed under individual component in the Visual Studio 2022 installer. 
 
 ```
-conan install . -s build_type=Release --build=missing -pr conan/profiles/vsxp
-conan build . -bf build
+conan install . --build=missing -pr conan/profiles/vsxp
 ```
 
 ### Package the release
