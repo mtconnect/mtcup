@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2023-06-27T16:12:49.419Z
+date: 2023-06-27T16:16:30.788Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-22T02:21:15.482Z
@@ -82,9 +82,9 @@ A typical MTConnect architecture has 4 key components: Device, Adapter, Agent an
 
 - [Develop Application](/Application "wikilink")
 
-- [Pipeline Architecture](/Pipeline_Architecture "wikilink")
+- [Develop Agent Plug-ins](/Agent-Plugins "wikilink")
 
-  - [Agent Plug-ins](/Agent-Plugins "wikilink")
+  - [Data Transformation Pipeline Architecture](/Pipeline_Architecture "wikilink")
 
 ## Research Projects
 
