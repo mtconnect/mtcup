@@ -2,7 +2,7 @@
 title: Data Transformation Using Ruby
 description: 
 published: true
-date: 2023-06-27T11:37:47.756Z
+date: 2023-06-27T11:39:13.033Z
 tags: 
 editor: markdown
 dateCreated: 2023-06-26T12:09:50.494Z
@@ -28,7 +28,7 @@ The current functionality is limited to the pipeline transformations from the ad
 
 # Examples
 
-## Template for a Ruby Transformation Module
+## Template
 
 ```ruby
 # You may replace the name of the class <UseCaseName> with the custom use case at hand.
