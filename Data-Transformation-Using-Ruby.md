@@ -1,14 +1,12 @@
 ---
 title: Data Transformation Using Ruby
-description: 
+description: The Agent 2.0.0.2 release introduced an embedded mruby scripting engine for dynamic transformation.
 published: true
-date: 2023-06-27T11:39:13.033Z
+date: 2023-06-27T16:11:35.455Z
 tags: 
 editor: markdown
 dateCreated: 2023-06-26T12:09:50.494Z
 ---
-
-The [Agent 2.0.0.2][agent_2-0-0-2] release introduced an embedded mruby scripting engine for dynamic transformation.
 
 # Configuration
 
