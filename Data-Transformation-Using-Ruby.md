@@ -1,15 +1,14 @@
 ---
 title: Data Transformation Using Ruby
-description: The Agent 2.0.0.2 release introduced an embedded mruby scripting engine for dynamic transformation.
+description: The Agent includes an embedded mruby scripting engine for dynamic transformation.
 published: true
-date: 2023-06-27T18:11:11.114Z
+date: 2023-06-27T18:14:27.675Z
 tags: 
 editor: markdown
 dateCreated: 2023-06-26T12:09:50.494Z
 ---
 
-
-The Agent includes an embedded mruby scripting engine to enable dynamic transformation.
+[Agent 2.0.0.2][agent_2-0-0-2] release introduced an extensible plug-in architecture for incoming and outgoing protocols; and data transformations.
 
 # Data Transformation Pipeline Architecture
 
@@ -245,9 +244,6 @@ MTConnect.agent.sources.each do |s|
   end
 end
 ```
-
-
-
 
 
 [agent_2-0-0-2]: https://github.com/mtconnect/cppagent/releases/tag/v2.0.0.2
