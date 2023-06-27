@@ -1,18 +1,16 @@
 ---
-title: Data Transformation using Ruby
+title: Data Transformation Using Ruby
 description: 
 published: true
-date: 2023-06-26T12:09:50.494Z
+date: 2023-06-27T11:37:47.756Z
 tags: 
 editor: markdown
 dateCreated: 2023-06-26T12:09:50.494Z
 ---
 
-# Data Transformation using Ruby
-
 The [Agent 2.0.0.2][agent_2-0-0-2] release introduced an embedded mruby scripting engine for dynamic transformation.
 
-## Configuration
+# Configuration
 
 For data transformation using Ruby, add the following in the agent config file:
 
@@ -28,9 +26,9 @@ The current functionality is limited to the pipeline transformations from the ad
 
 [ruby_plugin_module_example]: /Ruby-Plugin-Module-Example "wikilink"
 
-## Examples
+# Examples
 
-### Template for a Ruby Transformation Module
+## Template for a Ruby Transformation Module
 
 ```ruby
 # You may replace the name of the class <UseCaseName> with the custom use case at hand.
@@ -65,7 +63,7 @@ MTConnect.agent.sources.each do |s|
 end
 ```
 
-#### Template with Transformation count
+### Template with Transformation count
 
 ```ruby
 # You may replace the name of the class <UseCaseName> with the custom use case at hand.
@@ -109,7 +107,7 @@ MTConnect.agent.sources.each do |s|
 end
 ```
 
-### Fix `Execution` state of a device
+## Fix `Execution` state of a device
 
 Scenario: The adapter outputs `Execution` state `NOT_READY` as `IDLE`, and `WAIT` as `WAITING` instead. `IDLE` and `WAITING` are not MTConnect semantics. Hence can be transformed to `NOT_READY` and `WAIT` as shown below.
 
