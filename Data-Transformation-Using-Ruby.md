@@ -2,7 +2,7 @@
 title: Data Transformation Using Ruby
 description: The Agent includes an embedded mruby scripting engine for dynamic transformation.
 published: true
-date: 2023-06-27T18:14:27.675Z
+date: 2023-06-28T12:29:25.725Z
 tags: 
 editor: markdown
 dateCreated: 2023-06-26T12:09:50.494Z
@@ -13,6 +13,91 @@ dateCreated: 2023-06-26T12:09:50.494Z
 # Data Transformation Pipeline Architecture
 
 The MTConnect Agent uses a data transformation pipeline to provide a flexible and mutable mechanism for processing incoming data from various sources and allowing for reusability of common transform components. Learn more about the architecture at [MTConnect Agent Pipeline Architecture][pipeline_architecture].
+
+## RubyTransform and Useful Methods
+
+### Constructor Method
+
+A [Transform][transform_model] defined for a SHDR pipeline **MUST** have the transform's `name` and **MAY** have a `filter`. See the constructor method in the [Fix Execution][fix_execution] example.
+
+* `filter` can be a specific type of [Entity][entity_definition] only to which the transform shall be applied. Examples of common filters:
+  - `:Event`
+  - `:Sample`
+  - `:Condition`
+
+On the other hand, a [Transform][transform_model] defined for an MQTT pipeline **MUST** additionally have a `Guard` defined. Learn more about `Guard` [here][transform_model].
+
+* A `guard` **MUST** always return one of `:RUN`, `:CONTINUE` or `:SKIP`.
+
+* See the MQTT examples [below][mqtt_examples].
+
+### Transform Method
+
+Typically transformation is performed on an [Entity in the pipeline][entity_in_pipelines]. The `transform` method as seen in the "fix execution" example takes an `Observation` Entity, `obs`, as an argument. 
+
+* Properties of an Entity: `entity.properties`
+  - Example: Get `dataItemId` of `Observation`:  `observation.properties[:dataItemId]`
+  - *Properties defined for any entity type are same as defined by the standard.*
+
+* Value of an Entity: `entity.value`
+
+* Learn more about different types of entities used in the pipelines [here][entity_in_pipelines].
+
+MTConnect device metadata can be accessed by using:
+
+* `MTConnect.agent.default_device`
+
+Creating a new `Observation`:
+
+```ruby
+# obs is the incoming observation
+# {"dataItemId":"execution","timestamp":"2023-01-11T21:36:06.371Z","value":"IDLE"}
+
+device = MTConnect.agent.default_device
+
+dataitem_of_obs = device.data_item[obs.properties[:dataItemId]]
+
+new_obs = MTConnect::Event.new(dataitem_of_obs, 'NOT_READY')
+```
+
+Creating a new `Observation` with the timestamp of the `Observation` to be transformed:
+
+```ruby
+# obs is the incoming observation
+device = MTConnect.agent.default_device
+
+dataitem_of_obs = device.data_item[obs.properties[:dataItemId]]
+
+new_obs = MTConnect::Observation.new(
+						dataitem_for_obs,
+            '<transformed_value>',
+            obs.properties[:timestamp]) # For current timestamp: Time.now
+```
+
+* Similarly `MTConnect::Event`, `MTConnect::Sample` and `MTConnect::Condition` can be created. See examples.
+
+New, transformed or old `Entity` maybe passed on to the pipeline by using: 
+`forward(obs)`.
+
+## Splicing the Pipeline
+
+Accessing the pipelines of all the data sources:
+
+```ruby
+MTConnect.agent.sources.each do |s|
+  pipe = s.pipeline
+```
+
+Splicing the pipeline:
+
+```ruby
+transform = YourTransform.new('YourTransform', :Event) # filtering only Events
+
+pipe.splice_before('DeliverObservation', transform) # See the note below
+```
+
+* *See [Pipelines][pipelines] to understand different methods defined to modify the pipeline.*
+
 
 # Configuration
 
@@ -40,7 +125,6 @@ class UseCaseName < MTConnect::RubyTransform
   
   # Constructor method
   def initialize(name, filter)
-    @cache = Hash.new
     super(name, filter)
   end
 
@@ -60,7 +144,7 @@ MTConnect.agent.sources.each do |s|
   puts "Splicing the pipeline"
   
   # The arguments may differ depending upon the initialization. See examples below to see how
-  trans = UseCaseName.new('UseCaseName')
+  trans = UseCaseName.new('UseCaseName', :Entity)
   
 	# The method called to modify the pipeline may differ depending upon the usecase. See examples below to see how
 	pipe.splice_before('DeliverObservation', trans)
@@ -247,5 +331,10 @@ end
 
 
 [agent_2-0-0-2]: https://github.com/mtconnect/cppagent/releases/tag/v2.0.0.2
-
 [pipeline_architecture]: /Pipeline_Architecture "wikilink"
+[transform_model]: /Pipeline_Architecture#transforms "wikilink"
+[fix_execution]: /Data-Transformation-Using-Ruby#fix-execution-state-of-a-device "wikilink"
+[entity_definition]: https://github.com/mtconnect/cppagent/blob/master/src/mtconnect/entity/entity.hpp
+[entity_in_pipelines]: /Pipeline_Architecture#entities-used-in-the-pipelines "wikilink"
+[pipelines]: /Pipeline_Architecture#pipelines "wikilink"
+[mqtt_examples]: /Data-Transformation-Using-Ruby#mqtt-pipeline-fix-execution-state-of-a-device "wikilink"
