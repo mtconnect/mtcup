@@ -2,7 +2,7 @@
 title: Data Transformation Using Ruby
 description: The Agent includes an embedded mruby scripting engine for dynamic transformation.
 published: true
-date: 2023-06-28T12:29:25.725Z
+date: 2023-06-28T12:30:09.635Z
 tags: 
 editor: markdown
 dateCreated: 2023-06-26T12:09:50.494Z
@@ -10,7 +10,7 @@ dateCreated: 2023-06-26T12:09:50.494Z
 
 [Agent 2.0.0.2][agent_2-0-0-2] release introduced an extensible plug-in architecture for incoming and outgoing protocols; and data transformations.
 
-# Data Transformation Pipeline Architecture
+# Data Transformation Pipeline
 
 The MTConnect Agent uses a data transformation pipeline to provide a flexible and mutable mechanism for processing incoming data from various sources and allowing for reusability of common transform components. Learn more about the architecture at [MTConnect Agent Pipeline Architecture][pipeline_architecture].
 
