@@ -2,7 +2,7 @@
 title: Data Transformation Using Ruby
 description: The Agent includes an embedded mruby scripting engine for dynamic transformation.
 published: true
-date: 2023-06-28T12:30:09.635Z
+date: 2023-06-28T12:31:17.753Z
 tags: 
 editor: markdown
 dateCreated: 2023-06-26T12:09:50.494Z
@@ -76,7 +76,9 @@ new_obs = MTConnect::Observation.new(
 
 * Similarly `MTConnect::Event`, `MTConnect::Sample` and `MTConnect::Condition` can be created. See examples.
 
-New, transformed or old `Entity` maybe passed on to the pipeline by using: 
+Forwarding an `Entity`:
+
+* New, transformed or old `Entity` may be passed on to the pipeline by using: 
 `forward(obs)`.
 
 ## Splicing the Pipeline
