@@ -2,7 +2,7 @@
 title: Data Transformation Using Ruby
 description: The Agent includes an embedded mruby scripting engine for dynamic transformation.
 published: true
-date: 2023-06-28T12:32:30.641Z
+date: 2023-06-28T12:34:49.046Z
 tags: 
 editor: markdown
 dateCreated: 2023-06-26T12:09:50.494Z
@@ -155,7 +155,7 @@ end
 
 ## Fix `Execution` state of a device
 
-The adapter outputs `Execution` state `NOT_READY` as `IDLE`, and `WAIT` as `WAITING` instead. `IDLE` and `WAITING` are not MTConnect semantics. Hence can be transformed to `NOT_READY` and `WAIT` as shown below.
+An example of when a transformation can be done is when an adapter incorrectly outputs `Execution` state of `NOT_READY` as `IDLE`, and of `WAIT` as `WAITING` instead. `IDLE` and `WAITING` are not MTConnect semantics. Hence can be transformed to `NOT_READY` and `WAIT` as shown below.
 
 ```ruby
 class FixExecution < MTConnect::RubyTransform
