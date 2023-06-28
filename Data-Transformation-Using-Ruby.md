@@ -2,7 +2,7 @@
 title: Data Transformation Using Ruby
 description: The Agent includes an embedded mruby scripting engine for dynamic transformation.
 published: true
-date: 2023-06-28T12:34:49.046Z
+date: 2023-06-28T12:54:58.926Z
 tags: 
 editor: markdown
 dateCreated: 2023-06-26T12:09:50.494Z
@@ -24,28 +24,66 @@ A [Transform][transform_model] defined for a SHDR pipeline **MUST** have the tra
   - `:Event`
   - `:Sample`
   - `:Condition`
+  
+```ruby
+class FixExecution < MTConnect::RubyTransform
+  def initialize(name, filter)
+    super(name, filter)
+  end
+end
+```
 
 On the other hand, a [Transform][transform_model] defined for an MQTT pipeline **MUST** additionally have a `Guard` defined. Learn more about `Guard` [here][transform_model].
 
 * A `guard` **MUST** always return one of `:RUN`, `:CONTINUE` or `:SKIP`.
 
-* See the MQTT examples [below][mqtt_examples].
+* See the MQTT examples at [MQTT Pipeline][mqtt_examples].
+
+```ruby
+class MapMqttData < MTConnect::RubyTransform
+  def initialize
+    super("MapMqttData")
+    guard = lambda { |e|
+      if e.name == "JsonMessage"
+        return :RUN
+      else
+        return :CONTINUE
+      end
+    }
+  end
+end
+```
 
 ### Transform Method
 
-Typically transformation is performed on an [Entity in the pipeline][entity_in_pipelines]. The `transform` method as seen in the "fix execution" example takes an `Observation` Entity, `obs`, as an argument. 
+Typically transformation is performed on an [Entity in the pipeline][entity_in_pipelines]. For example, the `transform` method as seen in the "fix execution" example takes an `Observation` Entity, `obs`, as an argument. 
 
+* Name of an entity: `entity.name`
 * Properties of an Entity: `entity.properties`
   - Example: Get `dataItemId` of `Observation`:  `observation.properties[:dataItemId]`
   - *Properties defined for any entity type are same as defined by the standard.*
 
 * Value of an Entity: `entity.value`
 
+```ruby
+def transform(entity)
+  puts "*** received #{entity.name} with value: #{entity.value}"
+end
+```
+
 * Learn more about different types of entities used in the pipelines [here][entity_in_pipelines].
 
-MTConnect device metadata can be accessed by using:
+MTConnect device metadata can be accessed as shown:
 
-* `MTConnect.agent.default_device`
+```ruby
+def transform(obs)
+  dataItemId = obs.properties[:dataItemId]
+  device = MTConnect.agent.default_device # Device Metadata
+  dataitem_of_obs = device.data_item(dataItemId)
+end
+```
+
+* In case of multiple devices, `devices` can be used instead of `default_device`. See [Ruby Agent][ruby_agent].
 
 Creating a new `Observation`:
 
@@ -340,3 +378,4 @@ end
 [entity_in_pipelines]: /Pipeline_Architecture#entities-used-in-the-pipelines "wikilink"
 [pipelines]: /Pipeline_Architecture#pipelines "wikilink"
 [mqtt_examples]: /Data-Transformation-Using-Ruby#mqtt-pipeline-fix-execution-state-of-a-device "wikilink"
+[ruby_agent]: https://github.com/mtconnect/cppagent/blob/master/src/mtconnect/ruby/ruby_agent.hpp
