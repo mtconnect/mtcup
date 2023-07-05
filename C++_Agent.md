@@ -2,7 +2,7 @@
 title: C++ Agent
 description: 
 published: true
-date: 2023-07-05T13:40:34.023Z
+date: 2023-07-05T13:46:47.430Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-24T00:30:40.556Z
@@ -25,9 +25,8 @@ The MTConnect agent receives data from an adapter and transforms it as required 
 
 The agent main responsibility is data collection, transformation, and delivery to various sinks (destination protocols). The agent supports REST as the primary method using HTTP optionally with TLS (SSL) according to the MTConnect standard. Starting with version 2.0, various plugins are available for OPC UA, Kafka, InfluxDB, and MQTT.
 
-## Quick Start
+## Quick Start (Windows)
 
-### Windows
 
 * Download the pre-built Agent from [Releases](http://github.com/mtconnect/cppagent/releases)
 * unzip the archive
@@ -41,18 +40,16 @@ The agent main responsibility is data collection, transformation, and delivery t
    > replace `<version>` with the release version number, such as `2.0.0.7`
  * Open a broswer and navigate to: http://localhost:5000/probe
  
-### Linux
-
-
- ### Next...
  
  * Configure the agent for your machine and adapter
    * Modify the Device.xml with the components and data available from you adapter(s)
- * The new agent supports many incoming data feeds as follows:
+ * The agent supports many incoming data feeds as follows:
    * Classic SHDR (pipe delimited. timestamped data)
    * MQTT
    * Another agent
    * Plugins available for OPC UA and other protocols.
+   
+See [Building the C++ Agent](/C++_Agent#building-the-c-agent "wikilink") for further install options.
 
 
 ## Usage and Configuration
