@@ -2,7 +2,7 @@
 title: C++ Agent
 description: 
 published: true
-date: 2022-06-03T02:07:36.080Z
+date: 2023-07-05T13:40:34.023Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-24T00:30:40.556Z
@@ -43,7 +43,6 @@ The agent main responsibility is data collection, transformation, and delivery t
  
 ### Linux
 
-### Docker
 
  ### Next...
  
