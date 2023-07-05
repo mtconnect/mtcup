@@ -2,7 +2,7 @@
 title: C++ Agent
 description: 
 published: true
-date: 2023-07-05T13:46:47.430Z
+date: 2023-07-05T13:48:03.438Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-24T00:30:40.556Z
@@ -49,7 +49,7 @@ The agent main responsibility is data collection, transformation, and delivery t
    * Another agent
    * Plugins available for OPC UA and other protocols.
    
-See [Building the C++ Agent](/C++_Agent#building-the-c-agent "wikilink") for further install options.
+See [Building the C++ Agent](/C++_Agent#building-the-c-agent "wikilink") for further install options, operating systems, and platforms.
 
 
 ## Usage and Configuration
