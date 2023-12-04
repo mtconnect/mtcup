@@ -2,7 +2,7 @@
 title: Adapter
 description: 
 published: true
-date: 2022-06-03T12:27:03.037Z
+date: 2023-12-04T19:59:26.253Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-03T11:14:50.014Z
@@ -34,3 +34,6 @@ There are Adapter examples on MTConnect GitHub that one may follow and could use
 - [Adapter Examples](https://github.com/mtconnect/adapter): Examples in several software languages.
 - [PocketNC Adapter](https://github.com/mtconnect/PocketNC_adapter): Example in python2.7.
 - [ISO Digital Twin Project](https://github.com/mtconnect/iso_digital_twin_adapter): Example in python3.
+- [TrueAnalyticsSolutions/Mtconnect.Adapter](https://github.com/TrueAnalyticsSolutions/Mtconnect.Adapter): First model-aware Adapter SDK to use the [MTConnect Transpiler](/MTConnect-Transpiler "wikilinks").
+  - [TrueAnalyticsSolutions/Mtconnect.PcAdapter](https://github.com/TrueAnalyticsSolutions/Mtconnect.PcAdapter): Example Adapter to showcase communication between an Adapter and an Agent.
+  - [TrueAnalyticsSolutions/Mtconnect.MakerBotAdapter](https://github.com/TrueAnalyticsSolutions/Mtconnect.MakerBotAdapter): Compatible with 5th gen MakerBots (ie. Replicator+, Mini, etc.)
