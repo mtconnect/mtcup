@@ -1,8 +1,8 @@
 ---
 title: MTConnect Transpiler
 description: An overview of the MTConnect Transpiler project
-published: false
-date: 2023-12-04T19:50:54.427Z
+published: true
+date: 2023-12-04T19:51:29.082Z
 tags: mtconnect, transpiler, c#, open-source
 editor: markdown
 dateCreated: 2023-12-04T19:37:48.495Z
