@@ -2,7 +2,7 @@
 title: Application
 description: 
 published: true
-date: 2022-06-03T12:26:37.563Z
+date: 2023-12-04T20:02:43.118Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-03T12:24:58.134Z
@@ -169,3 +169,4 @@ http://172.26.83.83:5000/Mazak/sample?from=172&interval=2000&path=//DataItems/Da
 - [Dataminer](https://github.com/mtconnect/dataminer)
 - [MTExplorer](https://github.com/mtconnect/mtexplorer)
 - [TrakHound MTConnect](https://github.com/TrakHound/MTConnect.NET)
+- [TrueAnalyticsSolutions/MtconnectCore](https://github.com/TrueAnalyticsSolutions/MtconnectCore): Deserializes MTConnect Response Documents into strongly-typed class model.
