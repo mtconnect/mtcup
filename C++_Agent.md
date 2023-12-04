@@ -2,7 +2,7 @@
 title: C++ Agent
 description: 
 published: true
-date: 2023-07-05T13:48:03.438Z
+date: 2023-12-04T17:10:58.717Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-24T00:30:40.556Z
@@ -94,6 +94,9 @@ The agent build is dependent on the following utilities:
 
 ## Change History
 
+* Version 2.2.0 Support for all Version 2.2 standard changes and dynamic configuration from adapters. 
+  * Upgraded conan build package to conan 2.
+* Version 2.1.0 Added MQTT Sink, Agent Restart and new JSON format (version 2)
 * Version 2.0.0: Rearchitecture of the agent with the following additions:
   * Full HTTP 1.1 support
   * TLS 1.2 and dual certificate support
