@@ -2,7 +2,7 @@
 title: MTConnect Transpiler
 description: An overview of the MTConnect Transpiler project
 published: true
-date: 2023-12-04T19:51:29.082Z
+date: 2023-12-04T19:52:56.944Z
 tags: mtconnect, transpiler, c#, open-source
 editor: markdown
 dateCreated: 2023-12-04T19:37:48.495Z
@@ -28,7 +28,7 @@ To get started developing a custom sink, determine if there is an existing "abst
 Continue with these steps:
  - Create a new console application project in C#
  - **If starting fresh**, reference the `Mtconnect.Transpiler` library in your C#
-   - `$ dotnet add package MtconnectTranspiler --version`. View the `MtconnectTranspiler` project on [GitHub (mtconnect/MtconnectTranspiler)](https://github.com/mtconnect/MtconnectTranspiler)
+   - `$ dotnet add package MtconnectTranspiler`. View the `MtconnectTranspiler` project on [GitHub (mtconnect/MtconnectTranspiler)](https://github.com/mtconnect/MtconnectTranspiler)
    - Implement the `ITranspilerSink` interface and the `Transpile(XmiDocument model, CancellationToken cancellationToken)` method
  - **If using an abstract sink**, reference the sink and the `Mtconnect.Transpiler` library should be inherited
    - Implement the abstract sink according to its documentation
