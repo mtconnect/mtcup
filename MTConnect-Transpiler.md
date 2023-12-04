@@ -2,7 +2,7 @@
 title: MTConnect Transpiler
 description: An overview of the MTConnect Transpiler project
 published: false
-date: 2023-12-04T19:37:48.495Z
+date: 2023-12-04T19:50:54.427Z
 tags: mtconnect, transpiler, c#, open-source
 editor: markdown
 dateCreated: 2023-12-04T19:37:48.495Z
@@ -14,15 +14,15 @@ The MTConnect Transpiler refers to the open-source, C# library that deserializes
 
 The transpiler represents a leap forward in standards development and implementation. Developers that implement the transpiler in their workflows will find it's easier to maintain parity with the development of the standard.
 
-### Getting Started
+## Getting Started
 As a developer, if you're looking to use implement "model-aware" in your software, it is recommended to look for existing, open-source transpiler projects that may already output the codebase you need. For example, the `MtconnectCore` and `MTConnect.NET` C# libraries already contain transpiled code from the standard.
 
 If you need a more custom codebase, then you will need to utilize sinks to implement your own executable transpiler.
 
-## Sinks
+# Sinks
 The MTConnect Transpiler implements a sink architecture where-in the `MtconnectTranspiler` library is capable of deserializing the XMI of the MTConnect SysML model into a strongly-typed class model. The `MtconnectTranspiler` then sends this model to sink operator(s) to complete the tranpilation process.
 
-### Developing a Sink
+## Developing a Sink
 To get started developing a custom sink, determine if there is an existing "abstract" sink that can help you get started. Examples of this include the `ScribanTemplates` or `CSharp` projects which give you a headstart in implementing the `Transpiler`.
 
 Continue with these steps:
@@ -42,12 +42,25 @@ Continue with these steps:
 
 **Note** the specific construction of the `Transpiler` will differ depending on the options required.
 
-### Development Workflow
-With a transpiler project available, like those seen in some of the examples below, it is recommended to include the execution of the transpiler in an automated workflow.
+## Development Workflow
+Once a transpiler is created, for example to write code, it should only need to be run in case of the following events:
+
+ - The format of the output changes
+ - The transpiler has been updated (or its dependencies)
+ - The MTConenct Standard is updated (ie. v2.2 to v2.3)
+ 
+These events may be rare and are appropriate candidates for workflow automation.
+
+ - In the event that format changes, developers could create pipelines based on Releases of their git repositories.
+ - In the event that the transpiler has been updated (or dependencies), existing pipelines like Dependabot can be utilized
+ - In the event that the Standard is updated, workflows can be scheduled to continually check for updates on the standard and compare against your codebase
+   - For example, checkout this [GitHub Workflow (TrueAnalyticsSolutions/mtconnect-compare-version-action)](https://github.com/marketplace/actions/tams-mtconnect-version-comparator)
+ 
+If you've implemented your transpiler as an executable (ie. EXE file or cross-platform .NET standard app) then you can easily trigger the execution of the transpiler at the end of your workflow. Then, it is recommended to commit any code changes to a new branch and create a new pull request.
 
 
 
-### Sink Examples
+## Sink Examples
 Here are a few examples of sink implementations that can be referenced and built upon:
 
  - `MtconnectTranspiler.Sinks.ScribanTemplates`: An abstract sink that utilizes [Scriban](https://github.com/scriban/scriban) templates to generate static files. View on [GitHub (mtconnect/MtconnectTranspiler.Sinks.ScribanTemplates)](https://github.com/mtconnect/MtconnectTranspiler.Sinks.ScribanTemplates)
