@@ -2,7 +2,7 @@
 title: Installing C++ Agent on Mac
 description: 
 published: true
-date: 2024-03-01T15:57:53.792Z
+date: 2024-03-01T16:01:20.479Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-01T13:57:54.464Z
@@ -63,8 +63,18 @@ conan profile detect
 ### Add agent to PATH
 Note that the filepath may be specific to your build; in this example the buildid is mtcond5569031024c6. 
 ```
+touch .zshrc
+nano .zshrc
+```
+Add the following to the .zshrc file; if the file does not exist opening in nano will add the file.
+```
 export PATH=$PATH:~/.conan2/p/b/mtcond5569031024c6/p/bin
 ```
+Save changes to .zshrc and restart terminal. Run the agent.
+```
+agent
+```
+
 ### For XCode
 
 ```   
