@@ -2,7 +2,7 @@
 title: Installing C++ Agent on Mac
 description: 
 published: true
-date: 2024-02-27T15:34:55.675Z
+date: 2024-03-01T15:27:49.166Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-01T13:57:54.464Z
@@ -48,14 +48,20 @@ pip3 install conan
     cd cppagent
     conan export conan/mqtt_cpp
     conan export conan/mruby
-    conan install . -if build  --build=missing
+```
+Test the conan profile. If the default conan profile is not set, use the following command.
+```
+conan profile detect
 ```
 
 ### Build the agent
 
-```	
-	conan build . -bf build
 ```
+	conan create cppagent -pr cppagent/conan/profiles/macos --build=missing
+```
+
+### Add agent to PATH
+
 
 ### For XCode
 
