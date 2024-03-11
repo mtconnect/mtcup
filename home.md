@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2023-12-04T19:52:27.666Z
+date: 2024-03-11T19:34:02.808Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-22T02:21:15.482Z
@@ -118,6 +118,8 @@ A typical MTConnect architecture has 4 key components: Device, Adapter, Agent an
 - [Other Resources](/Other_Resources "wikilink")
 
 - [MTC FAQ](/MTC_FAQ "wikilink")
+
+- Test
 
 
   
