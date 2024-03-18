@@ -2,7 +2,7 @@
 title: Installing C++ Agent on Ubuntu
 description: 
 published: true
-date: 2024-03-18T02:10:29.454Z
+date: 2024-03-18T02:16:29.031Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-24T00:31:47.231Z
@@ -234,5 +234,3 @@ Use the enable command to ensure that the service starts whenever the system boo
 sudo systemctl enable mtc_agent
 sudo systemctl enable mtc_adapter
 ```
-
-Test
