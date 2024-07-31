@@ -2,7 +2,7 @@
 title: C++ Agent Usage and Configuration
 description: 
 published: true
-date: 2024-07-31T12:44:21.106Z
+date: 2024-07-31T12:46:48.516Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-01T14:19:42.467Z
@@ -252,7 +252,7 @@ For client.cnf
 #### Agent Adapter
 
 #### MQTT Adapters
-For MQTT Ingress of json payloads from an mqtt broker, you can create an adapter entry for mqtt. The Agent will connect and subscribe to one or more topics. Note that json payloads must be formatted correctly or ingest will fail.
+For MQTT Ingress of json payloads from an mqtt broker, you can create an adapter entry for mqtt. The Agent will connect and subscribe to one or more topics. Note that json payloads must be formatted correctly or ingest will fail. (Agent v2.3.0.16 or later)
 ```
 Adapters {
   broker{
@@ -292,7 +292,7 @@ Adapters {
 ### Configuring Sinks
 
 #### MQTT Sink
-The Agent can publish json payloads to a Broker.  This is in addition to providing xml/json response document over http.  Both http response documents and mqtt publish can occur simultaneously.  This is useful in the case that clients are querying the Agent using http while the Agent publishes all data to a cettral mqtt broker.  You can designate the topics to publish to or use the defaults.
+The Agent can publish json payloads to a Broker.  This is in addition to providing xml/json response document over http.  Both http response documents and mqtt publish can occur simultaneously.  This is useful in the case that clients are querying the Agent using http while the Agent publishes all data to a cettral mqtt broker.  You can designate the topics to publish to or use the defaults. (Agent v2.3.0.16 or later)
 ```
 Sinks {
     Mqtt2Service {
