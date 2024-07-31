@@ -2,7 +2,7 @@
 title: C++ Agent Usage and Configuration
 description: 
 published: true
-date: 2024-07-31T12:27:01.981Z
+date: 2024-07-31T12:32:54.192Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-01T14:19:42.467Z
@@ -274,6 +274,20 @@ Adapters {
  }
 } 
 ```
+The Agent will create a random ClientId on each connection to the broker.  If you want to specify the client ID, you can.  In most cases it's better to let the Agent assign an ID automatically.
+
+```
+Adapters {
+  broker{
+        Url = 10.23.45.12:1883
+        MqttUserName = username
+        MqttPassword = password
+        Topics = "shop/machineid/mtconnect/#"
+        MqttClientId = MyClientID
+ }
+} 
+```
+
 
 ### Configuring Sinks
 
