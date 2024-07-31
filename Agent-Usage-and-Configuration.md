@@ -2,7 +2,7 @@
 title: C++ Agent Usage and Configuration
 description: 
 published: true
-date: 2023-01-03T23:30:40.620Z
+date: 2024-07-31T12:27:01.981Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-01T14:19:42.467Z
@@ -252,6 +252,28 @@ For client.cnf
 #### Agent Adapter
 
 #### MQTT Adapters
+For MQTT Ingress of json payloads from an mqtt broker, you can create an adapter entry for mqtt. The Agent will connect and subscribe to one or more topics. Note that json payloads must be formatted correctly or ingest will fail.
+```
+Adapters {
+  broker{
+        Url = 10.23.45.12:1883
+        MqttUserName = username
+        MqttPassword = password
+        Topics = "shop/machineid/mtconnect/#"
+ }
+} 
+```
+For subscription to multiple topics from the same connection, you can append topic names.  This might be required where two sensors are providing data to individual topics.
+```
+Adapters {
+  broker{
+        Url = 10.23.45.12:1883
+        MqttUserName = username
+        MqttPassword = password
+        Topics = "shop/machineid1/mtconnect/#:shop/machineid2/mtconnect/#"
+ }
+} 
+```
 
 ### Configuring Sinks
 
