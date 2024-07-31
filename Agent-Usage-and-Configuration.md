@@ -2,7 +2,7 @@
 title: C++ Agent Usage and Configuration
 description: 
 published: true
-date: 2024-07-31T12:32:54.192Z
+date: 2024-07-31T12:40:22.840Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-01T14:19:42.467Z
@@ -290,6 +290,25 @@ Adapters {
 
 
 ### Configuring Sinks
+The Agent can publish json payloads to a Broker.  This is in addition to providing xml/json response document over http.  Both http response documents and mqtt publish can occur simultaneously.  This is useful in the case that clients are querying the Agent using http while the Agent publishes all data to a cettral mqtt broker.  You can designate the topics to publish to or use the defaults.
+```
+Sinks {
+    Mqtt2Service {
+        MqttHost = 10.123.12.31
+        MqttPort = 1883
+        ProbeTopic = corp/dept/machine/device/
+        CurrentTopic = corp/dept/machine/current/
+        SampleTopic = corp/dept/machine/sample/
+        AssetTopic = corp/dept/machine/Assets/
+        MqttLastWillTopic = corp/dept/machine/lastwill/
+        MqttCurrentInterval = 10000ms
+        MqttSampleInterval = 500ms
+        MqttSampleCount = 1000
+        MqttUserName = username
+        MqttPassword = password
+    }
+}   
+```
 
 #### MQTT Sink
 
