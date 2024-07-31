@@ -2,7 +2,7 @@
 title: C++ Agent Usage and Configuration
 description: 
 published: true
-date: 2024-07-31T12:42:20.271Z
+date: 2024-07-31T12:44:21.106Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-01T14:19:42.467Z
@@ -308,6 +308,28 @@ Sinks {
         MqttSampleCount = 1000
         MqttUserName = username
         MqttPassword = password
+    }
+}   
+```
+In the case you need to use CERTs to connect to the broker...
+```
+Sinks {
+    Mqtt2Service {
+        MqttHost = 10.123.12.31
+        MqttPort = 1883
+        ProbeTopic = corp/dept/machine/device/
+        CurrentTopic = corp/dept/machine/current/
+        SampleTopic = corp/dept/machine/sample/
+        AssetTopic = corp/dept/machine/Assets/
+        MqttLastWillTopic = corp/dept/machine/lastwill/
+        MqttCurrentInterval = 10000ms
+        MqttSampleInterval = 500ms
+        MqttSampleCount = 1000
+         
+        MqttCaCert = AmazonCA.pem
+        MqttCert  = b24cf812-certificate.pem.crt
+        MqttPrivateKey = b24cf812-private.pem.key
+        MqttTls = true
     }
 }   
 ```
