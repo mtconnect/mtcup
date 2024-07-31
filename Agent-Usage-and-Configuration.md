@@ -2,7 +2,7 @@
 title: C++ Agent Usage and Configuration
 description: 
 published: true
-date: 2024-07-31T12:40:22.840Z
+date: 2024-07-31T12:42:20.271Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-01T14:19:42.467Z
@@ -290,6 +290,8 @@ Adapters {
 
 
 ### Configuring Sinks
+
+#### MQTT Sink
 The Agent can publish json payloads to a Broker.  This is in addition to providing xml/json response document over http.  Both http response documents and mqtt publish can occur simultaneously.  This is useful in the case that clients are querying the Agent using http while the Agent publishes all data to a cettral mqtt broker.  You can designate the topics to publish to or use the defaults.
 ```
 Sinks {
@@ -309,8 +311,6 @@ Sinks {
     }
 }   
 ```
-
-#### MQTT Sink
 
 ### Adding Plugins
 
