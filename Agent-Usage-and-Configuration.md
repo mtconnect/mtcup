@@ -2,7 +2,7 @@
 title: C++ Agent Usage and Configuration
 description: 
 published: true
-date: 2024-08-01T17:13:22.031Z
+date: 2024-08-01T17:14:22.030Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-01T14:19:42.467Z
@@ -337,13 +337,7 @@ Sinks {
 ### Adding Plugins
 
 ### Ruby Transformations
-When you have no control over an OEM adapter output, or you need to drive the value of a custom dataItem, you can use a ruby script with the agent to perform inline transformations.  (i.e. convert execution tag 'INCYCLE' to 'ACTIVE').  Add a reference to your ruby script file in the agent cfg.  In the sample below, a ruby script file 'mytransform.rb' is referenced in the local folder.
 
-```
-Ruby {
-  module = mytransform.rb
-}
-```
 
 ### Serving Static Content
 
