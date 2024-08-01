@@ -2,7 +2,7 @@
 title: C++ Agent Usage and Configuration
 description: 
 published: true
-date: 2024-07-31T12:46:48.516Z
+date: 2024-08-01T17:04:06.463Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-01T14:19:42.467Z
@@ -252,7 +252,7 @@ For client.cnf
 #### Agent Adapter
 
 #### MQTT Adapters
-For MQTT Ingress of json payloads from an mqtt broker, you can create an adapter entry for mqtt. The Agent will connect and subscribe to one or more topics. Note that json payloads must be formatted correctly or ingest will fail. (Agent v2.3.0.16 or later)
+For MQTT Ingress of json payloads from an mqtt broker, you can create an adapter entry for mqtt. The Agent will connect and subscribe to one or more topics. Note that json payloads must be formatted correctly or ingest will fail. (Agent v2.3.0.16 or later)  This example connects to an mqtt broker on port 1883 and ingests any json payloads published to the topic 'shop/machineid/mtconnect'.
 ```
 Adapters {
   broker{
@@ -263,7 +263,7 @@ Adapters {
  }
 } 
 ```
-For subscription to multiple topics from the same connection, you can append topic names.  This might be required where two sensors are providing data to individual topics.
+For subscription to multiple topics from the same connection, you can append topic names.  This might be required where two sensors are providing data to individual topics.  This example subscribes to two topic at the same mqtt broker and ingests json payloads from both topics.
 ```
 Adapters {
   broker{
