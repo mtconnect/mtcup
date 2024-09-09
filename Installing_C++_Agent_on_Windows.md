@@ -2,7 +2,7 @@
 title: Installing C++ Agent on Windows
 description: Build, install, configure and run MTConnect C++ Agent on Windows.
 published: true
-date: 2024-09-09T14:02:31.309Z
+date: 2024-09-09T14:14:39.124Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-01T12:39:42.594Z
@@ -65,17 +65,17 @@ Make sure to setup the environment For VS 2022:
 "C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Auxiliary\Build\vcvars64.bat"
 conan build . --build=missing -pr conan/profiles/vs64 
 OR
-Debug Mode:
-conan build . --build=missing -pr conan/profiles/vs64debug -o development=True/False -o with_ruby=True/False
+conan build . --build=missing -pr conan/profiles/vs64debug
+
 ```
 or
 
 ```
 "C:\Program Files (x86)\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"	
-conan build . --build=missing -pr conan/profiles/vs64 
+conan build . --build=missing -pr conan/profiles/vs64
 OR
-Debug Mode:
-conan build . --build=missing -pr conan/profiles/vs64debug -o development=True/False -o with_ruby=True/False
+conan build . --build=missing -pr conan/profiles/vs64debug
+
 ```
 #### To build for 32 bit Windows
 
