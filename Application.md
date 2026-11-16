@@ -170,3 +170,4 @@ http://172.26.83.83:5000/Mazak/sample?from=172&interval=2000&path=//DataItems/Da
 - [MTExplorer](https://github.com/mtconnect/mtexplorer)
 - [TrakHound MTConnect](https://github.com/TrakHound/MTConnect.NET)
 - [TrueAnalyticsSolutions/MtconnectCore](https://github.com/TrueAnalyticsSolutions/MtconnectCore): Deserializes MTConnect Response Documents into strongly-typed class model.
+- [FEAI Machine Monitor](https://monitor.factoryedgeai.com): Windows MTConnect client for live CNC machine status, utilization and downtime monitoring; free and fully functional for 2 machines.
